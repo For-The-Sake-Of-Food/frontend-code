@@ -1,4 +1,3 @@
-import React from 'react';
 import "./NavBar.css";
 import Logo from "../assets/company-logo.jpg";
 import Instagram from "../assets/instagram-logo.png";
