@@ -13,10 +13,11 @@
     padding-top: 50px;
   }
   .hero-text h1 {
-    color:#F6AA1C;
+    font-weight: 700;
+    color:#FFCAD4;
   }
   .hero-image {
-    max-width: 40%; /* Adjust the width as needed */
+    max-width: 50%; /* Adjust the width as needed */
     border-radius: 37px;
     height: 50%;
     margin-top: 40px;
