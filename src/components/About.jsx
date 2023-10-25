@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
-import "./About.css";
+import React, { Fragment, useState } from "react";
+import "../CSS/About.css";
 
 const About = () => {
   const [toggleTab, setToggleTab] = useState(1);
