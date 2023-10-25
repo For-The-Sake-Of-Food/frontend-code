@@ -1,7 +1,5 @@
-// Blog.js
-
 import React from 'react';
-import Blog from "./Blog.css";
+import "./Blog.css";
 
 function Blog() {
   return (
