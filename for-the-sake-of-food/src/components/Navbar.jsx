@@ -14,9 +14,6 @@ const NavBar = () => {
         />
       </div>
       <ul className="flex list-none">
-        <Link href="/blog">
-          <li className="mr-8">Blog</li>
-        </Link>
         <Link href="/about">
           <li className="mr-8">About</li>
         </Link>

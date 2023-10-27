@@ -38,6 +38,7 @@ const Welcome = () => {
           </div>
         </div>
       </div>
+      
       <div className="mt-auto">
         <SignupForm />
       </div>
