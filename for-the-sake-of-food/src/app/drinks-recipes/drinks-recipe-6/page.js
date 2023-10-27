@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import SignupForm from "@/components/SignupForm";
+import Link from "next/link";
 
 const MyPage = () => {
   return (
