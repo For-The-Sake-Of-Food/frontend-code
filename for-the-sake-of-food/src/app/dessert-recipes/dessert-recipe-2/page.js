@@ -72,13 +72,13 @@ const MyPage = () => {
 
       {/* Previous and Next buttons */}
       <div className="flex justify-between mt-4">
-        <Link href="/food-recipes/food-recipe-1">
+        <Link href="/dessert-recipes/dessert-recipe-1">
         <button className="flex items-center">
           <FaArrowLeft className="mr-2" />
           Previous
         </button>
         </Link>
-        <Link href="/food-recipes/food-recipe-3">
+        <Link href="/dessert-recipes/dessert-recipe-3">
         <button className="flex items-center">
           Next
           <FaArrowRight className="ml-2" />

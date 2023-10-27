@@ -7,37 +7,37 @@ const cardData = [
     image: '/drinks.jpg',
     timestamp: 'October 26, 2023',
     description: 'Description for card 1.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-1",
   },
   {
     image: '/drinks.jpg',
     timestamp: 'October 27, 2023',
     description: 'Description for card 2.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-2",
   },
   {
     image: '/drinks.jpg',
     timestamp: 'October 26, 2023',
     description: 'Description for card 3.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-3",
   },
   {
     image: '/drinks.jpg',
     timestamp: 'October 26, 2023',
     description: 'Description for card 4.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-4",
   },
   {
     image: '/drinks.jpg',
     timestamp: 'October 26, 2023',
     description: 'Description for card 5.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-5",
   },
   {
     image: '/drinks.jpg',
     timestamp: 'October 26, 2023',
     description: 'Description for card 6.',
-    link: "/about",
+    link: "/drinks-recipes/drinks-recipe-6",
   },
 ];
 

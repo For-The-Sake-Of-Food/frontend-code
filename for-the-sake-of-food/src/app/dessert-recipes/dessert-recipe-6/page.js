@@ -72,14 +72,18 @@ const MyPage = () => {
 
       {/* Previous and Next buttons */}
       <div className="flex justify-between mt-4">
+        <Link href="/dessert-recipes/dessert-recipe-6">
         <button className="flex items-center">
           <FaArrowLeft className="mr-2" />
           Previous
         </button>
+        </Link>
+        <Link href="/">
         <button className="flex items-center">
           Next
           <FaArrowRight className="ml-2" />
         </button>
+        </Link>
       </div>
 
       {/* SignupForm with full-width background */}

@@ -79,7 +79,7 @@ const MyPage = () => {
           Previous
         </button>
         </Link>
-        <Link href="/food-recipes/food-recipe-2">
+        <Link href="/drinks-recipes/drinks-recipe-2">
         <button className="flex items-center">
           Next
           <FaArrowRight className="ml-2" />

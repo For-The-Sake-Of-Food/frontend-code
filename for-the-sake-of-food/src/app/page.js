@@ -1,4 +1,7 @@
 "use client";
+import Dessertcard from "@/components/Dessertcard";
+import Foodcard from "@/components/Foodcard";
+import Juicecard from "@/components/Juicecard";
 import SignupForm from "@/components/SignupForm";
 
 
@@ -38,7 +41,11 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-      
+      <div className="flex justify-center">
+        <Foodcard />
+        <Juicecard />
+        <Dessertcard />
+      </div>
       <div className="mt-auto">
         <SignupForm />
       </div>

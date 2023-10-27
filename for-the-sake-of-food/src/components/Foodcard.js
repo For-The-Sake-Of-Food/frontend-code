@@ -1,15 +1,18 @@
-import React from 'react';
+"use client";
+import Link from 'next/link';
+import Image from 'next/image';
 
-const Foodcard = ({ image, timestamp, description }) => {
+const Foodcard = () => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
-      <img src={image} alt="Card Image" className="w-full" />
-      <div className="px-4 py-2">
-        <div className="font-bold text-xl nb-2">{timestamp}</div>
-        <p className="text-gray-700 text-base">{description}</p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600">
-          Read More
-        </button>
+    <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <Image src="/hero-image.jpg" alt="Food" width= {100} height={100}className="w-full h-32 object-cover" />
+      <div className="p-4">
+        <h2 className="text-2xl font-semibold text-gray-800">Food</h2>
+        <Link href="/food">
+          <button className="block mt-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold text-center px-4 py-2 rounded cursor-pointer">
+            View all recipes
+          </button>
+        </Link>
       </div>
     </div>
   );
