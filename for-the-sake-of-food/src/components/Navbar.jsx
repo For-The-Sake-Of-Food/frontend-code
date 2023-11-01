@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <nav
-  className={`bg-white text-black fixed w-full top-0 h-16 transition-all duration-300 ${
+  className={`bg-white z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
     visible ? "transform translate-y-0" : "-translate-y-16"
   }`}
     >
