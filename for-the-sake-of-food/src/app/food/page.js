@@ -5,37 +5,37 @@ import SignupForm from "@/components/SignupForm";
 
 const cardData = [
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 26, 2023",
     description: "Description for card 1.",
     link: "/food-recipes/food-recipe-1",
   },
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 27, 2023",
     description: "Description for card 2.",
     link: "/food-recipes/food-recipe-2",
   },
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 26, 2023",
     description: "Description for card 3.",
     link: "/food-recipes/food-recipe-3",
   },
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 26, 2023",
     description: "Description for card 4.",
     link: "/food-recipes/food-recipe-4",
   },
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 26, 2023",
     description: "Description for card 5.",
     link: "/food-recipes/food-recipe-5",
   },
   {
-    image: "/hero-image.jpg",
+    image: "/food-category.png",
     timestamp: "October 26, 2023",
     description: "Description for card 6.",
     link: "/food-recipes/food-recipe-6",
