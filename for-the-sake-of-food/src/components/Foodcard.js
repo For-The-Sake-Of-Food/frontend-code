@@ -9,7 +9,7 @@ const Foodcard = () => {
       <div className="p-4 bg-[#E7F9FD] rounded-lg">
         <h2 className="text-2xl font-semibold text-center text-black">Food</h2>
         <Link href="/food">
-        <button className="block mt-2 bg-white hover:bg-gray-200 text-black font-semibold text-center px-4 py-2 rounded-full cursor-pointer">
+        <button className="block mt-2 bg-white hover:bg-[#d6e8cc] text-black font-semibold text-center px-4 py-2 rounded-full cursor-pointer">
           View all recipes
           </button>
         </Link>

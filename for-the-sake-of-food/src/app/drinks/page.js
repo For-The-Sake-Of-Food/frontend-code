@@ -50,7 +50,15 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Juice Recipes</h1>
+      <h1 className="text-2xl font-bold mb-4"></h1>
+      <div className="mb-8">
+        {" "}
+        {/* Added margin for spacing */}
+        <p className="text-lg">Explore our nutritious selection of juices and find your next
+!.</p>
+      </div>
       {cardGroups.map((group, groupIndex) => (
         <div className="flex" key={groupIndex}>
           {group.map((card, index) => (
@@ -58,9 +66,9 @@ const Home = () => {
           ))}
         </div>
       ))}
-      <div className="bg-gray-200">
+      <div className="bg-[#E7F9FD] w-full">
         <div className="max-w-screen-xl mx-auto p-4">
-          <div className="flex justify-center">
+          <div className="w-full">
             <SignupForm />
           </div>
         </div>

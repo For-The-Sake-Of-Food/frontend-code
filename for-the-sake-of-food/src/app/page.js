@@ -2,7 +2,8 @@
 import Dessertcard from "@/components/Dessertcard";
 import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
-import SignupForm from "@/components/SignupForm";
+import Food from "@/app/food/page";
+import NavBar from "@/components/Navbar";
 
 const Welcome = () => {
   return (
@@ -20,7 +21,6 @@ const Welcome = () => {
               Food&rsquo; recipes are here to make nutritious eating both
               effortless and enjoyable.
             </p>
-
             <p>
               Join us in savoring the rich flavors of fresh, wholesome
               ingredients, and learn how to make nutrition a delightful part of
@@ -56,20 +56,36 @@ const Welcome = () => {
           <img
             src="/user.jpg"
             alt="user image"
-            className=" h-500 rounded-md" // Use rounded-md for slightly rounded corners
+            className=" h-500 rounded-md" // Using rounded-md for slightly rounded corners
           />
         </div>
-        <div className="w-1/2 p-4 ">
+        <div className="w-1/2 p-4">
+          <h1 className="text-2xl font-bold relative">
+            <span className="text-black">Why </span>
+            <span className="text-[#3A8700] font-bold">Our Recipes</span>
+            <span className="text-black"> Are The Best</span>
+            <span className="absolute top-[-0.75rem] left-[-0.7rem] text-gray-300 text-8xl -ml-8">
+              “
+            </span>
+          </h1>
           <p>
-            Your text goes here. You can add multiple paragraphs or other
-            content as needed.
+            At 65, it's become more important than ever to make healthy food
+            choices. This app has opened a world of delicious, nutritious meals
+            that keep me feeling vibrant and energized. It's not just an app;
+            it's a companion on my journey to a healthier, happier life. The
+            recipes are easy to follow, and I've never had so much fun
+            experimenting in the kitchen. Thank you for making healthy eating a
+            joy!
           </p>
+          <p>~Carol Lynn</p>
         </div>
       </div>
-
-      <div className="mt-auto">
-        <SignupForm />
+  
+      <div className="mt-16">
+        <Food />
+        <NavBar/>
       </div>
+      
     </div>
   );
 };
