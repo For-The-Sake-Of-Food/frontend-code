@@ -57,7 +57,7 @@ const Home = () => {
       <div className="mb-8">
         {" "}
         {/* Added margin for spacing */}
-        <p className="text-lg">Cooking has never been so fun, right?!.</p>
+        <p className="text-lg">Cooking has never been so fun right?!.</p>
       </div>
       {cardGroups.map((group, groupIndex) => (
         <div className="flex mb-20" key={groupIndex}>

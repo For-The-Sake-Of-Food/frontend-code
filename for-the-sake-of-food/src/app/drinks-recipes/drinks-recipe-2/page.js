@@ -75,13 +75,13 @@ const MyPage = () => {
         {/* Description below the line */}
         <p>
         <h2 className="text-2xl font-bold">Directions</h2>
-          Be clear, be confident and don’t overthink it. The beauty of your
-          story is that it’s going to continue to evolve and your site can
+        Be clear, be confident and dont overthink it. The beauty of your
+          story is that its going to continue to evolve and your site can
           evolve with it. Your goal should be to make it feel right for right
           now. Later will take care of itself. It always does. It all begins
           with an idea. Maybe you want to launch a business. Maybe you want to
           turn a hobby into something more. Or maybe you have a creative project
-          to share with the world. Whatever it is, the way you tell your story
+          to share with the world. Whatever it is the way you tell your story
           online can make all the difference.
         </p>
       </div>
@@ -90,14 +90,14 @@ const MyPage = () => {
       <div className="flex justify-between mt-20 mb-20">
       <Link href="/drinks-recipes/drinks-recipe-1">
         <button className="flex items-center pl-20 pr-2">
-          <img src="/left-arrow.png" alt="Previous" className="arrow-icon mr-2" />
+          <Image src="/left-arrow.png" alt="Previous" width={20} height={10} className="arrow-icon mr-2" />
           <span className="text-lg font-bold">Previous</span>
         </button>
       </Link>
       <Link href="/drinks-recipes/drinks-recipe-3">
         <button className="flex items-center pl-2 pr-20">
         <span className="text-lg font-bold">Next</span>
-          <img src="/right-arrow.png" alt="Next" className="arrow-icon ml-2" />
+          <Image src="/right-arrow.png" alt="Next" width={20} height={10} className="arrow-icon ml-2" />
         </button>
       </Link>
       <style jsx>{`

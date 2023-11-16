@@ -73,28 +73,28 @@ const About = () => {
                   Our Story
                 </h2>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam elementum porta sapien in ornare. In hac habitasse
-                  platea dictumst. Pellentesque habitant morbi tristique
-                  senectus et netus et malesuada fames ac turpis egestas. Donec
-                  ut sodales elit, non blandit diam. Praesent et nisi nunc.
-                  Etiam id nisi at enim convallis imperdiet. Praesent dolor
-                  ligula, ultricies et suscipit ut, ullamcorper in nisi.
-                  Vestibulum eleifend, sem ut venenatis consectetur, enim purus
-                  luctus orci, pharetra interdum purus magna a augue. Maecenas
-                  pretium rhoncus nulla, vel vehicula ex pharetra in.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                    Nullam elementum porta sapien in ornare. In hac habitasse
+                    platea dictumst. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.
+                    Donec ut sodales elit non blandit diam. Praesent et nisi
+                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
+                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
+                    Vestibulum eleifend sem ut venenatis consectetur purus
+                    luctus orci pharetra interdum purus magna a augue. Maecenas
+                    pretium rhoncus nulla vel vehicula ex pharetra in.
                 </p>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam elementum porta sapien in ornare. In hac habitasse
-                  platea dictumst. Pellentesque habitant morbi tristique
-                  senectus et netus et malesuada fames ac turpis egestas. Donec
-                  ut sodales elit, non blandit diam. Praesent et nisi nunc.
-                  Etiam id nisi at enim convallis imperdiet. Praesent dolor
-                  ligula, ultricies et suscipit ut, ullamcorper in nisi.
-                  Vestibulum eleifend, sem ut venenatis consectetur, enim purus
-                  luctus orci, pharetra interdum purus magna a augue. Maecenas
-                  pretium rhoncus nulla, vel vehicula ex pharetra in.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                    Nullam elementum porta sapien in ornare. In hac habitasse
+                    platea dictumst. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.
+                    Donec ut sodales elit non blandit diam. Praesent et nisi
+                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
+                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
+                    Vestibulum eleifend sem ut venenatis consectetur purus
+                    luctus orci pharetra interdum purus magna a augue. Maecenas
+                    pretium rhoncus nulla vel vehicula ex pharetra in.
                 </p>
               </div>
               {/* Skills Content */}
@@ -107,16 +107,16 @@ const About = () => {
                   Skills
                 </h2>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam elementum porta sapien in ornare. In hac habitasse
-                  platea dictumst. Pellentesque habitant morbi tristique
-                  senectus et netus et malesuada fames ac turpis egestas. Donec
-                  ut sodales elit, non blandit diam. Praesent et nisi nunc.
-                  Etiam id nisi at enim convallis imperdiet. Praesent dolor
-                  ligula, ultricies et suscipit ut, ullamcorper in nisi.
-                  Vestibulum eleifend, sem ut venenatis consectetur, enim purus
-                  luctus orci, pharetra interdum purus magna a augue. Maecenas
-                  pretium rhoncus nulla, vel vehicula ex pharetra in.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                    Nullam elementum porta sapien in ornare. In hac habitasse
+                    platea dictumst. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.
+                    Donec ut sodales elit non blandit diam. Praesent et nisi
+                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
+                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
+                    Vestibulum eleifend sem ut venenatis consectetur purus
+                    luctus orci pharetra interdum purus magna a augue. Maecenas
+                    pretium rhoncus nulla vel vehicula ex pharetra in.
                 </p>
                 <div className="skills-row">
                   <div className="skills-column">
@@ -169,16 +169,16 @@ const About = () => {
                   </h3>
                   <span className="font-semibold text-black">2021-2023</span>
                   <p className="mt-2 text-gray-900">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
                     Nullam elementum porta sapien in ornare. In hac habitasse
                     platea dictumst. Pellentesque habitant morbi tristique
                     senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit, non blandit diam. Praesent et nisi
+                    Donec ut sodales elit non blandit diam. Praesent et nisi
                     nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula, ultricies et suscipit ut, ullamcorper in nisi.
-                    Vestibulum eleifend, sem ut venenatis consectetur, purus
-                    luctus orci, pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla, vel vehicula ex pharetra in.
+                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
+                    Vestibulum eleifend sem ut venenatis consectetur purus
+                    luctus orci pharetra interdum purus magna a augue. Maecenas
+                    pretium rhoncus nulla vel vehicula ex pharetra in.
                   </p>
                 </div>
                 <div className="exp-column">
@@ -187,16 +187,16 @@ const About = () => {
                   </h3>
                   <span className="font-semibold text-black">2021-2023</span>
                   <p className="mt-2 text-black">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
                     Nullam elementum porta sapien in ornare. In hac habitasse
                     platea dictumst. Pellentesque habitant morbi tristique
                     senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit, non blandit diam. Praesent et nisi
+                    Donec ut sodales elit non blandit diam. Praesent et nisi
                     nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula, ultricies et suscipit ut, ullamcorper in nisi.
-                    Vestibulum eleifend, sem ut venenatis consectetur, purus
-                    luctus orci, pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla, vel vehicula ex pharetra in.
+                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
+                    Vestibulum eleifend sem ut venenatis consectetur purus
+                    luctus orci pharetra interdum purus magna a augue. Maecenas
+                    pretium rhoncus nulla vel vehicula ex pharetra in.
                   </p>
                 </div>
               </div>
