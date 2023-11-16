@@ -8,7 +8,7 @@ https://frontend-code-sage.vercel.app/
 https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=design&node-id=104-54&viewport=41%2C-148%2C0.22&t=Htkjpo0oa4xAoTgh-1&scaling=scale-down&starting-point-node-id=81%3A3&mode=design
 
 **Project Title**
-For the Sake of Food- Empowering Healthy Living through Nutrition**
+For the Sake of Food- Empowering Healthy Living through Nutrition
 
 **Objective**
 The primary goal of For the Sake of Food is to promote and facilitate healthier lifestyles among the Ugandan population by providing accessible, culturally relevant recipes for drinks, snacks, food, and desserts. The objective is to improve overall nutrition and well-being in Uganda.
