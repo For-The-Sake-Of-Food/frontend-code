@@ -28,12 +28,12 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`bg-gray-100 z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
-        visible ? "transform translate-y-0" : "-translate-y-16"
-      }`}
+  className={`bg-white z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
+    visible ? "transform translate-y-0" : "-translate-y-16"
+  }`}
     >
       <div className="flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center pl-4">
           <Link href="/">
             <Image
               src="/company-logo.jpg"
@@ -44,20 +44,23 @@ const NavBar = () => {
           </Link>
         </div>
         <ul className="flex list-none">
+        <Link href="/">
+            <li className="px-8 py-4">Home</li>
+          </Link>
           <Link href="/about">
-            <li className="mr-8">About</li>
+            <li className="px-8 py-4">About us</li>
           </Link>
           <Link
-            href="https://www.instagram.com"
+            href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <li className="mr-8">
+            <li className="px-12 py-4">
               <Image
-                src="/instagram-logo.png"
-                alt="Instagram"
-                width={30}
-                height={30}
+                src="/facebook-logo.png"
+                alt="Facebook"
+                width={18}
+                height={18}
               />
             </li>
           </Link>
@@ -66,8 +69,22 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <li>
-              <Image src="/x-logo.png" alt="X" width={30} height={30} />
+            <li className="py-4">
+              <Image src="/twitter-logo.png" alt="X" width={25} height={25} />
+            </li>
+          </Link>
+          <Link
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li className="px-10 py-4">
+              <Image
+                src="/instagram-logo.png"
+                alt="Instagram"
+                width={20}
+                height={20}
+              />
             </li>
           </Link>
         </ul>

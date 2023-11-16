@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import SignupForm from "@/components/SignupForm";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -44,8 +43,9 @@ const MyPage = () => {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center">
-        <p className="text-4xl font-bold">Loading...</p>
+      <div className="h-screen flex flex-col  items-center justify-center">
+        <p className="text-2xl font-semibold mb-4">Please Wait </p>
+        <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );
   }
@@ -64,17 +64,38 @@ const MyPage = () => {
         <div className="rounded-lg overflow-hidden">
           <Image
             src={recipe.image}
-            alt="Company Logo"
-            width={400} // Adjust the image width as needed
-            height={50} // Adjust the image height as needed
+            alt="Dessert"
+            width={300} // Adjust the image width as needed
+            height={5} // Adjust the image height as needed
           />
         </div>
       </div>
 
       <div className="w-1/2 mx-auto">
-        {/* Description of the image */}
-        {/* <p>{recipes.desc}</p> */}
+      <div className="flex items-center mt-4">
+          <div className="ml-20 px-6 py-4 flex items-center">
+            <Image src="/timer.png" alt="timer" width={18} height={18} />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-black">COOK TIME </p>
+            <p className="text-xs text-black ">30 minutes</p>
+          </div>
 
+          <div className="ml-4 flex items-center">
+            <div className="ml-30 mr-1 px-6 py-4">
+              <Image
+                src="/knife-and-fork.png"
+                alt="knife and fork"
+                width={18}
+                height={18}
+              />
+            </div>
+            <div>
+              <p className="text-xs font-bold text-black">RECOMMENDED FOR </p>
+              <p className="text-xs text-black">Diabetes</p>
+            </div>
+          </div>
+        </div>
         {/* Thin black horizontal line */}
         <hr className="w-full border-t border-black my-4" />
 
@@ -98,20 +119,26 @@ const MyPage = () => {
       </div>
 
       {/* Previous and Next buttons */}
-      <div className="flex justify-between mt-4">
-        <Link href="/drinks-recipes/drinks-recipe-6">
-          <button className="flex items-center">
-            <FaArrowLeft className="mr-2" />
-            Previous
-          </button>
-        </Link>
-        <Link href="/dessert-recipes/dessert-recipe-2">
-          <button className="flex items-center">
-            Next
-            <FaArrowRight className="ml-2" />
-          </button>
-        </Link>
-      </div>
+      <div className="flex justify-between mt-20 mb-20">
+      <Link href="/drinks-recipes/drinks-recipe-6">
+        <button className="flex items-center pl-20 pr-2">
+          <img src="/left-arrow.png" alt="Previous" className="arrow-icon mr-2" />
+          <span className="text-lg font-bold">Previous</span>
+        </button>
+      </Link>
+      <Link href="/dessert-recipe/dessert-recipe-2">
+        <button className="flex items-center pl-2 pr-20">
+        <span className="text-lg font-bold">Next</span>
+          <img src="/right-arrow.png" alt="Next" className="arrow-icon ml-2" />
+        </button>
+      </Link>
+      <style jsx>{`
+        .arrow-icon {
+          max-width: 20px; /* Set the maximum width of the arrow icon */
+          height: auto; /* Maintain aspect ratio */
+        }
+      `}</style>
+    </div>
 
       {/* SignupForm with full-width background */}
       <div className="bg-gray-200">

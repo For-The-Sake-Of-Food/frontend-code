@@ -29,22 +29,32 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center">
-        <p className="text-4xl font-bold">Loading...</p>
+      <div className="h-screen flex flex-col  items-center justify-center">
+        <p className="text-2xl font-semibold mb-4">Please Wait </p>
+        <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );
   }
 
   return (
-    <div>
-      <div className="grid grid-cols-3 mt-[60px]">
-        {cardData.map((recipe) => (
-          <Card key={recipe.id} {...recipe} />
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Snack Recipes</h1>
+      <h1 className="text-2xl font-bold mb-4">For any time of the day!</h1>
+      <div className="mb-8">
+        {" "}
+        {/* Added margin for spacing */}
+        <p className="text-lg">Cooking has never been so fun, right?!.</p>
+      </div>
+      <div className="flex flex-wrap">
+        {cardData.map((card, index) => (
+          <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
+            <Card key={index} {...card} />
+          </div>
         ))}
       </div>
-      <div className="bg-gray-200">
+      <div className="bg-[#E7F9FD] w-full">
         <div className="max-w-screen-xl mx-auto p-4">
-          <div className="flex justify-center">
+          <div className="w-full">
             <SignupForm />
           </div>
         </div>
