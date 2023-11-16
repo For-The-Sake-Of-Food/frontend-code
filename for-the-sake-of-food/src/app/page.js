@@ -22,11 +22,11 @@ const Welcome = () => {
               effortless and enjoyable.
             </p>
             <p>
-              Join us in savoring the rich flavors of fresh, wholesome
-              ingredients, and learn how to make nutrition a delightful part of
+              Join us in savoring the rich flavors of fresh wholesome
+              ingredients and learn how to make nutrition a delightful part of
               your daily routine. &lsquo;For the Sake of Food&rsquo; is more
-              than an app; it&apos;s a commitment to your well-being, a
-              community of food lovers, and your personal guide to a healthier
+              than an app&lsquo; it&apos;s a commitment to your well-being a
+              community of food lovers and your personal guide to a healthier
               and happier life.
             </p>
             <p></p>
@@ -69,11 +69,11 @@ const Welcome = () => {
             </span>
           </h1>
           <p>
-            At 65, it's become more important than ever to make healthy food
-            choices. This app has opened a world of delicious, nutritious meals
-            that keep me feeling vibrant and energized. It's not just an app;
-            it's a companion on my journey to a healthier, happier life. The
-            recipes are easy to follow, and I've never had so much fun
+            At 65 its become more important than ever to make healthy food
+            choices. This app has opened a world of delicious nutritious meals
+            that keep me feeling vibrant and energized. Its not just an app
+            its a companion on my journey to a healthier happier life. The
+            recipes are easy to follow and I have never had so much fun
             experimenting in the kitchen. Thank you for making healthy eating a
             joy!
           </p>
