@@ -60,7 +60,7 @@ const Home = () => {
         <p className="text-lg">Cooking has never been so fun, right?!.</p>
       </div>
       {cardGroups.map((group, groupIndex) => (
-        <div className="flex" key={groupIndex}>
+        <div className="flex mb-20" key={groupIndex}>
           {group.map((card, index) => (
             <Card key={index} {...card} />
           ))}

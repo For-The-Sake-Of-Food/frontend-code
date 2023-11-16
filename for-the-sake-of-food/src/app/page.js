@@ -83,7 +83,6 @@ const Welcome = () => {
   
       <div className="mt-16">
         <Food />
-        <NavBar/>
       </div>
       
     </div>

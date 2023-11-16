@@ -52,15 +52,14 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-3xl font-bold mb-4">Juice Recipes</h1>
-      <h1 className="text-2xl font-bold mb-4"></h1>
+      <h1 className="text-2xl font-bold mb-4">Blend, Sip, Repeat!</h1>
       <div className="mb-8">
         {" "}
         {/* Added margin for spacing */}
-        <p className="text-lg">Explore our nutritious selection of juices and find your next
-!.</p>
+        <p className="text-lg">Explore our nutritious selection of juices and find your next favourite blend.</p>
       </div>
       {cardGroups.map((group, groupIndex) => (
-        <div className="flex" key={groupIndex}>
+        <div className="flex mb-20" key={groupIndex}>
           {group.map((card, index) => (
             <Card key={index} {...card} />
           ))}

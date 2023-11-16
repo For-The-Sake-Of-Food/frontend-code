@@ -42,7 +42,7 @@ const SignupForm = () => {
             {/* <h1 className="text-5xl py-10 pt-60 text-black font-bold">
               Simple and tasty recipes
             </h1> */}
-            <h2 className="text-2xl font-semibold text-center mb-4">
+            <h2 className="text-2xl font-bold text-center mb-4">
               Deliciousness to your inbox
             </h2>
             <p className="text-black mb-8">

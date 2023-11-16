@@ -6,37 +6,37 @@ import SignupForm from "@/components/SignupForm";
 const cardData = [
   {
     image: "/food-category.png",
-    timestamp: "October 26, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 1.",
     link: "/food-recipes/food-recipe-1",
   },
   {
     image: "/food-category.png",
-    timestamp: "October 27, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 2.",
     link: "/food-recipes/food-recipe-2",
   },
   {
     image: "/food-category.png",
-    timestamp: "October 26, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 3.",
     link: "/food-recipes/food-recipe-3",
   },
   {
     image: "/food-category.png",
-    timestamp: "October 26, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 4.",
     link: "/food-recipes/food-recipe-4",
   },
   {
     image: "/food-category.png",
-    timestamp: "October 26, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 5.",
     link: "/food-recipes/food-recipe-5",
   },
   {
     image: "/food-category.png",
-    timestamp: "October 26, 2023",
+    timestamp: "Beans Katogo",
     description: "Description for card 6.",
     link: "/food-recipes/food-recipe-6",
   },
@@ -61,7 +61,7 @@ const Home = () => {
           favorite meal!.</p>
       </div>
       {cardGroups.map((group, groupIndex) => (
-        <div className="flex" key={groupIndex}>
+        <div className="flex mb-20" key={groupIndex}>
           {group.map((card, index) => (
             <Card key={index} {...card} />
           ))}

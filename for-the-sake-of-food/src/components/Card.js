@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Card = ({ image, timestamp, description,link }) => {
   return (
-    <div className="max-w-lg rounded overflow-hidden shadow-lg m-4">
+    <div className="max-w-lg rounded overflow-hidden bg-[#E7F9FD] shadow-lg m-4">
       <Image width={300} height={200} src={image} alt="Card Image" className="" />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{timestamp}</div>
