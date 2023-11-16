@@ -1,5 +1,9 @@
 # For the Sake of Food - Frontend Code
 
+## Documentation
+Steps to Guide you on how to use the Web-application.
+[Project Documentation (PDF)](https://drive.google.com/file/d/1iMNxtP2ODkmRzB6tHitaxIILUP6ecAh7/view?usp=drive_link)
+
 ## Project Title
 For the Sake of Food - Empowering Healthy Living through Nutrition
 
