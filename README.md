@@ -27,7 +27,7 @@ https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=d
 
 ## Installation
     ```bash
-   npm install
+    npm install
 1. Clone the repository.
    ```bash
    git clone https://github.com/your-username/your-project.git
@@ -38,9 +38,9 @@ https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=d
    - Explain how to use your project. Include code examples, screenshots, or any relevant information that helps users understand how to interact with your application.
      ```markdown
      ## Usage
-    To run the project, use the following command:
+     To run the project, use the following command:
     ```bash
-     npm start
+    npm start
 
 # CONTRIBUTIONS
    ## Contributing
