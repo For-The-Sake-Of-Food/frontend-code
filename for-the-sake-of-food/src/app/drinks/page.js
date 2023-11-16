@@ -1,63 +1,47 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import SignupForm from "@/components/SignupForm";
-const cardData = [
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 26, 2023',
-    description: 'Description for card 1.',
-    link: "/drinks-recipes/drinks-recipe-1",
-  },
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 27, 2023',
-    description: 'Description for card 2.',
-    link: "/drinks-recipes/drinks-recipe-2",
-  },
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 26, 2023',
-    description: 'Description for card 3.',
-    link: "/drinks-recipes/drinks-recipe-3",
-  },
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 26, 2023',
-    description: 'Description for card 4.',
-    link: "/drinks-recipes/drinks-recipe-4",
-  },
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 26, 2023',
-    description: 'Description for card 5.',
-    link: "/drinks-recipes/drinks-recipe-5",
-  },
-  {
-    image: '/drinks.jpg',
-    timestamp: 'October 26, 2023',
-    description: 'Description for card 6.',
-    link: "/drinks-recipes/drinks-recipe-6",
-  },
-];
+import axios from "axios";
+
 
 const Home = () => {
-  const columns = 3; // Number of columns
-  const cardGroups = [];
-  for (let i = 0; i < cardData.length; i += columns) {
-    const cardGroup = cardData.slice(i, i + columns);
-    cardGroups.push(cardGroup);
+  const [cardData, setCardData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+
+        const response = await axios.get("http://localhost:5000/api/drinks");
+        console.log(response.data);
+        setCardData(response.data);
+
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <p className="text-4xl font-bold">Loading...</p>
+      </div>
+    );
   }
 
   return (
     <div>
-      {cardGroups.map((group, groupIndex) => (
-        <div className="flex" key={groupIndex}>
-          {group.map((card, index) => (
-            <Card key={index} {...card} />
-          ))}
-        </div>
-      ))}
+      <div className="grid grid-cols-3 mt-[60px]">
+        {cardData.map((recipe) => (
+          <Card key={recipe.id} {...recipe} />
+        ))}
+      </div>
       <div className="bg-gray-200">
         <div className="max-w-screen-xl mx-auto p-4">
           <div className="flex justify-center">
