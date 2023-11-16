@@ -18,7 +18,7 @@ For The Sake of Food focuses on delivering nutritionally balanced recipes tailor
 ## Links
 - [Trello Board](https://trello.com/b/rqK1NVM6/for-the-sake-of-food)
 - [Landing Page](https://frontend-code-sage.vercel.app/)
-- [Figma Design](https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=design&node-id=104-54&viewport=41%2C-148%2C0.22&t=Htkjpo0oa4xAoTgh-1&scaling=scale-down&starting-point-node-id=81%3A3&mode=design)
+- [Figma Design]([https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=design&node-id=104-54&viewport=41%2C-148%2C0.22&t=Htkjpo0oa4xAoTgh-1&scaling=scale-down&starting-point-node-id=81%3A3&mode=design](https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/FTSOF?page-id=0%3A1&type=design&node-id=141-93&viewport=2786%2C-821%2C0.45&t=g4MvGc01hXU53Wu6-1&scaling=scale-down&starting-point-node-id=141%3A93&mode=design))
 
 ## Installation
 1. Clone the repository.
