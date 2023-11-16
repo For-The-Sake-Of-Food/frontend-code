@@ -7,13 +7,13 @@ https://frontend-code-sage.vercel.app/
 **Link to Figma :**
 https://www.figma.com/proto/97Sp6cttxwFaEOGk1Gkxxk/Untitled?page-id=0%3A1&type=design&node-id=104-54&viewport=41%2C-148%2C0.22&t=Htkjpo0oa4xAoTgh-1&scaling=scale-down&starting-point-node-id=81%3A3&mode=design
 
-**Project Title**
+**Project Title: **
 For the Sake of Food- Empowering Healthy Living through Nutrition
 
-**Objective**
+**Objective: **
 The primary goal of For the Sake of Food is to promote and facilitate healthier lifestyles among the Ugandan population by providing accessible, culturally relevant recipes for drinks, snacks, food, and desserts. The objective is to improve overall nutrition and well-being in Uganda.
 
-**Scope**
+**Scope: **
 For The Sake of Food focuses on delivering nutritionally balanced recipes tailored to the Ugandan context. The project includes a diverse range of recipes for drinks, snacks, meals, and desserts, considering local ingredients, cultural preferences, and dietary needs. The scope extends to the development of a user-friendly web app that provides a seamless experience for users.
 
 **Key Features**
@@ -29,7 +29,7 @@ For The Sake of Food focuses on delivering nutritionally balanced recipes tailor
 4. Testing: Months 2
 5. Launch and Marketing: Month 2
 
-**Team Collaboration**
+**Team Collaboration:**
 The project involves collaboration amongst the team, nutritionists, chefs, app developers, and cultural experts. Roles include Project manager, Sales Manager, Software development and Backend development.
 
 **Challenges**
@@ -37,10 +37,10 @@ The project involves collaboration amongst the team, nutritionists, chefs, app d
 2. Nutritional Accuracy: Ensuring precise nutritional information for each recipe.
 3. Technology Adoption: Overcoming potential resistance to technology in certain demographics.
 
-**Progress and Achievements**
+**Progress and Achievements: **
 Currently in the planning phase, we have assembled a multidisciplinary team and initiated the research process. 
 
-**Expected Outcome**
+**Expected Outcome: **
 For The Sake of Food aims to contribute to a healthier population by making nutritious eating more accessible. We anticipate improved dietary habits, increased awareness of nutrition, and a sense of community engagement among users.
 
 **Next Steps**
