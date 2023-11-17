@@ -122,14 +122,14 @@ const MyPage = () => {
       <div className="flex justify-between mt-20 mb-20">
       <Link href="/drinks-recipes/drinks-recipe-6">
         <button className="flex items-center pl-20 pr-2">
-          <img src="/left-arrow.png" alt="Previous" className="arrow-icon mr-2" />
+          <Image src="/left-arrow.png" alt="Previous" width={20} height={10} className="arrow-icon mr-2" />
           <span className="text-lg font-bold">Previous</span>
         </button>
       </Link>
       <Link href="/dessert-recipe/dessert-recipe-2">
         <button className="flex items-center pl-2 pr-20">
         <span className="text-lg font-bold">Next</span>
-          <img src="/right-arrow.png" alt="Next" className="arrow-icon ml-2" />
+          <Image src="/right-arrow.png" alt="Next"width={20} height={10} className="arrow-icon ml-2" />
         </button>
       </Link>
       <style jsx>{`
