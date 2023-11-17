@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Juicecard = () => {
   return (
-    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-110">
       <Image src="/drinks.jpg" alt="Juice" width= {300} height={200}className="w-full h-32 object-cover" />
       <div className="p-4 bg-[#E7F9FD] rounded-lg">
         <h2 className="text-2xl font-semibold text-center text-black">Juice</h2>
