@@ -4,7 +4,7 @@ import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Food from "@/app/food/page";
 import NavBar from "@/components/Navbar";
-
+import Image from "next/image";
 const Welcome = () => {
   return (
     <div>
@@ -53,9 +53,11 @@ const Welcome = () => {
       </div>
       <div className="flex items-center">
         <div className="w-1/2 p-6">
-          <img
+          <Image
             src="/user.jpg"
             alt="user image"
+            width={700}
+            height={500}
             className=" h-500 rounded-md" // Using rounded-md for slightly rounded corners
           />
         </div>
