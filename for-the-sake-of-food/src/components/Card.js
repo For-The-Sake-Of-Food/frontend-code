@@ -12,7 +12,7 @@ const Card = ({ image, timestamp, description, link, id, category, title }) => {
       </div>
       <div className="px-6 py-4">
         <Link href={`/${category}/${id}`}>
-          <button className="bg-white hover:bg-[#d6e8cc] text-black font-bold py-2 px-4 rounded-full">
+          <button className="bg-black hover:bg-[#858684] text-white font-bold py-2 px-4 rounded-full">
             Read More
           </button>
         </Link>

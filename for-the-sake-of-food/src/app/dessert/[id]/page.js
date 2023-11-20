@@ -104,8 +104,8 @@ const MyPage = () => {
 
         {/* List of Ingredients */}
         <ul className="list-disc pl-10">
-          {recipe.ingredients.map((item) => (
-            <li>{item}</li>
+          {recipe.ingredients.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
 
