@@ -11,7 +11,7 @@ const MyPage = () => {
   const [recipe, setRecipe] = useState({
     id: "",
     title: "",
-    description: "",
+    description: [""],
     timestamp: "",
     image: "",
     category: "",
@@ -113,9 +113,11 @@ const MyPage = () => {
         <hr className="w-full border-t border-black my-4" />
 
         {/* Description below the line */}
-        <p>
-          {recipe.description}
-        </p>
+        <ul className="list-decimal pl-10">
+          {recipe.description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Previous and Next buttons */}
