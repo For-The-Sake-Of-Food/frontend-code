@@ -32,7 +32,7 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [setDrinksData]);
 
   if (loading) {
     return (

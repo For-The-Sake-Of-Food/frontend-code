@@ -28,12 +28,12 @@ const NavBar = () => {
 
   return (
     <nav
-  className={`bg-white z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
-    visible ? "transform translate-y-0" : "-translate-y-16"
-  }`}
+      className={`bg-white z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
+        visible ? "transform translate-y-0" : "-translate-y-16"
+      }`}
     >
-      <div className="flex justify-between items-center">
-        <div className="flex items-center pl-4">
+      <div className="flex justify-between items-center container mx-auto">
+        <div className="flex items-center pl-0.1">
           <Link href="/">
             <Image
               src="/company-logo.jpg"
@@ -43,19 +43,19 @@ const NavBar = () => {
             />
           </Link>
         </div>
-        <ul className="flex list-none">
-        <Link href="/">
-            <li className="px-8 py-4">Home</li>
+        <ul className="flex list-none space-x-2 md:space-x-8">
+          <Link href="/">
+            <li className="px-4 md:px-8 py-4">Home</li>
           </Link>
           <Link href="/about">
-            <li className="px-8 py-4">About us</li>
+            <li className="px-4 md:px-8 py-4">About us</li>
           </Link>
           <Link
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <li className="px-12 py-4">
+            <li className="py-4">
               <Image
                 src="/facebook-logo.png"
                 alt="Facebook"
@@ -78,7 +78,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <li className="px-10 py-4">
+            <li className="py-4 ">
               <Image
                 src="/instagram-logo.png"
                 alt="Instagram"
@@ -94,4 +94,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

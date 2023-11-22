@@ -19,7 +19,7 @@ const Foodcard = () => {
             Food
           </h2>
 
-          <button className="block mt-2 bg-white hover:bg-[#d6e8cc] text-black font-semibold text-center px-4 py-2 rounded-full cursor-pointer">
+          <button className="block mt-2 bg-black hover:bg-[#858684] text-white font-semibold text-center px-4 py-2 rounded-full cursor-pointer">
             View all recipes
           </button>
         </div>

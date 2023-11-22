@@ -69,32 +69,27 @@ const About = () => {
                   toggleTab === 1 ? "active-content" : "hidden"
                 } content`}
               >
-                <h2 className="text-4xl font-extrabold leading-1.4 mb-4 text-black">
+                <h2 className="text-4xl font-extrabold leading-1.4 mb-2 ml-3 pt-4 text-black">
                   Our Story
                 </h2>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    Nullam elementum porta sapien in ornare. In hac habitasse
-                    platea dictumst. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit non blandit diam. Praesent et nisi
-                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
-                    Vestibulum eleifend sem ut venenatis consectetur purus
-                    luctus orci pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla vel vehicula ex pharetra in.
+                  As third-year computer science students, we&#39;ve immersed
+                  ourselves in a diverse range of skills essential for the
+                  ever-evolving tech landscape. Proficient in languages such as
+                  Python and Javascript, we bring a strong foundation in
+                  programming to the table. Our exploration extends to web
+                  development, where we&#39;ve embraced HTML, Next, Tailwind,
+                  CSS, and JavaScript for crafting dynamic user interfaces. Data
+                  structures and algorithms are not just theoretical concepts;
+                  they&#39;re tools we leverage for creative problem-solving.
                 </p>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    Nullam elementum porta sapien in ornare. In hac habitasse
-                    platea dictumst. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit non blandit diam. Praesent et nisi
-                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
-                    Vestibulum eleifend sem ut venenatis consectetur purus
-                    luctus orci pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla vel vehicula ex pharetra in.
+                  With a keen interest in databases, we&#39;ve mastered both SQL
+                  and NoSQL systems, ensuring efficient data management.
+                  Collaboration is at the heart of our approach, supported by a
+                  solid understanding of software development life cycles and
+                  version control systems like Git. We are not just coders but
+                  collaborators in the vibrant world of computer science.
                 </p>
               </div>
               {/* Skills Content */}
@@ -103,29 +98,35 @@ const About = () => {
                   toggleTab === 2 ? "active-content" : "hidden"
                 } content`}
               >
-                <h2 className="text-4xl font-extrabold leading-1.4 mb-4 text-black">
+                <h2 className="text-4xl font-extrabold leading-1.4 mb-2 ml-3 pt-4 text-black">
                   Skills
                 </h2>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    Nullam elementum porta sapien in ornare. In hac habitasse
-                    platea dictumst. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit non blandit diam. Praesent et nisi
-                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
-                    Vestibulum eleifend sem ut venenatis consectetur purus
-                    luctus orci pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla vel vehicula ex pharetra in.
+                  In our third year as computer science students, we&#39;ve
+                  adeptly navigated a spectrum of skills crucial for today&#39;s
+                  tech realm. Our programming prowess now spans Python, Java,
+                  and C++, while web development proficiency includes mastery of
+                  HTML, Next, Tailwind, CSS, and JavaScript. Data structures and
+                  algorithmic problem-solving are second nature, as is the
+                  efficient management of both SQL and NoSQL databases. Version
+                  control with Git, software development life cycle
+                  understanding, and collaborative coding are integral aspects
+                  of my skill set. Networking concepts, cybersecurity awareness,
+                  and experience in cloud platforms contribute to our
+                  comprehensive tech toolkit, demonstrating a dynamic and
+                  adaptable skill growth in two years.
                 </p>
-                <div className="skills-row">
+                <div className="skills-row pl-5">
                   <div className="skills-column">
                     <div className="progress-wrap">
                       <h3 className="text-xs font-semibold uppercase">
                         Developers
                       </h3>
                       <div className="progress">
-                        <div className="progress-bar bg-blue-500" style={{ width: "80%" }}>
+                        <div
+                          className="progress-bar bg-blue-500"
+                          style={{ width: "80%" }}
+                        >
                           <span className="text-a2a9b1">70%</span>
                         </div>
                       </div>
@@ -137,7 +138,10 @@ const About = () => {
                         Designer
                       </h3>
                       <div className="progress">
-                        <div className="progress-bar bg-blue-500" style={{ width: "90%" }}>
+                        <div
+                          className="progress-bar bg-blue-500"
+                          style={{ width: "90%" }}
+                        >
                           <span className="text-a2a9b1">80%</span>
                         </div>
                       </div>
@@ -149,7 +153,10 @@ const About = () => {
                         Javascript
                       </h3>
                       <div className="progress">
-                        <div className="progress-bar  bg-blue-500" style={{ width: "85%" }}>
+                        <div
+                          className="progress-bar  bg-blue-500"
+                          style={{ width: "85%" }}
+                        >
                           <span className="text-a2a9b1">70%</span>
                         </div>
                       </div>
@@ -164,40 +171,40 @@ const About = () => {
                 } content`}
               >
                 <div className="exp-column">
-                  <h3 className="text-xl font-semibold leading-1.5 mb-2">
-                    Web App Developers
+                  <h3 className="text-xl font-semibold leading-1.5 mb-2 pt-2">
+                    2022
                   </h3>
-                  <span className="font-semibold text-black">2021-2023</span>
-                  <p className="mt-2 text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    Nullam elementum porta sapien in ornare. In hac habitasse
-                    platea dictumst. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit non blandit diam. Praesent et nisi
-                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
-                    Vestibulum eleifend sem ut venenatis consectetur purus
-                    luctus orci pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla vel vehicula ex pharetra in.
-                  </p>
+                  
+                  <ul className="mt-2 text-gray-900">
+                    <li className="font-bold pb-1">1. Programming Languages:</li>
+                    <li> Strengthen proficiency in languages like Python, Java, C++, or others commonly used in the industry.</li>
+                    <li className="pb-2"> Explore web development languages like HTML, CSS, and JavaScript.</li>
+                    <li className="font-bold pb-1">2. Database Management:</li>
+                    <li> Gain experience with both SQL and NoSQL databases.</li>
+                    <li className="pb-2"> Learn about database design, normalization, and optimization.</li>
+                    <li className="font-bold pb-1">3. Software Development:</li>
+                    <li className="pb-1"> Practice version control systems like Git.</li>
+
+                  </ul>
                 </div>
                 <div className="exp-column">
                   <h3 className="text-xl font-semibold leading-1.5 mb-2">
-                    Graphics Designers
+                    2023
                   </h3>
-                  <span className="font-semibold text-black">2021-2023</span>
-                  <p className="mt-2 text-black">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    Nullam elementum porta sapien in ornare. In hac habitasse
-                    platea dictumst. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas.
-                    Donec ut sodales elit non blandit diam. Praesent et nisi
-                    nunc. Etiam id nisi at enim convallis imperdiet. Praesent
-                    dolor ligula ultricies et suscipit ut ullamcorper in nisi.
-                    Vestibulum eleifend sem ut venenatis consectetur purus
-                    luctus orci pharetra interdum purus magna a augue. Maecenas
-                    pretium rhoncus nulla vel vehicula ex pharetra in.
-                  </p>
+                  
+                  <ul className="mt-2 text-gray-900">
+                    <li className="font-bold pb-1">4. Web Development:</li>
+                    <li className="pb-1"> Understand front-end technologies like React, Tailwind.css or Next.js.</li>
+                
+                    <li className="font-bold pb-1">5. Cybersecurity Awareness:</li>
+                    <li className="pb-1"> Learn about common cybersecurity threats and measures to prevent them.</li>
+                    <li className="pb-2"> Understand the importance of secure coding practices.</li>
+                    <li className="font-bold pb-1">6. Problem-Solving Skills:</li>
+                    <li className="pb-1"> Engage in programming contests to enhance problem-solving speed.</li>
+                    <li className="font-bold pb-1">7. Soft Skills:</li>
+                    <li> Improve communication skills for effective collaboration with team members.</li>
+                    <li> Develop time management and project management skills.</li>
+                  </ul>
                 </div>
               </div>
             </div>

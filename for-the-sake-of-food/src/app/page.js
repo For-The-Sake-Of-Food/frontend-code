@@ -36,16 +36,17 @@ const Welcome = () => {
             src="/hero-image.jpg"
             alt="hero image"
             className="w-full h-48 rounded-lg object-cover"
+           
           />
         </div>
         <div className="hidden md:block bg-[url('/hero-image.jpg')] bg-cover w-full h-full rounded-lg" />
       </div>
 
       <div className="flex flex-col  items-center justify-center">
-        <h1 className="text-5xl py-10 pt-20 md:pt-60 text-black font-bold">
+        <h1 className="text-5xl py-10 pt-20 md:pt-35 text-black font-bold">
           Meal Categories
         </h1>
-        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
+        <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
           <div className="w-3/4 h-80">
             <Foodcard />
           </div>
@@ -58,7 +59,7 @@ const Welcome = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center ">
-        <div className="w-1/2 p-6">
+        <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
             alt="user image"
@@ -67,7 +68,7 @@ const Welcome = () => {
             className="rounded-md" // Using rounded-md for slightly rounded corners
           />
         </div>
-        <div className="w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4 md:order-2">
           <h1 className="text-2xl pl-10 pr-5 font-bold relative">
             <span className="text-black">Why </span>
             <span className="text-[#3A8700] font-bold">Our Recipes</span>
@@ -91,7 +92,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-5">
         <Food />
       </div>
     </div>

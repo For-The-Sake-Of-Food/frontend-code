@@ -32,7 +32,7 @@ setDessertData(idsArray);
     };
 
     fetchData();
-  }, []);
+  }, [setDessertData]);
 
   if (loading) {
     return (

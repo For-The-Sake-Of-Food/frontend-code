@@ -14,7 +14,7 @@ const MyPage = () => {
   const [recipe, setRecipe] = useState({
     id: "",
     title: "",
-    description: "",
+    description: [""],
     timestamp: "",
     image: "",
     category: "",
@@ -24,7 +24,7 @@ const MyPage = () => {
   const [currentIndex, setCurrentIndex] = useState(dessertData.indexOf(parseInt(params.id)));
   console.log(params);
   console.log("dessert data here",dessertData);
-  console.log("current index", currentIndex);
+  console.log("current index this one", currentIndex);
 // Function to handle moving to the next index
 
 const handleNext = () => {
@@ -82,12 +82,8 @@ const handlePrevious = () => {
       {/* Large font size title */}
       <h1 className="text-3xl text-black text-center">{recipe.title}</h1>
 
-      {/* Small font size description */}
-      <p className="text-sm text-black text-center">
-        Written by me on {recipe.timestamp}
-      </p>
 
-      <div className="flex items-center justify-center mt-4 ">
+      <div className="flex items-center justify-center pt-10 ">
         <div className="rounded-lg overflow-hidden">
           <Image
             src={recipe.image}
@@ -98,18 +94,18 @@ const handlePrevious = () => {
         </div>
       </div>
 
-      <div className="w-1/2 mx-auto">
-        <div className="flex items-center mt-4">
-          <div className="ml-20 px-6 py-4 flex items-center">
+      <div className="w-full md:w-1/2 mx-auto mt-4 flex flex-col">
+        <div className="flex items-center justify-center">
+          <div className="ml-3 mr-1 px-6 py-4">
             <Image src="/timer.png" alt="timer" width={18} height={18} />
           </div>
-          <div>
+          <div className="text-center">
             <p className="text-xs font-bold text-black">COOK TIME </p>
             <p className="text-xs text-black ">30 minutes</p>
           </div>
 
-          <div className="ml-4 flex items-center">
-            <div className="ml-30 mr-1 px-6 py-4">
+          <div className="ml-4 flex items-center justify-center">
+            <div className="ml-3 mr-1 px-6 py-4">
               <Image
                 src="/knife-and-fork.png"
                 alt="knife and fork"
@@ -117,7 +113,7 @@ const handlePrevious = () => {
                 height={18}
               />
             </div>
-            <div>
+            <div className="text-center">
               <p className="text-xs font-bold text-black">RECOMMENDED FOR </p>
               <p className="text-xs text-black">Diabetes</p>
             </div>
@@ -127,7 +123,7 @@ const handlePrevious = () => {
         <hr className="w-full border-t border-black my-4" />
 
         {/* Title for Ingredients */}
-        <h2 className="text-2xl">Ingredients</h2>
+        <h2 className="text-2xl font-bold">Ingredients</h2>
 
         {/* List of Ingredients */}
         <ul className="list-disc pl-10">
@@ -140,12 +136,17 @@ const handlePrevious = () => {
         <hr className="w-full border-t border-black my-4" />
 
         {/* Description below the line */}
-        <p>{recipe.description}</p>
+        <h2 className="text-2xl font-bold">Directions</h2>
+        <ul className="list-decimal pl-10">
+          {recipe.description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Previous and Next buttons */}
       <div className="flex justify-between mt-20 mb-20">
-      <button onClick={handlePrevious} className="flex items-center pl-20 pr-2">
+      <button onClick={handlePrevious} className="flex items-center pl-10 pr-2">
           <Image
             src="/left-arrow.png"
             alt="Previous"
@@ -155,7 +156,7 @@ const handlePrevious = () => {
           />
           <span className="text-lg font-bold">Previous</span>
         </button>
-        <button onClick={handleNext} className="flex items-center pl-2 pr-20">
+        <button onClick={handleNext} className="flex items-center pl-2 pr-10">
           <span className="text-lg font-bold">Next</span>
           <Image
             src="/right-arrow.png"
