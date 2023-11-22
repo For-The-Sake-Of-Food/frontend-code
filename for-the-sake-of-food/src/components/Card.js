@@ -15,7 +15,7 @@ const Card = ({ image, timestamp, description, link, id, category, title }) => {
         />
       </div>
       <div className="px-6 py-4">
-        {/* <div className="font-bold text-xl mb-2">{timestamp}</div> */}
+        
         <p className="text-gray-700 font-bold text-xl">{title}</p>
       </div>
       <div className="px-6 py-4">

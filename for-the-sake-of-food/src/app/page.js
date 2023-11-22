@@ -4,6 +4,7 @@ import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Food from "@/app/food/page";
 import Image from "next/image";
+
 const Welcome = () => {
   return (
     <div>
@@ -67,23 +68,26 @@ const Welcome = () => {
           />
         </div>
         <div className="w-1/2 p-4">
-          <h1 className="text-2xl font-bold relative">
+          <h1 className="text-2xl pl-10 pr-5 font-bold relative">
             <span className="text-black">Why </span>
             <span className="text-[#3A8700] font-bold">Our Recipes</span>
             <span className="text-black"> Are The Best</span>
-            <span className="absolute top-[-0.75rem] left-[-0.7rem] text-gray-300 text-8xl -ml-8">
-              “
-            </span>
+            <span className="absolute top-[-2.5rem] left-[-3rem] text-gray-300 text-9xl ml-4">
+    “
+</span>
+
           </h1>
-          <p>
+          <p class="pl-10 pr-5">
             At 65 its become more important than ever to make healthy food
             choices. This app has opened a world of delicious nutritious meals
             that keep me feeling vibrant and energized. Its not just an app its
             a companion on my journey to a healthier happier life. The recipes
             are easy to follow and I have never had so much fun experimenting in
-            the kitchen. Thank you for making healthy eating a joy!
+            the kitchen. Thank you for making healthy eating a joy! 
           </p>
-          <p>~Carol Lynn</p>
+          <p class="pl-10 pr-5">
+            ~Carol Lynn
+            </p>
         </div>
       </div>
 
