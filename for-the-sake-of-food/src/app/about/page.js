@@ -12,9 +12,9 @@ const About = () => {
   return (
     <Fragment>
       <section className="about py-20 bg-white">
-        <div className="flex justify-around flex-row">
-          <div>
-            <div className="h-auto py-20 rounded-full">
+        <div className="flex flex-col justify-center items-center md:flex-row">
+          <div className="w-full md:w-3/5 mb-8 md:mb-0">
+            <div className="h-auto rounded-full overflow-hidden">
               <Image
                 src="/about-us.jpg"
                 alt="about us"
