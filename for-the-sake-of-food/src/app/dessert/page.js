@@ -3,21 +3,28 @@ import React, { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import SignupForm from "@/components/SignupForm";
 import axios from "axios";
-
+import { useRecipes } from "@/components/MyContext";
 
 const Home = () => {
+  const { setDessertData } = useRecipes();
   const [cardData, setCardData] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const extractIds = (data) => {
+    return data.map((item) => item.id);
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
 
-        const response = await axios.get("http://localhost:5000/api/dessert");
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/dessert`
+        );
         console.log(response.data);
         setCardData(response.data);
-
+        const idsArray = extractIds(response.data);
+        console.log(idsArray); // Log the array of ids
+setDessertData(idsArray);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -37,10 +44,10 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold mb-4">Snack Recipes</h1>
-      <h1 className="text-2xl font-bold mb-4">For any time of the day!</h1>
-      <div className="mb-8">
+    <div className="flex flex-col items-center justify-center py-14 min-h-screen">
+      <h1 className="text-3xl font-bold py-2">Snack Recipes</h1>
+      <h1 className="text-2xl font-bold py-2">For any time of the day!</h1>
+      <div className="py-4">
         {" "}
         {/* Added margin for spacing */}
         <p className="text-lg">Cooking has never been so fun right?!.</p>

@@ -4,12 +4,14 @@ import React, { useState } from "react";
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false); 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     const res = await fetch("/api/send-email", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
@@ -18,20 +20,26 @@ const SignupForm = () => {
     const data = await res.json();
     console.log(data);
     setSubmitted(true);
+    setLoading(false);
   }
 
   return (
     <div className="bg-[#E7F9FD]">
       {/* The gray background container */}
       <div className="p-4 max-w-md mx-auto">
-        {submitted ? (
+      {loading ? ( // Display loader if loading is true
+          <div className="text-center">
+            <p className="text-2xl font-semibold mb-4">Please Wait </p>
+            {/* <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10 ml-20"></div> */}
+          </div>
+        ) : submitted ? (
           <div className="text-center">
             <h2 className="text-2xl font-semibold text-black mb-4">
               Thank you for subscribing!
             </h2>
             <p className="text-gray-700">
               You will receive news and updates at{" "}
-              <span className="text-sm-blue-500">{email}</span>.
+              <span className="text-sm text-blue-500">{email}</span>.
             </p>
             <p className="text-gray-700">
               In case you do not see the notification, check your spam folder.

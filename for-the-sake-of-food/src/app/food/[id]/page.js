@@ -2,11 +2,13 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SignupForm from "@/components/SignupForm";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import axios from "axios";
-
+import { useRecipes } from "@/components/MyContext";
+import { useRouter } from 'next/navigation';
 const MyPage = () => {
+  const router = useRouter();
+  const { foodData } = useRecipes();
   const params = useParams();
   const [recipe, setRecipe] = useState({
     id: "",
@@ -18,8 +20,31 @@ const MyPage = () => {
     ingredients: [""],
   });
   const [loading, setLoading] = useState(false);
-
+  const [currentIndex, setCurrentIndex] = useState(foodData.indexOf(parseInt(params.id)));
   console.log(params);
+  console.log("food data here",foodData);
+  console.log("current index", currentIndex);
+  // Function to handle moving to the next index
+
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % foodData.length;
+    const nextId = foodData[nextIndex];
+    navigateToRecipe(nextId,nextIndex);
+  };
+
+  // Function to handle moving to the previous index
+  const handlePrevious = () => {
+    const prevIndex =
+      currentIndex === 0 ? foodData.length - 1 : currentIndex - 1;
+    const prevId = foodData[prevIndex];
+    navigateToRecipe(prevId,prevIndex);
+  };
+   // Function to navigate to a specific recipe based on its index in the foodData array
+   const navigateToRecipe = (id,index) => {
+    // Use the router to navigate to the recipe page with the provided id
+    setCurrentIndex(index);
+    router.push(`/food/${id}`);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,9 +52,11 @@ const MyPage = () => {
         setLoading(true);
 
         const response = await axios.get(
-          `http://localhost:5000/api/get-recipe/${parseInt(params.id)}`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/get-recipe/${parseInt(
+            params.id
+          )}`
         );
-        console.log(response.data);
+        console.log("Recipe Data:", response.data);
         setRecipe(response.data);
 
         setLoading(false);
@@ -49,7 +76,7 @@ const MyPage = () => {
       </div>
     );
   }
-
+  
   return (
     <div className="pt-20 relative">
       {/* Large font size title */}
@@ -72,7 +99,7 @@ const MyPage = () => {
       </div>
 
       <div className="w-1/2 mx-auto">
-      <div className="flex items-center mt-4">
+        <div className="flex items-center mt-4">
           <div className="ml-20 px-6 py-4 flex items-center">
             <Image src="/timer.png" alt="timer" width={18} height={18} />
           </div>
@@ -113,32 +140,38 @@ const MyPage = () => {
         <hr className="w-full border-t border-black my-4" />
 
         {/* Description below the line */}
-        <p>
-          {recipe.description}
-        </p>
+        <li>{recipe.description}</li>
       </div>
-
       {/* Previous and Next buttons */}
       <div className="flex justify-between mt-20 mb-20">
-      <Link href="/drinks-recipes/drinks-recipe-6">
-        <button className="flex items-center pl-20 pr-2">
-          <Image src="/left-arrow.png" alt="Previous" width={20} height={10} className="arrow-icon mr-2" />
+      <button onClick={handlePrevious} className="flex items-center pl-20 pr-2">
+          <Image
+            src="/left-arrow.png"
+            alt="Previous"
+            width={20}
+            height={10}
+            className="arrow-icon mr-2"
+          />
           <span className="text-lg font-bold">Previous</span>
         </button>
-      </Link>
-      <Link href="/dessert-recipe/dessert-recipe-2">
-        <button className="flex items-center pl-2 pr-20">
-        <span className="text-lg font-bold">Next</span>
-          <Image src="/right-arrow.png" alt="Next"width={20} height={10} className="arrow-icon ml-2" />
+        <button onClick={handleNext} className="flex items-center pl-2 pr-20">
+          <span className="text-lg font-bold">Next</span>
+          <Image
+            src="/right-arrow.png"
+            alt="Next"
+            width={20}
+            height={10}
+            className="arrow-icon ml-2"
+          />
         </button>
-      </Link>
-      <style jsx>{`
-        .arrow-icon {
-          max-width: 20px; /* Set the maximum width of the arrow icon */
-          height: auto; /* Maintain aspect ratio */
-        }
-      `}</style>
-    </div>
+        
+        <style jsx>{`
+          .arrow-icon {
+            max-width: 20px; /* Set the maximum width of the arrow icon */
+            height: auto; /* Maintain aspect ratio */
+          }
+        `}</style>
+      </div>
 
       {/* SignupForm with full-width background */}
       <div className="bg-gray-200">

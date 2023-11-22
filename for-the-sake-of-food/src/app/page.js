@@ -3,17 +3,16 @@ import Dessertcard from "@/components/Dessertcard";
 import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Food from "@/app/food/page";
-import NavBar from "@/components/Navbar";
 import Image from "next/image";
 const Welcome = () => {
   return (
     <div>
-      <div className="grid md:grid-cols-2 gap-0 pt-24 pb-12 h-screen px-4 md:px-6">
+      <div className="grid md:grid-cols-2 gap-0 pt-24 pb-5  px-4 md:px-6">
         <div className="my-auto text-md px-10 pl-4 bg-[#E7FAFE]">
           <h1 className="text-5xl py-10 text-black font-bold">
             Cook with food straight from the source
           </h1>
-          <div className="text-black pb-40">
+          <div className="text-black pb-4 md:pb-5 lg:pb-20 xl:pb-40">
             <p>Welcome to &lsquo;For the Sake of Food&rsquo;</p>
             <p>
               Are you ready to embark on a delicious journey towards a healthier
@@ -29,17 +28,23 @@ const Welcome = () => {
               community of food lovers and your personal guide to a healthier
               and happier life.
             </p>
-            <p></p>
           </div>
         </div>
-        <div className="bg-[url('/hero-image.jpg')] bg-cover sm:h-96 h-48 md:h-full rounded-lg" />
+        <div className="md:hidden">
+          <img
+            src="/hero-image.jpg"
+            alt="hero image"
+            className="w-full h-48 rounded-lg object-cover"
+          />
+        </div>
+        <div className="hidden md:block bg-[url('/hero-image.jpg')] bg-cover w-full h-full rounded-lg" />
       </div>
 
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-5xl py-10 pt-60 text-black font-bold">
+      <div className="flex flex-col  items-center justify-center">
+        <h1 className="text-5xl py-10 pt-20 md:pt-60 text-black font-bold">
           Meal Categories
         </h1>
-        <div className="flex justify-center space-x-40">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
           <div className="w-3/4 h-80">
             <Foodcard />
           </div>
@@ -51,14 +56,14 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="flex flex-col md:flex-row items-center ">
         <div className="w-1/2 p-6">
           <Image
             src="/user.jpg"
             alt="user image"
             width={700}
             height={500}
-            className=" h-500 rounded-md" // Using rounded-md for slightly rounded corners
+            className="rounded-md" // Using rounded-md for slightly rounded corners
           />
         </div>
         <div className="w-1/2 p-4">
@@ -73,20 +78,18 @@ const Welcome = () => {
           <p>
             At 65 its become more important than ever to make healthy food
             choices. This app has opened a world of delicious nutritious meals
-            that keep me feeling vibrant and energized. Its not just an app
-            its a companion on my journey to a healthier happier life. The
-            recipes are easy to follow and I have never had so much fun
-            experimenting in the kitchen. Thank you for making healthy eating a
-            joy!
+            that keep me feeling vibrant and energized. Its not just an app its
+            a companion on my journey to a healthier happier life. The recipes
+            are easy to follow and I have never had so much fun experimenting in
+            the kitchen. Thank you for making healthy eating a joy!
           </p>
           <p>~Carol Lynn</p>
         </div>
       </div>
-  
+
       <div className="mt-16">
         <Food />
       </div>
-      
     </div>
   );
 };
