@@ -18,20 +18,23 @@ export async function POST(request) {
   const mailOptions = {
     from: process.env.NEXT_PUBLIC_AUTH_EMAIL,
     to: data?.email,
-    subject: `Welcome to For The Sake Of Food!`,
+    subject: `Welcome to For The Sake Of Food - Bring out the chef in you!`,
     html: `<h1>Thank You for Joining For The Sake Of Food!</h1>
     <p>Dear ${data.email},</p>
-    <p>We're thrilled to have you as a part of our food-loving community. Your passion for delicious recipes is our driving force.</p>
-    <p>Get ready to embark on a culinary adventure with us! You can look forward to:</p>
+    <p>Thank you for signing up! We are thrilled to welcome you to our culinary community, where delicious adventures await.</p>
+   <p>At For The Sake Of Food, we believe that the heart of a happy home is a well-fed family. We are excited to be part of your culinary journey, and we can't wait to share mouthwatering recipes and cooking inspiration with you.</p>
+    <p>Here's what you can look forward to:</p>
     <ul>
-      <li>Exciting new recipes delivered to your inbox regularly</li>
-      <li>Exclusive tips and tricks from top chefs</li>
-      <li>Notifications about the latest features and updates</li>
-    </ul>
-    <p>If you ever have any questions or suggestions, feel free to reach out to us. We're here to make your experience exceptional.</p>
-    <p>Once again, thank you for signing up with For The Sake Of Food. Let's cook up something amazing together!</p>
-    <p>Happy cooking!</p>
-    <p>Sincerely,</p>
+    <li>
+    1. Fresh Recipes: Be the first to discover our latest recipes, from quick weekday meals to indulgent weekend treats.</li>
+    <li>2. Cooking Tips and Tricks: Elevate your cooking skills with our expert tips and tricks that will turn you into a kitchen pro.</li>
+    <li>3. Special Events: Stay tuned for exclusive and exciting events tailored just for you.</li>
+</ul>
+<p>We understand that life can be busy, so don't worry—we'll only send you the good stuff! Expect to hear from us when there's a new recipe to try or something special cooking in the For The Sake Of Food kitchen</p>
+<p>If you ever have any questions, feedback, or just want to share your culinary triumphs, feel free to reach out to us at forthesakeoffoodwebapp@gmail.com
+We're here to make your cooking experience enjoyable and memorable.</p>
+<p>Happy cooking!</p>
+<p>Warm regards,</p>
     <p> For The Sake Of Food Team</p>`,
   };
   try {
