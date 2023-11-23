@@ -25,7 +25,7 @@ const SignupForm = () => {
 
   return (
     <div className="bg-[#E7F9FD]">
-      {/* The gray background container */}
+      {/* The blue background container */}
       <div className="p-4 max-w-md mx-auto">
       {loading ? ( // Display loader if loading is true
           <div className="text-center">
@@ -37,11 +37,11 @@ const SignupForm = () => {
             <h2 className="text-2xl font-semibold text-black mb-4">
               Thank you for subscribing!
             </h2>
-            <p className="text-gray-700">
+            <p className="text-black">
               You will receive news and updates at{" "}
               <span className="text-sm text-blue-500">{email}</span>.
             </p>
-            <p className="text-gray-700">
+            <p className="text-black">
               In case you do not see the notification, check your spam folder.
             </p>
           </div>
@@ -58,12 +58,12 @@ const SignupForm = () => {
             </p>
             
             <form onSubmit={handleSubmit} className="w-full">
-              <div className="mb-4 flex">
+              <div className="text-sm flex md:mb-4">
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Your email address..."
+                  placeholder="Email address..."
                   value={email}
                   onChange={handleEmailChange}
                   className="w-3/4 p-2 border text-black border-gray-300 rounded-md focus:ring mr-8"

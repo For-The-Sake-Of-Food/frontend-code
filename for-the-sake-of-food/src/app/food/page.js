@@ -44,13 +44,13 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center py-14 min-h-screen">
-      <h1 className="text-3xl font-bold py-2">Food Recipes</h1>
-      <h1 className="text-2xl font-bold py-2">Breakfast Lunch & Supper!</h1>
+    <div className="flex flex-col min-h-screen md:items-center justify-center py-14 ">
+      <h1 className="text-3xl pl-5 font-bold py-2">Food Recipes</h1>
+      <h1 className="text-2xl pl-5 font-bold py-2">Breakfast Lunch & Supper!</h1>
       <div className="py-4">
         {" "}
         {/* Added margin for spacing */}
-        <p className="text-lg">
+        <p className="pl-5 text-lg ">
           Explore our mouthwatering selection of dishes and find your next
           favorite meal!.
         </p>
