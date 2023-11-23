@@ -19,6 +19,7 @@ const MyPage = () => {
     image: "",
     category: "",
     ingredients: [""],
+    recommended: "",
   });
   const [loading, setLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(dessertData.indexOf(parseInt(params.id)));
@@ -115,7 +116,7 @@ const handlePrevious = () => {
             </div>
             <div className="text-center">
               <p className="text-xs font-bold text-black">RECOMMENDED FOR </p>
-              <p className="text-xs text-black">Diabetes</p>
+              <p className="text-xs text-black">{recipe.recommended}</p>
             </div>
           </div>
         </div>
