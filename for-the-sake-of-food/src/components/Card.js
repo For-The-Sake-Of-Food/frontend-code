@@ -14,7 +14,7 @@ const Card = ({
 }) => {
   return (
     <div className="max-w-lg rounded-lg overflow-hidden bg-[#E7F9FD] shadow-lg m-4">
-      <div style={{ position: "relative", width: "100%", height: "400px" }}>
+      <div style={{ position: "relative", width: "100%", height: "300px" }}>
         <Image
           layout="fill"
           objectFit="cover"
@@ -24,7 +24,7 @@ const Card = ({
         />
       </div>
       <div className="px-6 py-4">
-        <p className="text-black font-bold text-xl">{title}</p>
+        <p className="text-black font-bold  pb-2 text-xl">{title}</p>
         {recommended === null ? null : (
           <p className="text-black text-sm">Recommended for: {recommended}</p>
         )}

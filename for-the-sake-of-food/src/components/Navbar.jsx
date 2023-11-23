@@ -33,7 +33,7 @@ const NavBar = () => {
       }`}
     >
       <div className="flex justify-between items-center container mx-auto">
-        <div className="flex items-center pl-0.1">
+        <div className="flex items-center pl-4">
           <Link href="/">
             <Image
               src="/company-logo.png"
@@ -43,12 +43,12 @@ const NavBar = () => {
             />
           </Link>
         </div>
-        <ul className="flex list-none space-x-2 md:space-x-8">
+        <ul className="flex list-none text-sm space-x-1 md:space-x-12 pr-7">
           <Link href="/">
-            <li className="px-4 md:px-8 py-4">Home</li>
+            <li className="px-4 md:px-2 py-4">Home</li>
           </Link>
           <Link href="/about">
-            <li className="px-4 md:px-8 py-4">About us</li>
+            <li className="px-4 md:px-10 py-4">About us</li>
           </Link>
           <Link
             href="https://www.facebook.com"

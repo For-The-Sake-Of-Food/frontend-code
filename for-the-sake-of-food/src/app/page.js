@@ -36,14 +36,13 @@ const Welcome = () => {
             src="/hero-image.jpg"
             alt="hero image"
             className="w-full h-48 rounded-lg object-cover"
-           
           />
         </div>
         <div className="hidden md:block bg-[url('/hero-image.jpg')] bg-cover w-full h-full rounded-lg" />
       </div>
 
       <div className="flex flex-col  items-center justify-center">
-        <h1 className="text-5xl py-10 pt-20 md:pt-35 text-black font-bold">
+        <h1 className="text-5xl pl-5 py-10 pt-20 md:pt-35 text-black font-bold">
           Meal Categories
         </h1>
         <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
@@ -68,15 +67,14 @@ const Welcome = () => {
             className="rounded-md" // Using rounded-md for slightly rounded corners
           />
         </div>
-        <div className="w-full md:w-1/2 p-4 md:order-2">
+        <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
           <h1 className="text-2xl pl-10 pr-5 font-bold relative">
             <span className="text-black">Why </span>
             <span className="text-[#3A8700] font-bold">Our Recipes</span>
             <span className="text-black"> Are The Best</span>
             <span className="absolute top-[-2.5rem] left-[-3rem] text-gray-300 text-9xl ml-4">
-    “
-</span>
-
+              “
+            </span>
           </h1>
           <p class="pl-10 pr-5">
             At 65 its become more important than ever to make healthy food
@@ -84,11 +82,9 @@ const Welcome = () => {
             that keep me feeling vibrant and energized. Its not just an app its
             a companion on my journey to a healthier happier life. The recipes
             are easy to follow and I have never had so much fun experimenting in
-            the kitchen. Thank you for making healthy eating a joy! 
+            the kitchen. Thank you for making healthy eating a joy!
           </p>
-          <p class="pl-10 pr-5">
-            ~Carol Lynn
-            </p>
+          <p class="pl-10 pr-5">~Carol Lynn</p>
         </div>
       </div>
 
