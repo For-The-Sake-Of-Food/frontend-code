@@ -76,6 +76,9 @@ const SignupForm = () => {
                   Subscribe
                 </button>
               </div>
+                <p className="text-sm text-center">
+                <span className="font-bold">Disclaimer:</span> We're not nutritionists. Please verify health claims independently.For The Sake Of Food is not liable for decisions based on our content.
+                </p>
             </form>
           </div>
         )}
