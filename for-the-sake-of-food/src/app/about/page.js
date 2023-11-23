@@ -84,8 +84,8 @@ const About = () => {
                   they&#39;re tools we leverage for creative problem-solving.
                 </p>
                 <p className="p-4 text-base leading-1.8 font-normal text-gray-900">
-                  With a keen interest in databases, we&#39;ve mastered both SQL
-                  and NoSQL systems, ensuring efficient data management.
+                  With a keen interest in databases, we&#39;ve mastered both MySQL
+                  and PostgreSQL systems, ensuring efficient data management.
                   Collaboration is at the heart of our approach, supported by a
                   solid understanding of software development life cycles and
                   version control systems like Git. We are not just coders but
@@ -108,7 +108,7 @@ const About = () => {
                   and C++, while web development proficiency includes mastery of
                   HTML, Next, Tailwind, CSS, and JavaScript. Data structures and
                   algorithmic problem-solving are second nature, as is the
-                  efficient management of both SQL and NoSQL databases. Version
+                  efficient management of both MySQL and PostgreSQL databases. Version
                   control with Git, software development life cycle
                   understanding, and collaborative coding are integral aspects
                   of my skill set. Networking concepts, cybersecurity awareness,
@@ -180,7 +180,7 @@ const About = () => {
                     <li> Strengthen proficiency in languages like Python, Java, C++, or others commonly used in the industry.</li>
                     <li className="pb-2"> Explore web development languages like HTML, CSS, and JavaScript.</li>
                     <li className="font-bold pb-1">2. Database Management:</li>
-                    <li> Gain experience with both SQL and NoSQL databases.</li>
+                    <li> Gain experience with both MySQL and PostgreSQL databases.</li>
                     <li className="pb-2"> Learn about database design, normalization, and optimization.</li>
                     <li className="font-bold pb-1">3. Software Development:</li>
                     <li className="pb-1"> Practice version control systems like Git.</li>
