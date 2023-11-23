@@ -47,13 +47,13 @@ const Welcome = () => {
           Meal Categories
         </h1>
         <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
-          <div className="w-3/4 h-80">
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
             <Foodcard />
           </div>
-          <div className="w-3/4 h-80">
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
             <Juicecard />
           </div>
-          <div className="w-3/4 h-80">
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
             <Dessertcard />
           </div>
         </div>
