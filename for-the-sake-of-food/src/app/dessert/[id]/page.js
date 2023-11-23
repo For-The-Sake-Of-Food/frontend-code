@@ -20,6 +20,7 @@ const MyPage = () => {
     category: "",
     ingredients: [""],
     recommended: "",
+    cooktime:"",
   });
   const [loading, setLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(dessertData.indexOf(parseInt(params.id)));
@@ -102,7 +103,7 @@ const handlePrevious = () => {
           </div>
           <div className="text-center">
             <p className="text-xs font-bold text-black">COOK TIME </p>
-            <p className="text-xs text-black ">30 minutes</p>
+            <p className="text-xs text-black ">{recipe.cooktime}</p>
           </div>
 
           <div className="ml-4 flex items-center justify-center">
