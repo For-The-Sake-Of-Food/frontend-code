@@ -7,7 +7,7 @@ const Foodcard = () => {
     <Link href="/food">
       <div className="w-full md:w-1/2 lg:w-11/12 max-w-screen-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-110">
         <Image
-          src="/food-category.png"
+          src="/food3.jpg"
           alt="Food"
           width={500}
           height={300}

@@ -14,7 +14,7 @@ const About = () => {
       <section className="about py-20 bg-white">
         <div className="flex flex-col justify-center items-center md:flex-row">
           <div className="w-full md:w-3/5 mb-8 md:mb-0">
-            <div className="h-auto rounded-full overflow-hidden">
+            <div className="h-auto overflow-hidden">
               <Image
                 src="/about-us.jpg"
                 alt="about us"
@@ -26,8 +26,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="w-3/5">
-            <div className="flex">
+          <div className="w-full md:w-2/3 md:ml-6">
+            <div className="flex flex-col md:flex-row">
               <div
                 className={`${
                   toggleTab === 1 ? "active-tab bg-blue-300" : "bg-gray-200"
