@@ -17,17 +17,17 @@ const Welcome = () => {
             <p>Welcome to &lsquo;For the Sake of Food&rsquo;</p>
             <p>
               Are you ready to embark on a delicious journey towards a healthier
-              and more vibrant you? Look no further! Our &lsquo;For the Sake of
-              Food&rsquo; recipes are here to make nutritious eating both
-              effortless and enjoyable.
+              and more vibrant you, with a delightful Ugandan twist? Look no
+              further! Our &lsquo;For the Sake of Food&rsquo; Ugandan-inspired
+              recipes are here to make nutrition both effortless and enjoyable.
             </p>
             <p>
-              Join us in savoring the rich flavors of fresh wholesome
+              Join us in savoring the rich flavors of fresh, wholesome Ugandan
               ingredients and learn how to make nutrition a delightful part of
               your daily routine. &lsquo;For the Sake of Food&rsquo; is more
-              than an app&lsquo; it&apos;s a commitment to your well-being a
-              community of food lovers and your personal guide to a healthier
-              and happier life.
+              than an app &lsquo; it&apos;s a commitment to your well-being, a
+              community of food lovers, and your personal guide to a healthier
+              and happier life with a Ugandan flair.
             </p>
           </div>
         </div>
