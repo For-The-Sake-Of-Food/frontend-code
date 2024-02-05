@@ -76,7 +76,7 @@ const Welcome = () => {
               “
             </span>
           </h1>
-          <p class="pl-10 pr-5">
+          <p className="pl-10 pr-5">
             At 65 its become more important than ever to make healthy food
             choices. This app has opened a world of delicious nutritious meals
             that keep me feeling vibrant and energized. Its not just an app its
@@ -84,7 +84,7 @@ const Welcome = () => {
             are easy to follow and I have never had so much fun experimenting in
             the kitchen. Thank you for making healthy eating a joy!
           </p>
-          <p class="pl-10 pr-5">~Carol Lynn</p>
+          <p className="pl-10 pr-5">~Carol Lynn</p>
         </div>
       </div>
 

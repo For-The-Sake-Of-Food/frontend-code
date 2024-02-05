@@ -1,11 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { UserButton, useSession } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const {userId} = useSession()
+  console.log(userId)
 
   useEffect(() => {
     // Function to handle the scroll event
@@ -43,7 +46,7 @@ const NavBar = () => {
             />
           </Link>
         </div>
-        <ul className="flex list-none text-sm space-x-1 md:space-x-12 pr-7">
+        <ul className="flex items-center list-none text-sm space-x-1 md:space-x-12 pr-7">
           <Link href="/">
             <li className="md:px-2 py-4">Home</li>
           </Link>
@@ -87,6 +90,7 @@ const NavBar = () => {
               />
             </li>
           </Link>
+          <UserButton />
         </ul>
       </div>
     </nav>
