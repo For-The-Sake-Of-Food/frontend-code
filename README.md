@@ -49,6 +49,3 @@ For questions or feedback, please contact:
 
 # Acknowledgments
 Thanks to Ms. Mercy Nekesa, Mr. Solomon Opio, and Mr. Lubambo Simon, as well as the team for their inspiration and contributions.
-
-Feel free to further customize or add more details based on your project's specific requirements.
-
