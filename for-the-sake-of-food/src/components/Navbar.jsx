@@ -1,5 +1,5 @@
 "use client";
-import { UserButton, useSession } from "@clerk/nextjs";
+import { UserButton, useAuth, useSession } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const {userId} = useSession()
-  console.log(userId)
+  const { isSignedIn } = useAuth();
 
   useEffect(() => {
     // Function to handle the scroll event
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      const isNavbarVisible = currentScrollPos <= prevScrollPos || currentScrollPos < 10;
+      const isNavbarVisible =
+        currentScrollPos <= prevScrollPos || currentScrollPos < 10;
 
       setPrevScrollPos(currentScrollPos);
       setVisible(isNavbarVisible);
@@ -47,12 +47,6 @@ const NavBar = () => {
           </Link>
         </div>
         <ul className="flex items-center list-none text-sm space-x-1 md:space-x-12 pr-7">
-          <Link href="/">
-            <li className="md:px-2 py-4">Home</li>
-          </Link>
-          <Link href="/about">
-            <li className="px-4 md:px-10 py-4">About</li>
-          </Link>
           <Link
             href="https://www.facebook.com"
             target="_blank"
@@ -90,7 +84,13 @@ const NavBar = () => {
               />
             </li>
           </Link>
-          <UserButton />
+          {isSignedIn ? (
+            <UserButton />
+          ) : (
+            <Link href={"/sign-in"}>
+              <button>Login</button>
+            </Link>
+          )}
         </ul>
       </div>
     </nav>
