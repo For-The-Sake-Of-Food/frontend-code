@@ -8,7 +8,7 @@ import Image from "next/image";
 const Welcome = () => {
   return (
     <div>
-      <div className="grid md:grid-cols-2 gap-0 pt-24 pb-5  px-4 md:px-6">
+      <div className="grid md:grid-cols-2 gap-0 pt-5 pb-5  px-4 md:px-6">
         <div className="my-auto text-md px-10 pl-4 bg-[#E7FAFE]">
           <h1 className="text-5xl py-10 text-black font-bold">
             Cook with food straight from the source
@@ -64,7 +64,7 @@ const Welcome = () => {
             alt="user image"
             width={700}
             height={500}
-            className="rounded-md" // Using rounded-md for slightly rounded corners
+            className="rounded-md" 
           />
         </div>
         <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
@@ -96,3 +96,10 @@ const Welcome = () => {
 };
 
 export default Welcome;
+// "use-client";
+// const Home=()=>{
+//   return(
+//     <h1 className="text-black pt-40 mt-40 text-center justify-center">this is home</h1>
+//   )
+// }
+// export default Home;
