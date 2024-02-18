@@ -28,7 +28,7 @@ const Welcome = () => {
               than an app &lsquo; it&apos;s a commitment to your well-being, a
               community of food lovers, and your personal guide to a healthier
               and happier life with a Ugandan flair.
-            </p>
+            </p> 
           </div>
         </div>
         <div className="md:hidden">
