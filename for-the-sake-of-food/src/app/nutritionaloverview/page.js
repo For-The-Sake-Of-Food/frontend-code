@@ -90,29 +90,50 @@ const FoodInput = () => {
   };
 
   const foodCategoryOptions = [
-    { value: "fruits", label: "Fruits" },
-    { value: "vegetables", label: "Vegetables" },
+    { value: "vitamins", label: "Vitamins" },
+    { value: "fiber", label: "Fiber" },
     { value: "proteins", label: "Proteins" },
     { value: "carbohydrates", label: "Carbohydrates" },
-    { value: "sugarySnacks", label: "Sugary Snacks" },
-    { value: "fastFood", label: "Fast Food" },
+    { value: "water", label: "Water" },
+    { value: "iron", label: "Iron" },
+    { value: "zinc", label: "Zinc" },
+    { value: "calcium", label: "Calcium" },
+    { value: "potassium", label: "Potassium" },
+    { value: "fats", label: "Fats" },
+    { value: "magnesium", label: "Magnesium" },
+    { value: "omega-3 fatty acids ", label: "Fats" },
+    { value: "antioxidants", label: "Antioxidants" },
+    
   ];
   const cookingMethodOptions = [
     { value: "grilled", label: "Grilled" },
     { value: "fried", label: "Fried" },
     { value: "steamed", label: "Steamed" },
     { value: "boiled", label: "Boiled" },
+    { value: "starfried", label: "Star Fried" },
+    { value: "deepfried", label: "Deep Fried" },
+    { value: "sauted", label: "Sauted" },
+    { value: "poached", label: "Poached" },
+    { value: "simmered", label: "Simmered" },
+    { value: "toasted", label: "Toasted" },
+    { value: "microwaved", label: "Microwaved" },
+    { value: "baked", label: "Baked" },
+    { value: "pressurecooked", label: "Pressure cooked" },
+    { value: "smoked", label: "Smoked" },
+    { value: "broiled", label: "Broiled" },
   ];
   const freshnessOptions = [
     { value: "fresh", label: "Fresh" },
     { value: "processed", label: "Processed" },
+    { value: "refridgerated", label: "Refridgerated" },
+
   ];
   const mealtypeOpttions = [
     { value: "breakfast", label: "Breakfast" },
     { value: "lunch", label: "Lunch" },
     { value: "supper", label: "Supper" },
-    { value: "snack", label: "Snack" },
   ];
+
   return (
     <div
       className="flex items-center justify-center h-screen"
