@@ -21,7 +21,7 @@ const Home = () => {
         const response = await axios.get(
           `${process.env.NEXT_PUBLIC_API_URL}/api/food`
         );
-        console.log(response.data);
+       
         setCardData(response.data);
         const idsArray = extractIds(response.data);
         console.log(idsArray); // Log the array of ids
