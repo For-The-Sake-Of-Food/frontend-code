@@ -44,17 +44,9 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col min-h-screen md:items-center justify-center py-14 ">
-      <h1 className="text-3xl pl-5 font-bold py-2">Food Recipes</h1>
-      <h1 className="text-2xl pl-5 font-bold py-2">Breakfast Lunch & Supper!</h1>
-      <div className="py-4">
-        {" "}
-        {/* Added margin for spacing */}
-        <p className="pl-5 text-lg ">
-          Explore our mouthwatering selection of dishes and find your next
-          favorite meal!.
-        </p>
-      </div>
+    <div className="flex flex-col min-h-screen py-14 pl-8 pr-2 ">
+      <h1 className="text-4xl pl-4 font-bold py-2">Food Recipes</h1>
+      <h1 className="text-2xl pl-5 font-bold py-2"></h1>
       <div className="flex flex-wrap">
         {cardData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
@@ -62,13 +54,13 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div className="bg-[#E7F9FD] w-full">
+      {/* <div className="bg-[#E7F9FD] w-full">
         <div className="max-w-screen-xl mx-auto p-4">
           <div className="w-full">
             <SignupForm />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

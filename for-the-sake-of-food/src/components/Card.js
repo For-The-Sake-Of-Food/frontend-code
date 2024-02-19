@@ -31,7 +31,7 @@ const Card = ({
       </div>
       <div className="px-6 py-4">
         <Link
-          className="bg-black hover:bg-[#858684] text-white font-bold py-2 px-4 rounded-full"
+          className="bg-black hover:bg-[#858684] text-white font-bold py-2 px-4 rounded-full mb-4"
           href={`/${category}/${id}`}
         >
           Read More
