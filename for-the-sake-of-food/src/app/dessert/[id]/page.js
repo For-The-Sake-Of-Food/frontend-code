@@ -19,7 +19,6 @@ const MyPage = () => {
     image: "",
     category: "",
     ingredients: [""],
-    recommended: "",
     cooktime:"",
   });
   const [loading, setLoading] = useState(false);

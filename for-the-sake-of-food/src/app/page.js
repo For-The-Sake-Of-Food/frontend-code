@@ -16,10 +16,10 @@ const Welcome = () => {
               alt="hero image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-black to-transparent opacity-40 rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
             <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-white text-left">
               <p className="text-5xl font-bold mb-2">Hello, Name.</p>
-              <p className="text-lg">
+              <p className="text-lg font-semibold">
                 Welcome to{" "}
                 <span className="text-orange-500">For the Sake of Food!</span>
               </p>
@@ -63,7 +63,7 @@ const Welcome = () => {
 </div>
 
 
-      {/* <div className="flex flex-col md:flex-row items-center ">
+      <div className="flex flex-col md:flex-row items-center mt-20">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
@@ -74,7 +74,7 @@ const Welcome = () => {
           />
         </div>
         <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
-          <h1 className="text-2xl pl-10 pr-5 font-bold relative">
+          <h1 className="text-3xl pl-10 pr-5 font-bold relative">
             <span className="text-black">Why </span>
             <span className="text-[#3A8700] font-bold">Our Recipes</span>
             <span className="text-black"> Are The Best</span>
@@ -82,8 +82,8 @@ const Welcome = () => {
               “
             </span>
           </h1>
-          <p className="pl-10 pr-5">
-            At 65 its become more important than ever to make healthy food
+          <p className="pl-10 pr-5 mt-5">
+            At 50 its become more important than ever to make healthy food
             choices. This app has opened a world of delicious nutritious meals
             that keep me feeling vibrant and energized. Its not just an app its
             a companion on my journey to a healthier happier life. The recipes
@@ -92,7 +92,7 @@ const Welcome = () => {
           </p>
           <p className="pl-10 pr-5">~Carol Lynn</p>
         </div>
-      </div> */}
+      </div>
 
       <div className="mt-5">
         <Food />

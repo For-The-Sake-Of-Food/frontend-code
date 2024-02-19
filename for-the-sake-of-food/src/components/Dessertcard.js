@@ -20,7 +20,7 @@ const Foodcard = () => {
           </h2>
 
           <div className="md:text-center">
-          <button className=" block  mx-auto md:inline-block mt-2 bg-black hover:bg-[#858684] text-white font-semibold  px-4 py-2 rounded-full cursor-pointer">
+          <button className=" block  mx-auto md:inline-block mt-2 bg-black hover:bg-[#858684] text-white px-4 py-2 rounded-full cursor-pointer">
             View all recipes
           </button>
           </div>
