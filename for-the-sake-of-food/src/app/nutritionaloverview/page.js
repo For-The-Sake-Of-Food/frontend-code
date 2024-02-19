@@ -12,8 +12,12 @@ const FoodInput = () => {
   const [freshness, setFreshness] = useState({});
   const [error, setError] = useState("");
   const {
-    user: { id },
+    user,
   } = useUser();
+
+  if (!user) {
+    return null
+  }
 
   const handleSubmit = async (e) => {
     const date = new Date().toLocaleDateString();
@@ -69,7 +73,7 @@ const FoodInput = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...foodhistory, id: id, date: date }),
+        body: JSON.stringify({ ...foodhistory, id: user.id, date: date }),
       });
 
       if (!response.ok) {
