@@ -38,10 +38,11 @@ const Card = ({
         )}
       </div>
       <div className="px-6 py-4">
-        <Link href={`/${category}/${id}`}>
-          <button className="bg-black hover:bg-[#858684] text-white font-bold py-2 px-4 rounded-full">
-            Read More
-          </button>
+        <Link
+          className="bg-black hover:bg-[#858684] text-white font-bold py-2 px-4 rounded-full mb-4"
+          href={`/${category}/${id}`}
+        >
+          Read More
         </Link>
         <Dialog>
   <DialogTrigger>Open</DialogTrigger>
