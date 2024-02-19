@@ -13,11 +13,11 @@ import Image from "next/image";
 
 const navigation = [
   { name: "Favourites", href: "/favorites", icon: Heart },
-  { name: "Grocery Shopping", href: "/grocery-shopping", icon: ShoppingCart },
-  { name: "Meal Plan", href: "/meal-plan", icon: NotebookText },
+  { name: "Grocery Shopping", href: "/grocery", icon: ShoppingCart },
+  { name: "Meal Plan", href: "/meal-planner", icon: NotebookText },
   {
     name: "Nutritional Overview",
-    href: "/nutritional-overview",
+    href: "/nutritionaloverview",
     icon: Search,
   },
   { name: "Nutribot", href: "/nutribot", icon: MessagesSquare },
@@ -26,17 +26,19 @@ const navigation = [
 const Sidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      // Set translation value based on scroll position
-      const translation = isOpen ? 0 : Math.min(-16, -scrollY / 5);
-
-      // Apply translation to the sidebar
-      document.getElementById(
-        "sidenav"
-      ).style.transform = `translateY(${translation}rem)`;
-    };
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+      
+        // Check if the element with ID "sidenav" exists
+        const sidenavElement = document.getElementById("sidenav");
+        if (sidenavElement) {
+          // Set translation value based on scroll position
+          const translation = isOpen ? 0 : Math.min(-16, -scrollY / 5);
+      
+          // Apply translation to the sidebar
+          sidenavElement.style.transform = `translateY(${translation}rem)`;
+        }
+      };
 
     // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
