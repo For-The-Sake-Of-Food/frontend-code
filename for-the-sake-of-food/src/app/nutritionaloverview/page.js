@@ -15,7 +15,6 @@ const FoodInput = () => {
     user: { id },
   } = useUser();
 
-  console.log({ userId: id });
   const handleSubmit = async (e) => {
     const date = new Date().toLocaleDateString();
     console.log(date);

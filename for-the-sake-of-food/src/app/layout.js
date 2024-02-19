@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     appearance={{
       elements: {
         button: {
-          color: 'red'
+          color: "black"
         }
       }
     }}
