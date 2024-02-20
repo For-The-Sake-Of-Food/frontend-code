@@ -11,12 +11,10 @@ const FoodInput = () => {
   const [cookingMethod, setCookingMethod] = useState([]);
   const [freshness, setFreshness] = useState({});
   const [error, setError] = useState("");
-  const {
-    user,
-  } = useUser();
+  const { user } = useUser();
 
   if (!user) {
-    return null
+    return null;
   }
 
   const handleSubmit = async (e) => {
@@ -96,43 +94,57 @@ const foodNameOptions=[
   {value:"posho",label:"Posho"}
 ]
   const foodCategoryOptions = [
-    { value: "vitamins", label: "Vitamins" },
-    { value: "fiber", label: "Fiber" },
-    { value: "proteins", label: "Proteins" },
-    { value: "carbohydrates", label: "Carbohydrates" },
-    { value: "water", label: "Water" },
-    { value: "iron", label: "Iron" },
-    { value: "zinc", label: "Zinc" },
-    { value: "calcium", label: "Calcium" },
-    { value: "potassium", label: "Potassium" },
-    { value: "fats", label: "Fats" },
-    { value: "magnesium", label: "Magnesium" },
-    { value: "omega-3 fatty acids ", label: "Fats" },
     { value: "antioxidants", label: "Antioxidants" },
-    
+    { value: "calcium", label: "Calcium" },
+    { value: "carbohydrates", label: "Carbohydrates" },
+    { value: "fats", label: "Fats" },
+    { value: "dietaryfiber", label: "Dietary Fiber" },
+    { value: "iron", label: "Iron" },
+    { value: "magnesium", label: "Magnesium" },
+    { value: "minerals", label: "Minerals" },
+    { value: "omega-3 fatty acids ", label: "Omega-3 Fatty Acids" },
+    { value: "potassium", label: "Potassium" },
+    { value: "proteins", label: "Proteins" },
+    { value: "vitamins", label: "Vitamins" },
+    { value: "vitaminA", label: "Vitamin A" },
+    { value: "vitaminB", label: "Vitamin B" },
+    { value: "vitaminB1", label: "Vitamin B1 (Thiamine)" },
+    { value: "vitaminB2", label: "Vitamin B2 (Riboflavin)" },
+    { value: "vitaminB3", label: "Vitamin B3 (Niacin)" },
+    { value: "vitaminB6", label: "Vitamin B6" },
+    { value: "vitaminB9", label: "Vitamin B9 (Folate)" },
+    { value: "vitaminB12", label: "Vitamin B12" },
+    { value: "vitaminC", label: "Vitamin C" },
+    { value: "vitaminD", label: "Vitamin D" },
+    { value: "vitaminE", label: "Vitamin E" },
+    { value: "vitaminK", label: "Vitamin K" },
+    { value: "water", label: "Water" },
+    { value: "zinc", label: "Zinc" },
   ];
+
   const cookingMethodOptions = [
-    { value: "grilled", label: "Grilled" },
-    { value: "fried", label: "Fried" },
-    { value: "steamed", label: "Steamed" },
-    { value: "boiled", label: "Boiled" },
-    { value: "starfried", label: "Star Fried" },
-    { value: "deepfried", label: "Deep Fried" },
-    { value: "sauted", label: "Sauted" },
-    { value: "poached", label: "Poached" },
-    { value: "simmered", label: "Simmered" },
-    { value: "toasted", label: "Toasted" },
-    { value: "microwaved", label: "Microwaved" },
     { value: "baked", label: "Baked" },
-    { value: "pressurecooked", label: "Pressure cooked" },
-    { value: "smoked", label: "Smoked" },
+    { value: "boiled", label: "Boiled" },
     { value: "broiled", label: "Broiled" },
+    { value: "deepfried", label: "Deep Fried" },
+    { value: "fried", label: "Fried" },
+    { value: "grilled", label: "Grilled" },
+    { value: "marinated", label: "Marinated" },
+    { value: "microwaved", label: "Microwaved" },
+    { value: "poached", label: "Poached" },
+    { value: "pressurecooked", label: "Pressure cooked" },
+    { value: "sauted", label: "Sauted" },
+    { value: "simmered", label: "Simmered" },
+    { value: "sliced", label: "Sliced" },
+    { value: "smoked", label: "Smoked" },
+    { value: "starfried", label: "Star Fried" },
+    { value: "steamed", label: "Steamed" },
+    { value: "toasted", label: "Toasted" },
   ];
   const freshnessOptions = [
     { value: "fresh", label: "Fresh" },
     { value: "processed", label: "Processed" },
     { value: "refridgerated", label: "Refridgerated" },
-
   ];
   const mealtypeOpttions = [
     { value: "breakfast", label: "Breakfast" },
