@@ -98,7 +98,7 @@ const FoodInput = () => {
     { value: "calcium", label: "Calcium" },
     { value: "carbohydrates", label: "Carbohydrates" },
     { value: "fats", label: "Fats" },
-    { value: "fiber", label: "Fiber" },
+    { value: "dietaryfiber", label: "Dietary Fiber" },
     { value: "iron", label: "Iron" },
     { value: "magnesium", label: "Magnesium" },
     { value: "omega-3 fatty acids ", label: "Fats" },
