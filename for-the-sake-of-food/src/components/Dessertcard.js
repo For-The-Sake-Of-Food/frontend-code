@@ -27,6 +27,7 @@ const Foodcard = () => {
         </div>
       </div>
     </Link>
+    
   );
 };
 
