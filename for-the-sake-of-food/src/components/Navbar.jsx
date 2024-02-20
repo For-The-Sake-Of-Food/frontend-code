@@ -86,7 +86,7 @@ const NavBar = () => {
               />
             </li>
           </Link>
-          {isSignedIn ? <UserButton /> : <Link href={"/sign-in"}>Login</Link>}
+          {isSignedIn ? <UserButton afterSignOutUrl="/" /> : <Link href={"/sign-in"}>Login</Link>}
         </ul>
       </div>
     </nav>

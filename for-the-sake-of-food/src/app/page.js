@@ -4,8 +4,10 @@ import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Food from "@/app/food/page";
 import Image from "next/image";
+import { useUser } from "@clerk/nextjs";
 
 const Welcome = () => {
+  const { user } = useUser();
   return (
     <div>
       <div className="relative rounded-lg overflow-hidden pl-4">
@@ -18,8 +20,16 @@ const Welcome = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
             <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-white text-left">
-              <p className="text-5xl font-bold mb-2">Hello, Name.</p>
-              <p className="text-lg font-semibold">
+              {user ? (
+                <p className="text-5xl font-bold mb-2">
+                  Hello, {user.fullName}.
+                </p>
+              ) : (
+                <p className="text-5xl font-bold mb-2">
+                  Hey There!
+                </p>
+              )}
+              <p className="text-lg">
                 Welcome to{" "}
                 <span className="text-orange-500">For the Sake of Food!</span>
               </p>
@@ -45,25 +55,24 @@ const Welcome = () => {
         </div>
       </div> */}
 
-<div className="flex flex-col pl-8 pr-2">
-  <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
-    Meal Categories
-  </h1>
-  <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
-    <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-      <Foodcard className="max-h-24" />
-    </div>
-    <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-      <Juicecard className="max-h-24" />
-    </div>
-    <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-      <Dessertcard className="max-h-24" />
-    </div>
-  </div>
-</div>
+      <div className="flex flex-col pl-8 pr-2">
+        <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
+          Meal Categories
+        </h1>
+        <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
+            <Foodcard className="max-h-24" />
+          </div>
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
+            <Juicecard className="max-h-24" />
+          </div>
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
+            <Dessertcard className="max-h-24" />
+          </div>
+        </div>
+      </div>
 
-
-      <div className="flex flex-col md:flex-row items-center mt-20">
+      {/* <div className="flex flex-col md:flex-row items-center ">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
