@@ -87,10 +87,10 @@ const Welcome = () => {
               alt="hero image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
-            <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-white text-left">
+            <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
+            <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-[#1E1E1E] text-left">
               {user ? (
-                <p className="text-5xl font-bold mb-2">
+                <p className="text-4xl font-bold mb-2">
                   Hello, {user.fullName}.
                 </p>
               ) : (
@@ -122,7 +122,7 @@ const Welcome = () => {
         </div>
       </div>
 
-       <div className="flex flex-col md:flex-row items-center ">
+       <div className="flex flex-col md:flex-row items-center pt-10 pl-5">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
@@ -153,7 +153,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-3">
         <Food />
       </div>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
