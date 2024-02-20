@@ -31,12 +31,14 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`bg-white z-10 text-black fixed w-full top-0 h-16 transition-all duration-300 ${
+      className={`bg-white z-10 pr-10 text-black w-full top-0 h-16 transition-all duration-300 
+      ${
         visible ? "transform translate-y-0" : "-translate-y-16"
-      }`}
+      }
+      `}
     >
-      <div className="flex justify-between items-center container mx-auto">
-        <div className="flex items-center pl-2">
+      <div className="flex justify-end items-center container">
+        {/* <div className="flex items-center pl-2">
           <Link href="/">
             <Image
               src="/company-logo.png"
@@ -45,7 +47,7 @@ const NavBar = () => {
               height={200}
             />
           </Link>
-        </div>
+        </div> */}
         <ul className="flex items-center list-none text-sm space-x-1 md:space-x-12 pr-7">
           <Link
             href="https://www.facebook.com"
@@ -84,13 +86,7 @@ const NavBar = () => {
               />
             </li>
           </Link>
-          {isSignedIn ? (
-            <UserButton />
-          ) : (
-            <Link href={"/sign-in"}>
-              <button>Login</button>
-            </Link>
-          )}
+          {isSignedIn ? <UserButton afterSignOutUrl="/" /> : <Link href={"/sign-in"}>Login</Link>}
         </ul>
       </div>
     </nav>

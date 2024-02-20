@@ -18,7 +18,6 @@ const MyPage = () => {
     image: "",
     category: "",
     ingredients: [""],
-    recommended: "",
     cooktime:"",
   });
   const [loading, setLoading] = useState(false);
@@ -116,10 +115,10 @@ const MyPage = () => {
                 height={18}
               />
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <p className="text-xs font-bold text-black ">RECOMMENDED FOR </p>
               <p className="text-xs text-black ">{recipe.recommended}</p>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Thin black horizontal line */}
