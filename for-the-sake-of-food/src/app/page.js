@@ -72,7 +72,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      {/* <div className="flex flex-col md:flex-row items-center ">
+       <div className="flex flex-col md:flex-row items-center ">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
