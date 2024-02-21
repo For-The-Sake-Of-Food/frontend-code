@@ -10,8 +10,8 @@ const Highcholesterol = () => {
         <div className="px-4 md:px-6">
           <div className="relative">
             <img
-              src="/heroimage2.jpg"
-              alt="hero image"
+              src="/highcholesterol.jpg"
+              alt="high cholesterol image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
@@ -33,7 +33,7 @@ const Highcholesterol = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-            Scroll through to discover tasty recipes, and embark on a journey
+            "Scroll through to discover tasty recipes, and embark on a journey
             of flavor. Whether you're a seasoned chef or a kitchen beginner,
             there's something delightful waiting for you. Enjoy the experience!"
           </p>

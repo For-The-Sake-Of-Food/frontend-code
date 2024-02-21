@@ -7,7 +7,7 @@ const Highcholesterolcard = () => {
     <Link href="/highcholesterol">
       <div className="w-full md:w-1/2 lg:w-11/12 max-w-screen-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-110">
         <Image
-          src="/food3.jpg"
+          src="/highcholesterol.jpg"
           alt="Food"
           width={500}
           height={300}
