@@ -1,19 +1,14 @@
 "use client";
-import Dessertcard from "@/components/Dessertcard";
-import Foodcard from "@/components/Foodcard";
-import Juicecard from "@/components/Juicecard";
 import Food from "@/app/food/page";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import Generalcard from "@/components/Generalcard";
+import Highbloodpressurecard from "@/components/Highbloodpressure";
+import Highcholesterolcard from "@/components/Highcholesterol";
+import Diabetescard from "@/components/Diabetescard";
 
 const Welcome = () => {
   const { user } = useUser();
@@ -39,10 +34,10 @@ const Welcome = () => {
   };
 
   const conditionLabels = [
-    { label: 'Diabetes', value: 'diabetes' },
-    { label: 'High Blood Pressure', value: 'highBloodPressure' },
-    { label: 'High Cholesterol Levels', value: 'highCholesterol' },
-    { label: 'None', value: 'none' },
+    { label: "Diabetes", value: "diabetes" },
+    { label: "High Blood Pressure", value: "highBloodPressure" },
+    { label: "High Cholesterol Levels", value: "highCholesterol" },
+    { label: "None", value: "none" },
   ];
 
   const handleChange = (e) => {
@@ -85,7 +80,7 @@ const Welcome = () => {
             <img
               src="/heroimage2.jpg"
               alt="hero image"
-              className="w-full h-32 md:h-80 object-cover rounded-lg"
+              className="w-full h-40 md:h-80 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
             <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-[#1E1E1E] text-left">
@@ -96,33 +91,50 @@ const Welcome = () => {
               ) : (
                 <p className="text-5xl font-bold mb-2">Hey There!</p>
               )}
-              <p className="text-lg">
-                Welcome to{" "}
-                <span className="text-orange-500">For the Sake of Food!</span>
-              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="pt-20 items-center justify-center">
+        <div className="text-center">
+          <h1 className="font-bold mb-2">
+            <p className="text-4xl">
+              Welcome to{" "}
+              <span className="text-orange-500">For the Sake of Food!</span>
+            </p>
+          </h1>
+          <p className="text-lg pr-20 pl-20">
+            "For the Sake of Food is a groundbreaking nutrition platform aiming
+            to improve Ugandan lifestyles. We offer personalized recipes,
+            AI-driven meal planning, budget optimization, and insightful data
+            visualization. Empowering users to make informed dietary choices,
+            we're on a mission to foster a healthier, happier community."
+          </p>
+        </div>
+      </div>
+
       <div className="flex flex-col pl-8 pr-2">
         <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
-          Meal Categories
+          What recipes are you interested in today?
         </h1>
         <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
           <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-            <Foodcard className="max-h-24" />
+            <Generalcard className="max-h-24" />
           </div>
           <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-            <Juicecard className="max-h-24" />
+            <Diabetescard className="max-h-24" />
           </div>
           <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
-            <Dessertcard className="max-h-24" />
+            <Highbloodpressurecard className="max-h-24" />
+          </div>
+          <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
+            <Highcholesterolcard className="max-h-24" />
           </div>
         </div>
       </div>
 
-       <div className="flex flex-col md:flex-row items-center pt-10 pl-5">
+      <div className="flex flex-col md:flex-row items-center pt-10 pl-5">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
             src="/user.jpg"
@@ -227,7 +239,7 @@ const Welcome = () => {
                         name={condition.value}
                         checked={formData.conditions[condition.value]}
                         onChange={handleChange}
-                        className="mr-2 !checked:bg-black" 
+                        className="mr-2 !checked:bg-black"
                       />
                       {condition.label}
                     </label>
