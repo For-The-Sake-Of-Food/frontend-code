@@ -31,13 +31,13 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`bg-white z-10 pr-10 text-black w-full top-0 h-16 transition-all duration-300 
+      className={`bg-white z-10 pr-1 text-black w-full top-0 h-16 transition-all duration-300 
       ${
         visible ? "transform translate-y-0" : "-translate-y-16"
       }
       `}
     >
-      <div className="flex justify-end items-center container">
+      <div className="flex justify-end container mx-10">
         {/* <div className="flex items-center pl-2">
           <Link href="/">
             <Image
@@ -48,7 +48,7 @@ const NavBar = () => {
             />
           </Link>
         </div> */}
-        <ul className="flex items-center list-none text-sm space-x-1 md:space-x-12 pr-7">
+        <ul className="flex items-center list-none text-sm space-x-8 md:space-x-12 pr-7">
           <Link
             href="https://www.facebook.com"
             target="_blank"

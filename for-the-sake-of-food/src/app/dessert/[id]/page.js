@@ -106,7 +106,7 @@ const handlePrevious = () => {
           </div>
 
           <div className="ml-4 flex items-center justify-center">
-            <div className="ml-3 mr-1 px-6 py-4">
+            {/* <div className="ml-3 mr-1 px-6 py-4">
               <Image
                 src="/knife-and-fork.png"
                 alt="knife and fork"
@@ -117,7 +117,7 @@ const handlePrevious = () => {
             <div className="text-center">
               <p className="text-xs font-bold text-black">RECOMMENDED FOR </p>
               <p className="text-xs text-black">{recipe.recommended}</p>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Thin black horizontal line */}
@@ -176,9 +176,9 @@ const handlePrevious = () => {
       </div>
 
       {/* SignupForm with full-width background */}
-      <div className="bg-gray-200">
+      {/* <div className="bg-gray-200">
         <SignupForm />
-      </div>
+      </div> */}
     </div>
   );
 };

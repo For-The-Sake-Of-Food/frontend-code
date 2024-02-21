@@ -39,10 +39,10 @@ const Welcome = () => {
   };
 
   const conditionLabels = [
-    { label: 'Diabetes', value: 'diabetes' },
-    { label: 'High Blood Pressure', value: 'highBloodPressure' },
-    { label: 'High Cholesterol Levels', value: 'highCholesterol' },
-    { label: 'None', value: 'none' },
+    { label: "Diabetes", value: "diabetes" },
+    { label: "High Blood Pressure", value: "highBloodPressure" },
+    { label: "High Cholesterol Levels", value: "highCholesterol" },
+    { label: "None", value: "none" },
   ];
 
   const handleChange = (e) => {
@@ -85,28 +85,47 @@ const Welcome = () => {
             <img
               src="/heroimage2.jpg"
               alt="hero image"
-              className="w-full h-32 md:h-80 object-cover rounded-lg"
+              className="w-full h-48 md:h-96 object-cover rounded-lg"
             />
-            <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
-            <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-[#1E1E1E] text-left">
+            <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-80 md:opacity-65 rounded-lg" />
+            <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-lg md:text-4xl mt-5 md:mt-0 ml-5 md:ml-0 text-left">
               {user ? (
-                <p className="text-4xl font-bold mb-2">
+                <p className="mb-1 md:mb-4 font-semibold">
                   Hello, {user.fullName}.
                 </p>
               ) : (
-                <p className="text-5xl font-bold mb-2">Hey There!</p>
+                <p className="mb-1 md:mb-4 font-semibold">Hey There!</p>
               )}
-              <p className="text-lg">
-                Welcome to{" "}
-                <span className="text-orange-500">For the Sake of Food!</span>
+              <p className="text-sm md:text-lg font-semibold mb-5">
+                <span className="text-orange-500">Welcome to</span>{" "}
+                <span className="text-black">For the Sake of Food!</span>
               </p>
+
+              <button
+                className="bg-orange-500 text-white text-sm md:text-base rounded-full ml-12 md:ml-0 px-3 md:px-4 py-1 md:py-2 mb-12 flex justify-center md:justify-start"
+                onClick={() => {
+                  // Get the element to scroll to
+                  const mealCategoriesSection =
+                    document.getElementById("meal-categories");
+
+                  // Check if the element exists
+                  if (mealCategoriesSection) {
+                    // Scroll to the element smoothly
+                    mealCategoriesSection.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                See Categories
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col pl-8 pr-2">
-        <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
+      <div id="meal-categories" className="flex flex-col pl-8 pr-2">
+        <h1 className="text-xl md:text-4xl pl-4 py-10 pt-10 md:pt-20 font-semibold text-center text-black">
           Meal Categories
         </h1>
         <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
@@ -122,10 +141,10 @@ const Welcome = () => {
         </div>
       </div>
 
-       <div className="flex flex-col md:flex-row items-center pt-10 pl-5">
+      <div className="flex flex-col md:flex-row items-center pt-10 pl-5">
         <div className="w-full md:w-1/2 p-6 md:order-1">
           <Image
-            src="/user.jpg"
+            src="/userimage.jpg"
             alt="user image"
             width={700}
             height={500}
@@ -133,23 +152,23 @@ const Welcome = () => {
           />
         </div>
         <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
-          <h1 className="text-3xl pl-10 pr-5 font-bold relative">
+          <h1 className="text-xl md:text-3xl pl-10 pr-5 font-semibold relative">
             <span className="text-black">Why </span>
-            <span className="text-[#3A8700] font-bold">Our Recipes</span>
+            <span className="text-[#3A8700] font-semibold">Our Recipes</span>
             <span className="text-black"> Are The Best</span>
             <span className="absolute top-[-2.5rem] left-[-3rem] text-gray-300 text-9xl ml-4">
               “
             </span>
           </h1>
-          <p className="pl-10 pr-5 mt-5">
-            At 50 its become more important than ever to make healthy food
+          <p className="text-sm md:text-base pl-10 pr-5 mt-5">
+            At 40 its become more important than ever to make healthy food
             choices. This app has opened a world of delicious nutritious meals
             that keep me feeling vibrant and energized. Its not just an app its
             a companion on my journey to a healthier happier life. The recipes
             are easy to follow and I have never had so much fun experimenting in
             the kitchen. Thank you for making healthy eating a joy!
           </p>
-          <p className="pl-10 pr-5">~Carol Lynn</p>
+          <p className="text-sm md:text-base pl-10 pr-5">~Carol Lynn</p>
         </div>
       </div>
 
@@ -227,7 +246,7 @@ const Welcome = () => {
                         name={condition.value}
                         checked={formData.conditions[condition.value]}
                         onChange={handleChange}
-                        className="mr-2 !checked:bg-black" 
+                        className="mr-2 !checked:bg-black"
                       />
                       {condition.label}
                     </label>

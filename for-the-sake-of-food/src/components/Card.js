@@ -123,7 +123,7 @@ const Card = ({
 
   return (
     <div className="max-w-lg rounded-lg overflow-hidden bg-[#E7F9FD] shadow-lg m-4">
-      <div style={{ position: "relative", width: "100%", height: "300px" }}>
+      <div style={{ position: "relative", width: "100%", height: "200px" }}>
         <Image
           layout="fill"
           objectFit="cover"
@@ -132,12 +132,12 @@ const Card = ({
           className="rounded-t-lg"
         />
       </div>
-      <div className="px-6 py-4">
-        <p className="text-black font-bold  pb-2 text-xl">{title}</p>
+      <div className="px-6 py-2 md:py-4">
+        <p className="text-black pl-0 pb-0 md:pb-2 text-sm md:text-lg">{title}</p>
       </div>
       <div className="flex justify-between px-6 py-4">
         <Link
-          className="bg-black hover:bg-[#858684] text-white py-2 px-4 rounded-full mb-4"
+          className="bg-black hover:bg-[#858684] text-white text-sm md:text-base py-2 px-3 md:px-4 rounded-full mb-4"
           href={`/${category}/${id}`}
         >
           Read More
