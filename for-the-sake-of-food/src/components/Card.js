@@ -10,7 +10,7 @@
 //   id,
 //   category,
 //   title,
-  
+
 // }) => {
 //   return (
 //     <div className="max-w-lg rounded-lg overflow-hidden bg-[#E7F9FD] shadow-lg m-4">
@@ -105,6 +105,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useUser } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
 
 const Card = ({
   image,
@@ -114,11 +116,46 @@ const Card = ({
   id,
   category,
   title,
+  onFavoriteChange,
 }) => {
   const [isFavorited, setIsFavorited] = useState(false);
+  const { user } = useUser();
+  const pathName = usePathname();
+  console.log(pathName);
 
-  const toggleFavorite = () => {
+  if (!user) {
+    return null;
+  }
+
+  const toggleFavorite = async () => {
+    // Toggle the local state
     setIsFavorited(!isFavorited);
+
+    // Make a request to the API to add or remove the recipe from favorites
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/Favorites`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: user.id,
+            recipesId: id,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to update favorites");
+      }
+
+      // Notify parent component about the change in favorites
+      onFavoriteChange(id, !isFavorited);
+    } catch (error) {
+      console.error("Error updating favorites:", error);
+    }
   };
 
   return (
@@ -142,24 +179,22 @@ const Card = ({
         >
           Read More
         </Link>
-        <button
-          className="bg-transparent p-2 rounded-full mb-4"
-          onClick={toggleFavorite}
-        >
-          <img
-            src={isFavorited ? '/black-heart.png' : '/white-heart.png'}
-            alt={isFavorited ? "Unfavorite" : "Favorite"}
-            className="h-8"
-          />
-        </button>
+        {pathName == "/favorites" ? null : (
+          <button
+            className="bg-transparent p-2 rounded-full mb-4 relative"
+            onClick={() => toggleFavorite()}
+          >
+            <Image
+              src={isFavorited ? "/black-heart.png" : "/white-heart.png"}
+              alt={isFavorited ? "Unfavorite" : "Favorite"}
+              className="object-contain h-10 w-10"
+              fill
+            />
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
 export default Card;
-
-
-
-
-
