@@ -19,12 +19,10 @@ const Mealplanner = () => {
     setBreakfastMeals([newBreakfastMeal, ...breakfastMeals]);
   }
 
-  
   async function handleAddLunchMeal() {
     setLunchMeals([newLunchMeal, ...lunchmeals]);
   }
 
-  
   async function handleAddDinnerMeal() {
     setDinnerMeals([newDinnerMeal, ...dinnermeals]);
   }
@@ -54,7 +52,9 @@ const Mealplanner = () => {
                   <input
                     className="border-b w-full focus:outline-none p-3 "
                     placeholder="Add New"
-                    onChange={(e) => setNewBreakfastMeal({ name: e.target.value })}
+                    onChange={(e) =>
+                      setNewBreakfastMeal({ name: e.target.value })
+                    }
                   />
                   <button className="-ml-8" onClick={handleAddBreakfastMeal}>
                     <FaPlus />
@@ -65,7 +65,7 @@ const Mealplanner = () => {
               <div className="space-y-4 pt-4">
                 {breakfastMeals?.map((item, index) => {
                   return (
-                    <div className="flex flex-row space-x-2 items-center">
+                    <div key={index} className="flex flex-row space-x-2 items-center">
                       {/* <input type="checkbox" className="rounded-none p-8 " name={item?.name} value={item?.name} /> */}
                       <label htmlFor={item?.name} className="text-gray-500">
                         {item?.name}
@@ -95,7 +95,7 @@ const Mealplanner = () => {
               <div className="space-y-4 pt-4">
                 {lunchmeals?.map((item, index) => {
                   return (
-                    <div className="flex flex-row space-x-2 items-center">
+                    <div key={index} className="flex flex-row space-x-2 items-center">
                       {/* <input type="checkbox" className="rounded-none p-8 " name={item?.name} value={item?.name} /> */}
                       <label htmlFor={item?.name} className="text-gray-500">
                         {item?.name}
@@ -125,7 +125,7 @@ const Mealplanner = () => {
               <div className="space-y-4 pt-4">
                 {dinnermeals?.map((item, index) => {
                   return (
-                    <div className="flex flex-row space-x-2 items-center">
+                    <div key={index} className="flex flex-row space-x-2 items-center">
                       {/* <input type="checkbox" className="rounded-none p-8 " name={item?.name} value={item?.name} /> */}
                       <label htmlFor={item?.name} className="text-gray-500">
                         {item?.name}
@@ -135,7 +135,6 @@ const Mealplanner = () => {
                 })}
               </div>
             </div>
-            
           </div>
           <Calendar />
         </div>

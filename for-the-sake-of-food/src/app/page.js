@@ -76,7 +76,7 @@ const Welcome = () => {
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-4 md:px-6">
           <div className="relative">
-            <Image
+            <img
               src="/heroimage2.jpg"
               alt="hero image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
@@ -108,10 +108,11 @@ const Welcome = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-          `&quot;`For the Sake of Food is a nutrition platform aiming to improve
-            Ugandan lifestyles. We offer personalized recipes, and much needed
-            features aimed at empowering users to make informed dietary choices.
-            We`&apos;`re on a mission to foster a healthier, happier community.`&quot;`
+            `&quot;`For the Sake of Food is a nutrition platform aiming to
+            improve Ugandan lifestyles. We offer personalized recipes, and much
+            needed features aimed at empowering users to make informed dietary
+            choices. We`&apos;`re on a mission to foster a healthier, happier
+            community.`&quot;`
           </p>
         </div>
       </div>
