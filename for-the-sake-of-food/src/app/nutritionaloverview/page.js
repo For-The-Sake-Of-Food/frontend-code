@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 
 const FoodInput = () => {
-  const [foodName, setFoodName] = useState("");
+  const [foodName, setFoodName] = useState([]);
   const [mealType, setMealType] = useState({});
   const [foodCategory, setFoodCategory] = useState([]);
   const [cookingMethod, setCookingMethod] = useState([]);
@@ -90,7 +90,9 @@ const FoodInput = () => {
       console.error("Error submitting data:", error);
     }
   };
-
+const foodNameOptions=[
+  {value:"posho",label:"Posho"}
+]
   const foodCategoryOptions = [
     { value: "antioxidants", label: "Antioxidants" },
     { value: "calcium", label: "Calcium" },
@@ -183,13 +185,12 @@ const FoodInput = () => {
           {/* ... (unchanged code for text input fields) */}
           <div>
             <label htmlFor="foodName">Food Name:</label>
-            <input
-              type="text"
+            <Select
               id="foodName"
               value={foodName}
-              onChange={(e) => setFoodName(e.target.value)}
-              required
-              className="border p-2 w-full"
+              onChange={(selectedOptions) => setFoodName(selectedOptions)}
+              options={foodNameOptions}
+              isMulti
             />
           </div>
           <div>
@@ -249,3 +250,10 @@ const FoodInput = () => {
 };
 
 export default FoodInput;
+
+
+/**
+ * get results form the 
+ * 
+ * 
+ */
