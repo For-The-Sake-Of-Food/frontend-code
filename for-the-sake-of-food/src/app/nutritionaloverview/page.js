@@ -159,6 +159,12 @@ const FoodInput = () => {
         backgroundPosition: "center",
         minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
       }}
+      style={{
+        backgroundImage: 'url("./signin.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
+      }}
     >
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
