@@ -524,14 +524,24 @@ const FoodInput = () => {
   return (
     <div
       className="flex items-center justify-center h-screen"
-      style={{
-        backgroundImage: 'url("./signin.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
-      }}
+      // style={{
+      //   backgroundImage: 'url("./signin.jpg")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
+      // }}
     >
-      <div className="bg-white p-4 rounded shadow-md sm:w-96 w-full">
+      <div className="pt-20 items-center justify-center">
+        <div className="text-center">
+          <h1 className="font-bold mb-2">Visualize Your Health Journey</h1>
+          <p className="text-lg pr-20 pl-20">
+            "Our data visualization tool helps you track and understand your
+            eating patterns. Input your daily meals and gauge
+            your nutrition choices. Take control of your health with insightful
+            charts. Knowledge is power, embrace it!"
+          </p>
+        </div>
+        <div className="bg-white p-4 rounded shadow-md sm:w-96 w-full mt-8 pr-20">
         <h1 className="text-2xl mb-4 text-center">Food Input Form</h1>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -587,6 +597,9 @@ const FoodInput = () => {
           </button>
         </form>
       </div>
+      </div>
+
+      
     </div>
   );
 };

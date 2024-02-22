@@ -107,14 +107,14 @@ const MyPage = () => {
           </div>
 
           <div className="ml-4 flex items-center justify-center">
-            <div className="ml-3 mr-1 px-6 py-4">
+            {/* <div className="ml-3 mr-1 px-6 py-4">
               <Image
                 src="/knife-and-fork.png"
                 alt="knife and fork"
                 width={18}
                 height={18}
               />
-            </div>
+            </div> */}
             {/* <div className="text-center">
               <p className="text-xs font-bold text-black ">RECOMMENDED FOR </p>
               <p className="text-xs text-black ">{recipe.recommended}</p>
@@ -180,9 +180,9 @@ const MyPage = () => {
       </div>
 
       {/* SignupForm with full-width background */}
-      <div className="bg-gray-200">
+      {/* <div className="bg-gray-200">
         <SignupForm />
-      </div>
+      </div> */}
     </div>
   );
 };

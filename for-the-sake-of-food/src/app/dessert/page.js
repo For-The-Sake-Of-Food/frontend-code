@@ -59,13 +59,13 @@ setDessertData(idsArray);
           </div>
         ))}
       </div>
-      <div className="bg-[#E7F9FD] w-full">
+      {/* <div className="bg-[#E7F9FD] w-full">
         <div className="max-w-screen-xl mx-auto p-4">
           <div className="w-full">
             <SignupForm />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
