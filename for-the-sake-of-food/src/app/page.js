@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog";
 import { useState } from "react";
 
+
 const Welcome = () => {
   const { user } = useUser();
   const [dialogOpen, setDialogOpen] = useState(true);
@@ -107,7 +108,7 @@ const Welcome = () => {
 
       <div className="flex flex-col pl-8 pr-2">
         <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
-          Meal Categories
+          What recipes are you interested in?
         </h1>
         <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
           <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
@@ -157,7 +158,7 @@ const Welcome = () => {
         <Food />
       </div>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogTrigger>Open</DialogTrigger>
+        {/* <DialogTrigger className="ml-20">Open</DialogTrigger> */}
         <DialogContent>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="mb-4 ">
