@@ -105,6 +105,26 @@ const Welcome = () => {
         </div>
       </div>
 
+<<<<<<< Updated upstream
+=======
+      <div className="pt-20 items-center justify-center">
+        <div className="text-center">
+          <h1 className="font-bold mb-2">
+            <p className="text-4xl">
+              Welcome to{" "}
+              <span className="text-orange-500">For the Sake of Food!</span>
+            </p>
+          </h1>
+          <p className="text-lg pr-56 pl-56">
+            "For the Sake of Food is a nutrition platform aiming to improve
+            Ugandan lifestyles. We offer personalized recipes, and much needed
+            features aimed at empowering users to make informed dietary choices.
+            We're on a mission to foster a healthier, happier community."
+          </p>
+        </div>
+      </div>
+
+>>>>>>> Stashed changes
       <div className="flex flex-col pl-8 pr-2">
         <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
           Meal Categories
