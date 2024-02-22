@@ -2,14 +2,14 @@
 import Dessertcard from "@/components/Dessertcard";
 import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
-
+import Image from "next/image";
 const Highcholesterol = () => {
   return (
     <div>
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-4 md:px-6">
           <div className="relative">
-            <img
+            <Image
               src="/highcholesterol.jpg"
               alt="high cholesterol image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
@@ -33,9 +33,9 @@ const Highcholesterol = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-            "Scroll through to discover tasty recipes, and embark on a journey
-            of flavor. Whether you're a seasoned chef or a kitchen beginner,
-            there's something delightful waiting for you. Enjoy the experience!"
+          `&quot;`Scroll through to discover tasty recipes, and embark on a journey
+            of flavor. Whether you`&apos;`re a seasoned chef or a kitchen beginner,
+            there`&apos;`s something delightful waiting for you. Enjoy the experience!`&quot;`
           </p>
         </div>
       </div>
