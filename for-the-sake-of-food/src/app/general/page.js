@@ -3,8 +3,12 @@ import Dessertcard from "@/components/Dessertcard";
 import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Image from "next/image";
+import { Tab } from "@headlessui/react";
+import FoodRecipesTabs from "@/components/tabs/food-recipes";
+import { Fragment } from "react";
+import JuiceRecipesTabs from "@/components/tabs/juice-recipes";
+import SnackRecipesTabs from "@/components/tabs/snack-recipes";
 const General = () => {
-  
   return (
     <div>
       <div className="relative rounded-lg overflow-hidden pl-4">
@@ -13,6 +17,8 @@ const General = () => {
             <Image
               src="/food3.jpg"
               alt="general image"
+              width={200}
+              height={500}
               className="w-full h-32 md:h-80 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
@@ -34,13 +40,75 @@ const General = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-          `&quot;`Scroll through to discover tasty recipes, and embark on a journey
-            of flavor. Whether you`&apos;`re a seasoned chef or a kitchen beginner,
-            there`&apos;`s something delightful waiting for you. Enjoy the experience!`&quot;`
+            `&quot;`Scroll through to discover tasty recipes, and embark on a
+            journey of flavor. Whether you`&apos;`re a seasoned chef or a
+            kitchen beginner, there`&apos;`s something delightful waiting for
+            you. Enjoy the experience!`&quot;`
           </p>
         </div>
       </div>
-
+      <div className="pl-8">
+        <Tab.Group>
+          <Tab.List className={"flex flex-row justify-between px-16 py-16"}>
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                /* Use the `selected` state to conditionally style the selected tab. */
+                <button
+                  className={
+                    selected ? "bg-blue-500 text-white" : "bg-white text-black"
+                  }
+                >
+                  Food
+                </button>
+              )}
+            </Tab>
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                /* Use the `selected` state to conditionally style the selected tab. */
+                <button
+                  className={
+                    selected ? "bg-blue-500 text-white" : "bg-white text-black"
+                  }
+                >
+                  Juice
+                </button>
+              )}
+            </Tab>{" "}
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                /* Use the `selected` state to conditionally style the selected tab. */
+                <button
+                  className={
+                    selected ? "bg-blue-500 text-white" : "bg-white text-black"
+                  }
+                >
+                  Snacks
+                </button>
+              )}
+            </Tab>
+          </Tab.List>
+          <Tab.Panels>
+            <Tab.Panel>
+              <div>
+                {" "}
+                <FoodRecipesTabs />
+              </div>
+            </Tab.Panel>
+            <Tab.Panel>
+              <div>
+                {" "}
+                <JuiceRecipesTabs />
+              </div>
+            </Tab.Panel>
+            <Tab.Panel>
+              <div>
+                {" "}
+                <SnackRecipesTabs />
+              </div>
+            </Tab.Panel>
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
       <div className="flex flex-col pl-8 pr-2">
         <h1 className="text-4xl pl-4 py-10 pt-20 md:pt-35 text-black font-bold">
           Meal Categories
@@ -88,7 +156,7 @@ export default General;
 //     <div className="p-8">
 //       <h1 className="text-3xl font-bold mb-4">General Recipes</h1>
 //       <p className="mb-8">Discover a variety of delicious recipes to satisfy your cravings and nourish your body.</p>
-      
+
 //       <div className="flex items-center justify-between mb-4">
 //         <CategoryLink
 //           name="Food"
@@ -106,9 +174,9 @@ export default General;
 //           onClick={() => handleCategoryClick('Snacks')}
 //         />
 //       </div>
-      
+
 //       <hr className="mb-4" />
-      
+
 //       {/* Content for selected category goes here */}
 //     </div>
 //   );
@@ -194,7 +262,6 @@ export default General;
 // };
 
 // export default GeneralRecipesPage;
-
 
 // import React from 'react';
 // function MyTabs() {
