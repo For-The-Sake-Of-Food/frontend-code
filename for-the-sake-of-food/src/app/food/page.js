@@ -45,8 +45,8 @@ const Home = () => {
 
   return (
     <div className="flex flex-col min-h-screen py-14 pl-8 pr-2 ">
-      <h1 className="text-4xl pl-4 font-bold py-2">Food Recipes</h1>
-      <h1 className="text-2xl pl-5 font-bold py-2"></h1>
+      <h1 className="text-xl md:text-4xl pl-4 text-center font-semibold py-2">Food Recipes</h1>
+      <h1 className="text-2xl pl-5 py-2"></h1>
       <div className="flex flex-wrap">
         {cardData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>

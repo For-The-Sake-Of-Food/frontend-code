@@ -2,7 +2,9 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import React, { useState } from "react";
+import { useQuery } from "react-query";
 import Select from "react-select";
+import axios from "axios";
 
 const FoodInput = () => {
   const [foodName, setFoodName] = useState([]);
@@ -12,6 +14,22 @@ const FoodInput = () => {
   const [freshness, setFreshness] = useState({});
   const [error, setError] = useState("");
   const { user } = useUser();
+
+  const {
+    data,
+    error: fetchError,
+    isLoading,
+  } = useQuery("foodData", async () => {
+    const response = await axios.get("http://localhost:5000/api/all-foods");
+    return response.data;
+  });
+
+  // const fetchData = async () => {
+  //   const response = await axios.get("http://localhost:5000/api/all-foods");
+  //   return response.data;
+  // };
+
+  console.log({ data });
 
   if (!user) {
     return null;
@@ -26,7 +44,6 @@ const FoodInput = () => {
     if (
       !foodName ||
       !mealType ||
-      !foodCategory ||
       !cookingMethod ||
       !freshness
     ) {
@@ -34,35 +51,12 @@ const FoodInput = () => {
       return;
     }
     const foodhistory = {
-      foodName,
+      foodName: foodName.map((item) => ({ label: item.label, value: item.value })),
       mealType: mealType.value,
-      foodCategory: foodCategory.map((item) => item.value),
-      cookingMethod: cookingMethod.map((item) => item.value),
+      cookingMethod: cookingMethod.map((item) => ({ label: item.label, value: item.value })),
       freshness: freshness.value,
     };
-    //   {
-    //     "foodName": "matooke and beans",
-    //     "mealType": {
-    //         "value": "breakfast",
-    //         "label": "Breakfast"
-    //     },
-    //     "foodCategory": [
-    //         {
-    //             "value": "fruits",
-    //             "label": "Fruits"
-    //         }
-    //     ],
-    //     "cookingMethod": [
-    //         {
-    //             "value": "grilled",
-    //             "label": "Grilled"
-    //         }
-    //     ],
-    //     "freshness": {
-    //         "value": "fresh",
-    //         "label": "Fresh"
-    //     }
-    // }
+
     console.log("foodhistory", foodhistory);
 
     try {
@@ -80,7 +74,6 @@ const FoodInput = () => {
 
       setFoodName("");
       setMealType("");
-      setFoodCategory("");
       setCookingMethod("");
       setFreshness("");
       setError("");
@@ -90,36 +83,412 @@ const FoodInput = () => {
       console.error("Error submitting data:", error);
     }
   };
-const foodNameOptions=[
-  {value:"posho",label:"Posho"}
-]
-  const foodCategoryOptions = [
-    { value: "antioxidants", label: "Antioxidants" },
-    { value: "calcium", label: "Calcium" },
-    { value: "carbohydrates", label: "Carbohydrates" },
-    { value: "fats", label: "Fats" },
-    { value: "dietaryfiber", label: "Dietary Fiber" },
-    { value: "iron", label: "Iron" },
-    { value: "magnesium", label: "Magnesium" },
-    { value: "minerals", label: "Minerals" },
-    { value: "omega-3 fatty acids ", label: "Omega-3 Fatty Acids" },
-    { value: "potassium", label: "Potassium" },
-    { value: "proteins", label: "Proteins" },
-    { value: "vitamins", label: "Vitamins" },
-    { value: "vitaminA", label: "Vitamin A" },
-    { value: "vitaminB", label: "Vitamin B" },
-    { value: "vitaminB1", label: "Vitamin B1 (Thiamine)" },
-    { value: "vitaminB2", label: "Vitamin B2 (Riboflavin)" },
-    { value: "vitaminB3", label: "Vitamin B3 (Niacin)" },
-    { value: "vitaminB6", label: "Vitamin B6" },
-    { value: "vitaminB9", label: "Vitamin B9 (Folate)" },
-    { value: "vitaminB12", label: "Vitamin B12" },
-    { value: "vitaminC", label: "Vitamin C" },
-    { value: "vitaminD", label: "Vitamin D" },
-    { value: "vitaminE", label: "Vitamin E" },
-    { value: "vitaminK", label: "Vitamin K" },
-    { value: "water", label: "Water" },
-    { value: "zinc", label: "Zinc" },
+
+  const foodData = [
+    {
+      label: "Apple  Fruit",
+      value: 1,
+    },
+    {
+      label: "Apple Juice",
+      value: 2,
+    },
+    {
+      label: "Avocado Fruit",
+      value: 3,
+    },
+    {
+      label: "Avocado Salad",
+      value: 4,
+    },
+    {
+      label: "Banana Cake",
+      value: 5,
+    },
+    {
+      label: "Banana Crisps",
+      value: 6,
+    },
+    {
+      label: "Banana Fruit",
+      value: 7,
+    },
+    {
+      label: "Banana Pancakes",
+      value: 8,
+    },
+    {
+      label: "Banana Smoothie",
+      value: 9,
+    },
+    {
+      label: "Oatmeal",
+      value: 70,
+    },
+    {
+      label: "Orange Fruit",
+      value: 71,
+    },
+    {
+      label: "Beef meat pie",
+      value: 16,
+    },
+    {
+      label: "Beef Muchomo",
+      value: 17,
+    },
+    {
+      label: "Beef Samosas",
+      value: 18,
+    },
+    {
+      label: "Beef Sandwich",
+      value: 19,
+    },
+    {
+      label: "Beef stew",
+      value: 20,
+    },
+    {
+      label: "Biscuits",
+      value: 21,
+    },
+    {
+      label: "Brown Bread",
+      value: 22,
+    },
+    {
+      label: "Buga",
+      value: 23,
+    },
+    {
+      label: "Cabbage",
+      value: 24,
+    },
+    {
+      label: "Bean Stew",
+      value: 10,
+    },
+    {
+      label: "Carrot Juice",
+      value: 25,
+    },
+    {
+      label: "Cassava Crisps",
+      value: 26,
+    },
+    {
+      label: "Cassava Katogo",
+      value: 27,
+    },
+    {
+      label: "Cassava",
+      value: 28,
+    },
+    {
+      label: "Chapati",
+      value: 29,
+    },
+    {
+      label: "Chicken meat pie",
+      value: 30,
+    },
+    {
+      label: "Chicken Samosas",
+      value: 31,
+    },
+    {
+      label: "Chicken Sandwich",
+      value: 32,
+    },
+    {
+      label: "Chicken Stew",
+      value: 33,
+    },
+    {
+      label: "Cocktail Juice",
+      value: 34,
+    },
+    {
+      label: "Coconut Milk",
+      value: 35,
+    },
+    {
+      label: "Coconut Water",
+      value: 36,
+    },
+    {
+      label: "Coleslaw",
+      value: 37,
+    },
+    {
+      label: "Cornflakes",
+      value: 38,
+    },
+    {
+      label: "Daddies",
+      value: 39,
+    },
+    {
+      label: "Deviled eggs",
+      value: 40,
+    },
+    {
+      label: "Dodo",
+      value: 41,
+    },
+    {
+      label: "Egg Sandwich",
+      value: 42,
+    },
+    {
+      label: "Egged rice",
+      value: 43,
+    },
+    {
+      label: "Eggs",
+      value: 44,
+    },
+    {
+      label: "Fish",
+      value: 45,
+    },
+    {
+      label: "Fried Rice",
+      value: 46,
+    },
+    {
+      label: "Goat Muchomo",
+      value: 47,
+    },
+    {
+      label: "Goat Stew",
+      value: 48,
+    },
+    {
+      label: "Orange Juice",
+      value: 72,
+    },
+    {
+      label: "Grapes",
+      value: 49,
+    },
+    {
+      label: "Grasshoppers",
+      value: 50,
+    },
+    {
+      label: "Groundnut Sauce",
+      value: 51,
+    },
+    {
+      label: "Groundnuts",
+      value: 52,
+    },
+    {
+      label: "Guava Fruit",
+      value: 53,
+    },
+    {
+      label: "Guava Juice",
+      value: 54,
+    },
+    {
+      label: "Hard Corn",
+      value: 55,
+    },
+    {
+      label: "Kachumbari",
+      value: 56,
+    },
+    {
+      label: "Lemonade",
+      value: 57,
+    },
+    {
+      label: "Maize",
+      value: 58,
+    },
+    {
+      label: "Maize or Stiff Porridge",
+      value: 59,
+    },
+    {
+      label: "Mandazi",
+      value: 60,
+    },
+    {
+      label: "Mango  Fruit",
+      value: 61,
+    },
+    {
+      label: "Matooke",
+      value: 63,
+    },
+    {
+      label: "Matooke Katogo",
+      value: 64,
+    },
+    {
+      label: "Milk Tea",
+      value: 65,
+    },
+    {
+      label: "Millet Porridge",
+      value: 66,
+    },
+    {
+      label: "Mango Juice",
+      value: 62,
+    },
+    {
+      label: "Mixed Berry Juice",
+      value: 67,
+    },
+    {
+      label: "Nakati",
+      value: 68,
+    },
+    {
+      label: "Nyama Choma",
+      value: 69,
+    },
+    {
+      label: "Passion Fruit",
+      value: 73,
+    },
+    {
+      label: "Passion Fruit Juice",
+      value: 74,
+    },
+    {
+      label: "Pawpaw Fruit",
+      value: 75,
+    },
+    {
+      label: "Pawpaw Juice",
+      value: 76,
+    },
+    {
+      label: "Peas",
+      value: 77,
+    },
+    {
+      label: "Pilau",
+      value: 78,
+    },
+    {
+      label: "Pineapple Fruit",
+      value: 79,
+    },
+    {
+      label: "Pineapple Juice",
+      value: 80,
+    },
+    {
+      label: "Plantain",
+      value: 81,
+    },
+    {
+      label: "Pomegrante",
+      value: 82,
+    },
+    {
+      label: "Posho",
+      value: 83,
+    },
+    {
+      label: "Potato Crisps",
+      value: 84,
+    },
+    {
+      label: "Potato Wedges",
+      value: 85,
+    },
+    {
+      label: "Potatoes",
+      value: 86,
+    },
+    {
+      label: "Pumpkin",
+      value: 87,
+    },
+    {
+      label: "Rolex",
+      value: 88,
+    },
+    {
+      label: "Scrambled Eggs",
+      value: 89,
+    },
+    {
+      label: "Sorghum Porridge",
+      value: 90,
+    },
+    {
+      label: "Soya Porridge",
+      value: 91,
+    },
+    {
+      label: "Spiced Tea",
+      value: 92,
+    },
+    {
+      label: "Strawberry Juice",
+      value: 93,
+    },
+    {
+      label: "Sukuma Wiki",
+      value: 94,
+    },
+    {
+      label: "Sweet Potatoes",
+      value: 95,
+    },
+    {
+      label: "Tamarind Juice",
+      value: 96,
+    },
+    {
+      label: "Vanilla Cake",
+      value: 97,
+    },
+    {
+      label: "Vegetable Samosa",
+      value: 98,
+    },
+    {
+      label: "Vegetable Sandwich",
+      value: 99,
+    },
+    {
+      label: "Watermelon Fruit",
+      value: 100,
+    },
+    {
+      label: "Watermelon Juice",
+      value: 101,
+    },
+    {
+      label: "White Ants",
+      value: 102,
+    },
+    {
+      label: "White Milk bread",
+      value: 103,
+    },
+    {
+      label: "Yams",
+      value: 104,
+    },
+    {
+      label: "Donuts",
+      value: 105,
+    },
+    {
+      label: "Vegetable Rice",
+      value: 106,
+    },
   ];
 
   const cookingMethodOptions = [
@@ -155,27 +524,21 @@ const foodNameOptions=[
   return (
     <div
       className="flex items-center justify-center h-screen"
-      style={{
-        backgroundImage: 'url("./signin.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
-      }}
-      style={{
-        backgroundImage: 'url("./signin.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
-      }}
+      // style={{
+      //   backgroundImage: 'url("./signin.jpg")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
+      // }}
     >
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
           <h1 className="font-bold mb-2">Visualize Your Health Journey</h1>
           <p className="text-lg pr-20 pl-20">
-            "Our data visualization tool helps you track and understand your
+          `&quot;`Our data visualization tool helps you track and understand your
             eating patterns. Input your daily meals and gauge
             your nutrition choices. Take control of your health with insightful
-            charts. Knowledge is power, embrace it!"
+            charts. Knowledge is power, embrace it!`&quot;`
           </p>
         </div>
         <div className="bg-white p-4 rounded shadow-md sm:w-96 w-full mt-8 pr-20">
@@ -189,18 +552,7 @@ const foodNameOptions=[
               id="foodName"
               value={foodName}
               onChange={(selectedOptions) => setFoodName(selectedOptions)}
-              options={foodNameOptions}
-              isMulti
-            />
-          </div>
-          <div>
-            <label htmlFor="foodCategory">Food Category:</label>
-
-            <Select
-              id="foodCategory"
-              value={foodCategory}
-              onChange={(selectedOptions) => setFoodCategory(selectedOptions)}
-              options={foodCategoryOptions}
+              options={foodData}
               isMulti
             />
           </div>
@@ -245,15 +597,17 @@ const foodNameOptions=[
           </button>
         </form>
       </div>
+      </div>
+
+      
     </div>
   );
 };
 
 export default FoodInput;
 
-
 /**
- * get results form the 
- * 
- * 
+ * get results form the
+ *
+ *
  */

@@ -64,7 +64,7 @@ const Sidenav = () => {
       >
         {/* Company Logo */}
         <Link href="/">
-          <div className="relative flex w-25 h-12 ">
+          <div className="relative flex w-20 h-11 mt-2">
             {isOpen ? (
               <Image
                 src="/company-logo.png"
@@ -77,7 +77,7 @@ const Sidenav = () => {
                 src="/bowlnobg.png"
                 alt="Company Logo"
                 width={60}
-                height={80}
+                height={40}
                 className="pl-1 pb-1 object-fill"
               />
             )}
