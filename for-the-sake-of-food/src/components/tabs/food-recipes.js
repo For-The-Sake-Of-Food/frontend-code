@@ -36,15 +36,13 @@ export default function FoodRecipesTabs(){
     if (loading) {
       return (
         <div className="h-screen flex flex-col  items-center justify-center">
-          <p className="text-2xl font-semibold mb-4">Please Wait </p>
+          <p className="text-sm md:text-2xl md:font-semibold mb-4">Please Wait </p>
           <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
         </div>
       );
     }
     return (
-      <div className="flex flex-col min-h-screen py-14 pl-8 pr-2 ">
-        <h1 className="text-lg md:text-4xl pl-4 text-center font-semibold py-2">Food Recipes</h1>
-        <h1 className="text-2xl pl-5 py-2"></h1>
+      <div className="flex flex-col min-h-screen py-14 pl-8 pr-2 mt-0">
         <div className="flex flex-wrap">
           {cardData.map((card, index) => (
             <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>

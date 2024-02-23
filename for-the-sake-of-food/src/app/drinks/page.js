@@ -45,15 +45,14 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-14 min-h-screen">
-      <h1 className="text-3xl font-bold py-2">Juice Recipes</h1>
-      <h1 className="text-2xl font-bold py-2">Blend Sip Repeat!</h1>
+      {/* <h1 className="text-3xl font-bold py-2">Juice Recipes</h1>
+      <h1 className="text-2xl font-bold py-2">Blend Sip Repeat!</h1> */}
       <div className="py-4">
-        {" "}
         {/* Added margin for spacing */}
-        <p className="text-lg">
+        {/* <p className="text-lg">
           Explore our nutritious selection of juices and find your next
           favourite blend.
-        </p>
+        </p> */}
       </div>
       <div className="flex flex-wrap">
         {cardData.map((card, index) => (
