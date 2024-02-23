@@ -150,7 +150,7 @@ const Welcome = () => {
         <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
           <h1 className="text-xl md:text-3xl pl-10 pr-5 font-semibold relative">
             <span className="text-black">Why </span>
-            <span className="text-[#3A8700] font-bold">Our Recipes</span>
+            <span className="text-orange-500 font-bold">Our Recipes</span>
             <span className="text-black"> Are The Best</span>
             <span className="absolute top-[-2.5rem] left-[-3rem] text-gray-300 text-9xl ml-4">
               “
