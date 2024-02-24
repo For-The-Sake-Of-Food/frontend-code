@@ -67,10 +67,13 @@ const Sidenav = () => {
           <div className="relative flex w-20 h-11 mt-2">
             {isOpen ? (
               <Image
-                src="/company-logo.png"
+                src="/bowlnobg.png"
                 alt="Another Image"
-                fill
-                className="object-cover"
+                width={60}
+                height={40}
+                className="pl-1 pb-1 object-fill"
+                // fill
+                // className="object-cover"
               />
             ) : (
               <Image
@@ -102,7 +105,7 @@ const Sidenav = () => {
                 <item.icon />
                 {isOpen && (
                   <div className="flex items-center transition-all duration-300 ease-in-out">
-                    <span className="ml-2 text-base">{item.name}</span>
+                    <span className="ml-2 text-sm md:text-base">{item.name}</span>
                   </div>
                 )}
               </Link>

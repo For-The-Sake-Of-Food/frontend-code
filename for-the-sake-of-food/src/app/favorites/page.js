@@ -34,7 +34,7 @@ const Favorites = () => {
   if (loading) {
     return (
       <div className="h-screen flex flex-col  items-center justify-center">
-        <p className="text-2xl font-semibold mb-4">Please Wait </p>
+        <p className="text-sm md:text-2xl md:font-semibold mb-4">Please Wait </p>
         <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );

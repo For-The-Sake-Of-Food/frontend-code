@@ -522,29 +522,34 @@ const FoodInput = () => {
   ];
 
   return (
+    <div className="relative">
     <div
-      className="flex items-center justify-center h-screen"
-      // style={{
-      //   backgroundImage: 'url("./signin.jpg")',
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   minHeight: "100vh", // Optional: Set a minimum height to cover the entire viewport
-      // }}
-    >
+      style={{
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        zIndex: -1,
+        backgroundImage: "url('/Back-ground.JPG')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    ></div>
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
-          <h1 className="font-bold mb-2">Visualize Your Health Journey</h1>
-          <p className="text-lg pr-56 pl-56">
-          &quot;Our data visualization tool helps you track and understand your
+          <h1 className="text-lg md:text-4xl font-semibold mb-2">Visualize Your Health Journey</h1>
+          <p className="text-sm md:text-base mt-5 pr-10 md:pr-20 pl-10 md:pl-20">
+           Our data visualization tool helps you track and understand your
             eating patterns. Input your daily meals and gauge
             your nutrition choices. Take control of your health with insightful
-            charts. Knowledge is power, embrace it!&quot;
+            charts. Knowledge is power, embrace it!
           </p>
         </div>
-        <div className="bg-white p-4 rounded shadow-md sm:w-96 w-full mt-8 pr-20">
-        <h1 className="text-2xl mb-4 text-center">Food Input Form</h1>
+        <div className="bg-transparent p-4 rounded shadow-md sm:w-96 w-full mt-8 pr-20 pl-20 ">
+        <h1 className="text-base md:text-2xl mb-4 text-center font-semibold">Food Input Form</h1>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-sm">
           {/* ... (unchanged code for text input fields) */}
           <div>
             <label htmlFor="foodName">Food Name:</label>
@@ -588,13 +593,14 @@ const FoodInput = () => {
               options={mealtypeOpttions}
             />
           </div>
-
+          <div className="flex justify-center">
           <button
             type="submit"
-            className="bg-black text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 self-center"
           >
             Submit
           </button>
+          </div>
         </form>
       </div>
       </div>
