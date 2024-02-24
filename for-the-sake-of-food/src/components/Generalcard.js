@@ -15,11 +15,11 @@ const Generalcard = () => {
         />
 
         <div className="p-4 text-center bg-[#E7F9FD] rounded-lg">
-          <h2 className="text-2xl font-semibold text-black">
+          <h2 className="text-sm md:text-lg text-black">
             General
           </h2>
           <div className="md:text-center">
-          <button className=" block  mx-auto md:inline-block mt-2 bg-black hover:bg-[#858684] text-white  px-4 py-2 rounded-full cursor-pointer">
+          <button className="text-sm md:text-base block  mx-auto md:inline-block mt-2 bg-black hover:bg-[#858684] text-white  px-4 py-2 rounded-full cursor-pointer">
             View all recipes
           </button>
           </div>

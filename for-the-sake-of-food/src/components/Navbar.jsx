@@ -37,7 +37,7 @@ const NavBar = () => {
       }
       `}
     >
-      <div className="flex justify-end container mx-10">
+      <div className="flex justify-end container">
         {/* <div className="flex items-center pl-2">
           <Link href="/">
             <Image
