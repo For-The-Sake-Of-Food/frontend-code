@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import Select from "react-select";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const FoodInput = () => {
   const [foodName, setFoodName] = useState([]);
@@ -14,6 +15,7 @@ const FoodInput = () => {
   const [freshness, setFreshness] = useState({});
   const [error, setError] = useState("");
   const { user } = useUser();
+  const router = useRouter()
 
   const {
     data,
@@ -29,19 +31,19 @@ const FoodInput = () => {
   //   return response.data;
   // };
 
-  console.log({ data });
+  // console.log({ data });
 
   if (!user) {
     return null;
   }
 
   const handleSubmit = async (e) => {
-    const date = new Date().toLocaleDateString();
+    const date =  new Date().toLocaleDateString()
     console.log(date);
     e.preventDefault();
 
     // Basic form validation
-    if (!foodName || !mealType || !cookingMethod || !freshness) {
+    if (!foodName && !mealType && !cookingMethod && !freshness) {
       setError("All fields are required");
       return;
     }
@@ -66,11 +68,14 @@ const FoodInput = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...foodhistory, id: user.id, date: date }),
+        body: JSON.stringify({ ...foodhistory, userId: user.id, date: date }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to submit data");
+      if (response.ok) {
+        router.push("/donutchart")
+      } else {
+        // Handle potential errors (from backend)
+        throw new Error("Failed to submit data to backend");
       }
 
       setFoodName("");
