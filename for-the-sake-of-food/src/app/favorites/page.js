@@ -39,9 +39,25 @@ const Favorites = () => {
       </div>
     );
   }
+  
   return (
-    <div>
-      <h1 className="text-center text-lg">Favorites</h1>
+    <div className="relative">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          zIndex: -1,
+          backgroundImage: "url('/Back-ground.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "100%", 
+        }}
+      ></div>
+      <h1 className="text-center text-lg md:text-4xl font-semibold">Favorites</h1>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
