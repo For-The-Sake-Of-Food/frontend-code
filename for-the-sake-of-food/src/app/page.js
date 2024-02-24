@@ -108,11 +108,11 @@ const Welcome = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-            `&quot;`For the Sake of Food is a nutrition platform aiming to
-            improve Ugandan lifestyles. We offer personalized recipes, and much
-            needed features aimed at empowering users to make informed dietary
-            choices. We`&apos;`re on a mission to foster a healthier, happier
-            community.`&quot;`
+            &quot;For the Sake of Food is a nutrition platform aiming to improve
+            Ugandan lifestyles. We offer personalized recipes, and much needed
+            features aimed at empowering users to make informed dietary choices.
+            We&apos;re on a mission to foster a healthier, happier
+            community.&quot;
           </p>
         </div>
       </div>
@@ -236,7 +236,7 @@ const Welcome = () => {
               {formData.bmi && <p className="mt-2">Your BMI: {formData.bmi}</p>}
             </div>
 
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label className={conditionLabelStyle}>
                 Conditions:
                 <div className="mt-2 ml-4">
@@ -257,7 +257,7 @@ const Welcome = () => {
                   ))}
                 </div>
               </label>
-            </div>
+            </div> */}
 
             <div>
               <button

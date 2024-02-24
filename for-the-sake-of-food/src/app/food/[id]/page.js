@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import SignupForm from "@/components/SignupForm";
 import { useParams } from "next/navigation";
 import axios from "axios";
 import { useRecipes } from "@/components/MyContext";
@@ -18,7 +17,7 @@ const MyPage = () => {
     image: "",
     category: "",
     ingredients: [""],
-    cooktime:"",
+    cooktime: "",
   });
   const [loading, setLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(

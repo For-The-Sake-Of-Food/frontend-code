@@ -4,20 +4,21 @@ import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
 import Image from "next/image";
 const Highbloodpressure = () => {
-  
   return (
     <div>
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-4 md:px-6">
           <div className="relative">
-            <Image
+            <img
               src="/highbp.jpg"
               alt="highbp image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-65 rounded-lg" />
             <div className="absolute top-3/4 left-0 transform -translate-y-1/2 p-4 pl-8 text-[#1E1E1E] text-left">
-              <h1 className="text-4xl font-bold">High Blood Pressure Recipes Hub!</h1>
+              <h1 className="text-4xl font-bold">
+                High Blood Pressure Recipes Hub!
+              </h1>
             </div>
           </div>
         </div>
@@ -34,9 +35,10 @@ const Highbloodpressure = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-          `&quot;`Scroll through to discover tasty recipes, and embark on a journey
-            of flavor. Whether you`&apos;`re a seasoned chef or a kitchen beginner,
-            there`&apos;`s something delightful waiting for you. Enjoy the experience!`&quot;`
+            &quot;Scroll through to discover tasty recipes, and embark on a
+            journey of flavor. Whether you&apos;re a seasoned chef or a kitchen
+            beginner, there&apos;s something delightful waiting for you. Enjoy
+            the experience!&quot;
           </p>
         </div>
       </div>

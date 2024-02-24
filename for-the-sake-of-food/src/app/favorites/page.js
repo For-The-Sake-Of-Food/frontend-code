@@ -7,7 +7,7 @@ const Favorites = () => {
   const [favData, setfavData] = useState([]);
   const [loading, setLoading] = useState(false);
   const { userId } = useAuth();
-  console.log(userId);
+  // console.log(userId);
 
   useEffect(() => {
     const fetchData = async () => {
