@@ -9,7 +9,7 @@ const Diabetes = () => {
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-4 md:px-6">
           <div className="relative">
-            <Image
+            <img
               src="/diabetes.jpg"
               alt="diabetes image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
@@ -35,10 +35,10 @@ const Diabetes = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-            `&quot;`Scroll through to discover tasty recipes, and embark on a journey
-            of flavor. Whether you`&apos;`re a seasoned chef or a kitchen beginner,
+            &quot;Scroll through to discover tasty recipes, and embark on a journey
+            of flavor. Whether you&apos;re a seasoned chef or a kitchen beginner,
             there&apos;s something delightful waiting for you. Enjoy the
-            experience!`&quot;`
+            experience!&quot;
           </p>
         </div>
       </div>

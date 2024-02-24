@@ -2,7 +2,7 @@
 import Dessertcard from "@/components/Dessertcard";
 import Foodcard from "@/components/Foodcard";
 import Juicecard from "@/components/Juicecard";
-import Image from "next/image";
+
 const General = () => {
   
   return (
@@ -10,7 +10,7 @@ const General = () => {
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-4 md:px-6">
           <div className="relative">
-            <Image
+            <img
               src="/food3.jpg"
               alt="general image"
               className="w-full h-32 md:h-80 object-cover rounded-lg"
@@ -33,10 +33,10 @@ const General = () => {
               </span>
             </p>
           </h1>
-          <p className="text-lg pr-20 pl-20">
-          `&quot;`Scroll through to discover tasty recipes, and embark on a journey
-            of flavor. Whether you`&apos;`re a seasoned chef or a kitchen beginner,
-            there`&apos;`s something delightful waiting for you. Enjoy the experience!`&quot;`
+          <p className="text-lg pr-56 pl-56">
+          &quot;Scroll through to discover tasty recipes, and embark on a journey
+            of flavor. Whether you&apos;re a seasoned chef or a kitchen beginner,
+            there&apos;s something delightful waiting for you. Enjoy the experience!&quot;
           </p>
         </div>
       </div>

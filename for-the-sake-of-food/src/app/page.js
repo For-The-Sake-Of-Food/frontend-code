@@ -2,7 +2,7 @@
 import Food from "@/app/food/page";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+// import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import Generalcard from "@/components/Generalcard";
 import Highbloodpressurecard from "@/components/Highbloodpressure";
@@ -11,65 +11,65 @@ import Diabetescard from "@/components/Diabetescard";
 
 const Welcome = () => {
   const { user } = useUser();
-  const [dialogOpen, setDialogOpen] = useState(true);
+  // const [dialogOpen, setDialogOpen] = useState(true);
 
-  const [formData, setFormData] = useState({
-    age: "",
-    weight: "",
-    height: "",
-    bmi: "",
-    conditions: {
-      diabetes: false,
-      highBloodPressure: false,
-      highCholesterol: false,
-      none: false,
-    },
-  });
+  // const [formData, setFormData] = useState({
+  //   age: "",
+  //   weight: "",
+  //   height: "",
+  //   bmi: "",
+  //   conditions: {
+  //     diabetes: false,
+  //     highBloodPressure: false,
+  //     highCholesterol: false,
+  //     none: false,
+  //   },
+  // });
 
-  const calculateBMI = () => {
-    const { age, weight, height } = formData;
-    const bmiValue = (weight / Math.pow(height / 100, 2)).toFixed(2);
-    setFormData((prevData) => ({ ...prevData, bmi: bmiValue }));
-  };
+  // const calculateBMI = () => {
+  //   const { age, weight, height } = formData;
+  //   const bmiValue = (weight / Math.pow(height / 100, 2)).toFixed(2);
+  //   setFormData((prevData) => ({ ...prevData, bmi: bmiValue }));
+  // };
 
-  const conditionLabels = [
-    { label: "Diabetes", value: "diabetes" },
-    { label: "High Blood Pressure", value: "highBloodPressure" },
-    { label: "High Cholesterol Levels", value: "highCholesterol" },
-    { label: "None", value: "none" },
-  ];
+  // const conditionLabels = [
+  //   { label: "Diabetes", value: "diabetes" },
+  //   { label: "High Blood Pressure", value: "highBloodPressure" },
+  //   { label: "High Cholesterol Levels", value: "highCholesterol" },
+  //   { label: "None", value: "none" },
+  // ];
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  // const handleChange = (e) => {
+  //   const { name, value, type, checked } = e.target;
 
-    if (type === "checkbox") {
-      setFormData((prevData) => {
-        const updatedConditions = { ...prevData.conditions, [name]: checked };
+  //   if (type === "checkbox") {
+  //     setFormData((prevData) => {
+  //       const updatedConditions = { ...prevData.conditions, [name]: checked };
 
-        if (
-          ["diabetes", "highBloodPressure", "highCholesterol"].includes(name)
-        ) {
-          updatedConditions.none = false;
-        } else if (name === "none") {
-          updatedConditions.diabetes = false;
-          updatedConditions.highBloodPressure = false;
-          updatedConditions.highCholesterol = false;
-        }
+  //       if (
+  //         ["diabetes", "highBloodPressure", "highCholesterol"].includes(name)
+  //       ) {
+  //         updatedConditions.none = false;
+  //       } else if (name === "none") {
+  //         updatedConditions.diabetes = false;
+  //         updatedConditions.highBloodPressure = false;
+  //         updatedConditions.highCholesterol = false;
+  //       }
 
-        return { ...prevData, conditions: updatedConditions };
-      });
-    } else {
-      setFormData((prevData) => ({ ...prevData, [name]: value }));
-    }
-  };
+  //       return { ...prevData, conditions: updatedConditions };
+  //     });
+  //   } else {
+  //     setFormData((prevData) => ({ ...prevData, [name]: value }));
+  //   }
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = async (e) =>
+  //   e.preventDefault();
+  // };
 
-  const inputStyle = "p-2 border border-gray-300 rounded-md w-full";
+  // const inputStyle = "p-2 border border-gray-300 rounded-md w-full";
 
-  const conditionLabelStyle = "block mb-2";
+  // const conditionLabelStyle = "block mb-2";
 
   return (
     <div>
@@ -108,11 +108,11 @@ const Welcome = () => {
             </p>
           </h1>
           <p className="text-lg pr-20 pl-20">
-            `&quot;`For the Sake of Food is a nutrition platform aiming to
+            &quot;For the Sake of Food is a nutrition platform aiming to
             improve Ugandan lifestyles. We offer personalized recipes, and much
             needed features aimed at empowering users to make informed dietary
-            choices. We`&apos;`re on a mission to foster a healthier, happier
-            community.`&quot;`
+            choices. We&apos;re on a mission to foster a healthier, happier
+            community.&quot;
           </p>
         </div>
       </div>
@@ -171,14 +171,14 @@ const Welcome = () => {
       <div className="mt-3">
         <Food />
       </div>
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        {/* <DialogTrigger>Open</DialogTrigger> */}
+      {/* <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogTrigger>Open</DialogTrigger>
         <DialogContent>
           <div className="items-center justify-center">
             <div className="text-center">
-              {/* <h1 className="font-bold mb-2"> */}
+              <h1 className="font-bold mb-2">
               <p className="text-lg">Please fill out this form</p>
-              {/* </h1> */}
+              </h1>
             </div>
           </div>
 
@@ -269,7 +269,7 @@ const Welcome = () => {
             </div>
           </form>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 };
