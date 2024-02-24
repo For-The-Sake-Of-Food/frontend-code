@@ -5,7 +5,7 @@ import {
   Heart,
   ShoppingCart,
   NotebookText,
-  Search,
+  HeartPulse,
   MessagesSquare,
   Menu,
 } from "lucide-react";
@@ -18,7 +18,7 @@ const navigation = [
   {
     name: "Nutritional Overview",
     href: "/nutritionaloverview",
-    icon: Search,
+    icon: HeartPulse,
   },
   { name: "Nutribot", href: "/nutribot", icon: MessagesSquare },
 ];
@@ -105,7 +105,7 @@ const Sidenav = () => {
                 <item.icon />
                 {isOpen && (
                   <div className="flex items-center transition-all duration-300 ease-in-out">
-                    <span className="ml-2 text-sm md:text-base">{item.name}</span>
+                    <span className="ml-2 text-sm md:text-sm">{item.name}</span>
                   </div>
                 )}
               </Link>

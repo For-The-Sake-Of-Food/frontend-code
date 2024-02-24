@@ -1,7 +1,7 @@
 // pages/foodInput.js
 "use client";
 import { useUser } from "@clerk/nextjs";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import Select from "react-select";
 import axios from "axios";
@@ -41,19 +41,20 @@ const FoodInput = () => {
     e.preventDefault();
 
     // Basic form validation
-    if (
-      !foodName ||
-      !mealType ||
-      !cookingMethod ||
-      !freshness
-    ) {
+    if (!foodName || !mealType || !cookingMethod || !freshness) {
       setError("All fields are required");
       return;
     }
     const foodhistory = {
-      foodName: foodName.map((item) => ({ label: item.label, value: item.value })),
+      foodName: foodName.map((item) => ({
+        label: item.label,
+        value: item.value,
+      })),
       mealType: mealType.value,
-      cookingMethod: cookingMethod.map((item) => ({ label: item.label, value: item.value })),
+      cookingMethod: cookingMethod.map((item) => ({
+        label: item.label,
+        value: item.value,
+      })),
       freshness: freshness.value,
     };
 
@@ -523,89 +524,99 @@ const FoodInput = () => {
 
   return (
     <div className="relative">
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        zIndex: -1,
-        backgroundImage: "url('/Back-ground.JPG')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    ></div>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          zIndex: -1,
+          backgroundImage: "url('/Back-ground.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "100%", 
+        }}
+      ></div>
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
-          <h1 className="text-lg md:text-4xl font-semibold mb-2">Visualize Your Health Journey</h1>
-          <p className="text-sm md:text-base mt-5 pr-10 md:pr-20 pl-10 md:pl-20">
-           Our data visualization tool helps you track and understand your
-            eating patterns. Input your daily meals and gauge
-            your nutrition choices. Take control of your health with insightful
-            charts. Knowledge is power, embrace it!
+          <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
+            Visualize Your Health Journey
+          </h1>
+          <p className=" text-xs md:text-sm text-center pl-12 pr-10 pt-5 px-4 md:px-20">
+            Our data visualization tool helps you track and understand your
+            eating patterns. Input your daily meals and gauge your nutrition
+            choices. Take control of your health with insightful charts.
+            Knowledge is power, embrace it!
           </p>
         </div>
-        <div className="bg-transparent p-4 rounded shadow-md sm:w-96 w-full mt-8 pr-20 pl-20 ">
-        <h1 className="text-base md:text-2xl mb-4 text-center font-semibold">Food Input Form</h1>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-          {/* ... (unchanged code for text input fields) */}
-          <div>
-            <label htmlFor="foodName">Food Name:</label>
-            <Select
-              id="foodName"
-              value={foodName}
-              onChange={(selectedOptions) => setFoodName(selectedOptions)}
-              options={foodData}
-              isMulti
-            />
-          </div>
+        <div className="flex justify-center mt-10 items-center h-full">
+          <div className=" p-4 rounded w-full max-w-lg">
+            <h1 className="text-lg md:text-xl mb-4 text-center font-semibold">
+              Food Input Form
+            </h1>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 text-xs md:text-sm"
+            >
+              {/* ... (unchanged code for text input fields) */}
+              <div>
+                <label htmlFor="foodName" className="mb-2">Food Name:</label>
+                <Select
+                  id="foodName"
+                  value={foodName}
+                  onChange={(selectedOptions) => setFoodName(selectedOptions)}
+                  options={foodData}
+                  isMulti
+                />
+              </div>
 
-          <div>
-            <label htmlFor="cookingMethod">Cooking Method:</label>
-            <Select
-              id="cookingMethod"
-              value={cookingMethod}
-              onChange={(selectedOptions) => setCookingMethod(selectedOptions)}
-              options={cookingMethodOptions}
-              isMulti
-            />
-          </div>
+              <div>
+                <label htmlFor="cookingMethod" className="mb-2">Cooking Method:</label>
+                <Select
+                  id="cookingMethod"
+                  value={cookingMethod}
+                  onChange={(selectedOptions) =>
+                    setCookingMethod(selectedOptions)
+                  }
+                  options={cookingMethodOptions}
+                  isMulti
+                />
+              </div>
 
-          <div>
-            <label htmlFor="freshness">Fresh or Processed:</label>
+              <div>
+                <label htmlFor="freshness" className="mb-2">Fresh or Processed:</label>
+                <Select
+                  id="freshness"
+                  value={freshness}
+                  onChange={(selectedOptions) => setFreshness(selectedOptions)}
+                  options={freshnessOptions}
+                />
+              </div>
 
-            <Select
-              id="freshness"
-              value={freshness}
-              onChange={(selectedOptions) => setFreshness(selectedOptions)}
-              options={freshnessOptions}
-            />
+              <div>
+                <label htmlFor="mealType" className="mb-2">Meal Type:</label>
+                <Select
+                  id="mealtype"
+                  value={mealType}
+                  onChange={(selectedOptions) => setMealType(selectedOptions)}
+                  options={mealtypeOpttions}
+                />
+              </div>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 self-center"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-
-          <div>
-            <label htmlFor="mealType">Meal Type:</label>
-            <Select
-              id="mealtype"
-              value={mealType}
-              onChange={(selectedOptions) => setMealType(selectedOptions)}
-              options={mealtypeOpttions}
-            />
-          </div>
-          <div className="flex justify-center">
-          <button
-            type="submit"
-            className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 self-center"
-          >
-            Submit
-          </button>
-          </div>
-        </form>
+        </div>
       </div>
-      </div>
-
-      
     </div>
   );
 };
