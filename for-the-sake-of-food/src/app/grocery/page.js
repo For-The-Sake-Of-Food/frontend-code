@@ -160,7 +160,7 @@ const Groceryshopping = () => {
     if (newCheckedValue) {
       // If the checkbox is checked, send a DELETE request to delete the item
       const deleteResponse = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries/${itemId}`,
         {
           method: "DELETE",
         }
@@ -173,7 +173,7 @@ const Groceryshopping = () => {
     } else {
       // If the checkbox is unchecked, send a PATCH request to update the checked status
       const patchResponse = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries/${itemId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -196,7 +196,7 @@ const Groceryshopping = () => {
   const handleDeleteGrocery = async (itemId) => {
     console.log(handleDeleteGrocery);
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/groceries/${itemId}`,
       {
         method: "DELETE",
       }
