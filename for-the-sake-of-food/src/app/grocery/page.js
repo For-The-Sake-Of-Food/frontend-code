@@ -72,13 +72,15 @@ const Groceryshopping = () => {
   const [markedForDeletion, setMarkedForDeletion] = useState(null);
   const { user } = useUser();
   // console.log(userId);
-  
+
   // Fetch groceries on component mount
   useEffect(() => {
     const fetchGroceries = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/groceries`);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/groceries`
+        );
         const data = await response.json();
         setGrocery(data);
       } catch (error) {
@@ -97,11 +99,14 @@ const Groceryshopping = () => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/groceries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newGrocery,user),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newGrocery, user),
+        }
+      );
 
       if (response.ok) {
         const newGroceryItem = await response.json();
@@ -155,7 +160,7 @@ const Groceryshopping = () => {
     if (newCheckedValue) {
       // If the checkbox is checked, send a DELETE request to delete the item
       const deleteResponse = await fetch(
-        `http://localhost:5000/api/groceries/${itemId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
         {
           method: "DELETE",
         }
@@ -168,7 +173,7 @@ const Groceryshopping = () => {
     } else {
       // If the checkbox is unchecked, send a PATCH request to update the checked status
       const patchResponse = await fetch(
-        `http://localhost:5000/api/groceries/${itemId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -191,7 +196,7 @@ const Groceryshopping = () => {
   const handleDeleteGrocery = async (itemId) => {
     console.log(handleDeleteGrocery);
     const response = await fetch(
-      `http://localhost:5000/api/groceries/${itemId}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/groceries${itemId}`,
       {
         method: "DELETE",
       }
@@ -224,7 +229,9 @@ const Groceryshopping = () => {
             Grocery Shopping
           </h1>
           <p className="text-sm text-center pt-5 pl-8 md:px-20 ">
-          Welcome to our Grocery Shopping Page! Here, you can easily manage your shopping list. Simply add items you need, and check them off as you go. Happy shopping!
+            Welcome to our Grocery Shopping Page! Here, you can easily manage
+            your shopping list. Simply add items you need, and check them off as
+            you go. Happy shopping!
           </p>
         </div>
         <div className="px-4 md:px-28 pt-16">
@@ -271,9 +278,9 @@ const Groceryshopping = () => {
                   onChange={() => handleCheckboxChange(item.id, !item.checked)}
                 />
                 <label htmlFor={item?.name} className="text-gray-500">
-                {markedForDeletion === item.id && (
-                  <span className="ml-2 text-red-500">&#10003;</span>
-                )}
+                  {markedForDeletion === item.id && (
+                    <span className="ml-2 text-red-500">&#10003;</span>
+                  )}
                   {item.name}
                 </label>
               </div>
