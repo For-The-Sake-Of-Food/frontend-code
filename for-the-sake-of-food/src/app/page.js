@@ -85,7 +85,7 @@ const Welcome = () => {
             <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-xl md:text-4xl mt-5 md:mt-0 ml-2 md:ml-0 text-left">
               {user ? (
                 <p className="mb-1 md:mb-4 font-semibold">
-                  Hello, {user.fullName}.
+                  Hello, {user.fullName ? user.fullName : user.username}.
                 </p>
               ) : (
                 <p className="mb-1 md:mb-4 font-semibold">Hey There!</p>

@@ -504,6 +504,7 @@ const FoodInput = () => {
     { value: "deepfried", label: "Deep Fried" },
     { value: "fried", label: "Fried" },
     { value: "grilled", label: "Grilled" },
+    { value: "juiced", label: "Juiced" },
     { value: "marinated", label: "Marinated" },
     { value: "microwaved", label: "Microwaved" },
     { value: "poached", label: "Poached" },
@@ -512,7 +513,7 @@ const FoodInput = () => {
     { value: "simmered", label: "Simmered" },
     { value: "sliced", label: "Sliced" },
     { value: "smoked", label: "Smoked" },
-    { value: "starfried", label: "Star Fried" },
+    { value: "stirfried", label: "Stir Fried" },
     { value: "steamed", label: "Steamed" },
     { value: "toasted", label: "Toasted" },
   ];

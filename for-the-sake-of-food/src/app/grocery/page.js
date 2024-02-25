@@ -92,6 +92,10 @@ const Groceryshopping = () => {
     fetchGroceries();
   }, []);
 
+  if(!user) {
+    return null
+  }
+
   // Add a new grocery item
   const handleAddGrocery = async () => {
     if (newGrocery.name.trim() === "") return; // Prevent empty items
@@ -104,7 +108,7 @@ const Groceryshopping = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newGrocery, user),
+          body: JSON.stringify({...newGrocery, userId:user.id}),
         }
       );
 
