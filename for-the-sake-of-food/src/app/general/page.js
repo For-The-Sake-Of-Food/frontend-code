@@ -12,7 +12,7 @@ const General = () => {
           <h1 className="text-lg md:text-4xl font-semibold text-center mb-4">
             General Recipes.
           </h1>
-          <p className="text-sm text-center pt-5 pl-8 md:pl-0 md:px-20">
+          <p className="text-sm text-center pt-5 pl-8 md:pl-10 md:px-20">
           Scroll through to discover tasty recipes, and embark on a
             journey of flavor. Whether you&apos;re a seasoned chef or a
             kitchen beginner, there&apos;s something delightful waiting for
@@ -22,7 +22,7 @@ const General = () => {
 
       <div className="md:pl-4 md:pr-8 md:mt-8">
         <Tab.Group>
-          <Tab.List className={"flex flex-row justify-between px-10 md:px-20 py-16 pr-10 md:pr-0"}>
+          <Tab.List className={"flex flex-row justify-between px-10 md:px-20 py-16 pr-10 md:pr-30"}>
             <Tab as={Fragment}>
               {({ selected }) => (
                 <button

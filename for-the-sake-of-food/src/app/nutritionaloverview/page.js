@@ -548,7 +548,7 @@ const FoodInput = () => {
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
           <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
-            Visualize Your Health Journey
+            Nutritioanl Overview
           </h1>
           <p className=" text-xs md:text-sm text-center pl-12 pr-10 pt-5 px-4 md:px-20">
             Our data visualization tool helps you track and understand your
