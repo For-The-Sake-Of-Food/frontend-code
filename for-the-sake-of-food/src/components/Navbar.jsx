@@ -31,14 +31,13 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`bg-white z-10 pr-1 text-black w-full top-0 h-16 transition-all duration-300 
+      className={`bg-white z-10 pr-1 text-black w-full top-0 h-16 transition-all duration-300 overflow-x-hidden
       ${
         visible ? "transform translate-y-0" : "-translate-y-16"
       }
-      style={{ paddingInline: "1rem" }}
       `}
     >
-      <div className="flex justify-end container">
+      <div className="flex justify-end container overflow-x-hidden mx-10 md:mx-10">
         {/* <div className="flex items-center pl-2">
           <Link href="/">
             <Image

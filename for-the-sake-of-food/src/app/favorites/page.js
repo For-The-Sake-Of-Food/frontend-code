@@ -34,14 +34,14 @@ const Favorites = () => {
   if (loading) {
     return (
       <div className="h-screen flex flex-col  items-center justify-center">
-        <p className="text-sm md:text-2xl md:font-semibold mb-4">Please Wait </p>
+        <p className="text-sm md:text-lg md:font-semibold mb-4">Please Wait </p>
         <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );
   }
   
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div
         style={{
           position: "absolute",
@@ -57,7 +57,7 @@ const Favorites = () => {
           height: "100%", 
         }}
       ></div>
-      <h1 className="text-center text-lg md:text-4xl font-semibold">Favorites</h1>
+      <h1 className="text-center text-black text-lg md:text-4xl font-semibold">Favorites</h1>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
