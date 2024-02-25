@@ -22,7 +22,7 @@ const FoodInput = () => {
     error: fetchError,
     isLoading,
   } = useQuery("foodData", async () => {
-    const response = await axios.get("http://localhost:5000/api/all-foods");
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/all-foods`);
     return response.data;
   });
 
@@ -63,7 +63,7 @@ const FoodInput = () => {
     console.log("foodhistory", foodhistory);
 
     try {
-      const response = await fetch("http://localhost:5000/api/foodhistory", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/foodhistory`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -548,7 +548,7 @@ const FoodInput = () => {
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
           <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
-            Nutritioanl Overview
+            Nutritional Overview
           </h1>
           <p className=" text-xs md:text-sm text-center pl-12 pr-10 pt-5 px-4 md:px-20">
             Our data visualization tool helps you track and understand your

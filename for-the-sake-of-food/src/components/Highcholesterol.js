@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Highcholesterolcard = () => {
   return (
-    <Link href="/highcholesterol">
+    <Link href="/condition/highcholesterol">
       <div className="w-full md:w-1/2 lg:w-11/12 max-w-screen-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-110">
         <Image
           src="/highcholesterol.jpg"

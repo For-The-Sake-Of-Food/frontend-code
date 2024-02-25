@@ -16,7 +16,7 @@ const Favorites = () => {
 
         //   `${process.env.NEXT_PUBLIC_API_URL}/api/getfavorites/${userId}`
         const response = await axios.get(
-          `http://localhost:5000/api/getfavorites/${userId}`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/getfavorites/${userId}`
         );
 
         const data = await response.data;
