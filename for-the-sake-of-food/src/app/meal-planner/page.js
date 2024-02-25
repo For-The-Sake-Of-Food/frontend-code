@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
-
+import React from 'react';
 import { Calendar } from "@/components/ui/calendar";
 import { formatDate } from "@/lib/utils";
 
@@ -194,6 +194,8 @@ const Mealplanner = () => {
           backgroundImage: "url('/Back-ground.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          width: "100vw",
+          height: "100%", 
         }}
       ></div>
       <div className="pt-20 flex flex-col min-h-[90vh]">

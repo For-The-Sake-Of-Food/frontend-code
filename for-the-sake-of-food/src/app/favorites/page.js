@@ -7,7 +7,7 @@ const Favorites = () => {
   const [favData, setfavData] = useState([]);
   const [loading, setLoading] = useState(false);
   const { userId } = useAuth();
-  console.log(userId);
+  // console.log(userId);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,11 +39,25 @@ const Favorites = () => {
       </div>
     );
   }
+  
   return (
-    <div>
-      <div className="text-center">
-          <h1 className="font-bold mb-2">Your Favorites Page</h1>
-        </div>
+    <div className="relative">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          zIndex: -1,
+          backgroundImage: "url('/Back-ground.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "100%", 
+        }}
+      ></div>
+      <h1 className="text-center text-lg md:text-4xl font-semibold">Favorites</h1>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
