@@ -529,7 +529,7 @@ const FoodInput = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div
         style={{
           position: "absolute",
@@ -548,7 +548,8 @@ const FoodInput = () => {
       <div className="pt-20 items-center justify-center">
         <div className="text-center">
           <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
-            Nutritional Overview
+
+            Nutritional Overview.
           </h1>
           <p className=" text-xs md:text-sm text-center pl-12 pr-10 pt-5 px-4 md:px-20">
             Our data visualization tool helps you track and understand your
@@ -558,8 +559,8 @@ const FoodInput = () => {
           </p>
         </div>
         <div className="flex justify-center mt-10 items-center h-full">
-          <div className=" p-4 rounded w-full max-w-lg">
-            <h1 className="text-lg md:text-xl mb-4 text-center font-semibold">
+          <div className=" p-4 rounded w-full max-w-lg pr-5 md:pr-0 pl-10 md:pl-0">
+            <h1 className="text-sm md:text-xl mb-4 text-center font-semibold">
               Food Input Form
             </h1>
             {error && <p style={{ color: "red" }}>{error}</p>}
@@ -614,7 +615,7 @@ const FoodInput = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 self-center"
+                  className="bg-black hover:bg-[#858684] text-white text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"
                 >
                   Submit
                 </button>
@@ -629,8 +630,3 @@ const FoodInput = () => {
 
 export default FoodInput;
 
-/**
- * get results form the
- *
- *
- */

@@ -37,14 +37,14 @@ const Home = () => {
   if (loading) {
     return (
       <div className="h-screen flex flex-col  items-center justify-center">
-        <p className="text-sm md:text-2xl md:font-semibold mb-4">Please Wait </p>
+        <p className="text-sm md:text-lg md:font-semibold mb-4">Please Wait </p>
         <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center justify-center py-14 min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen py-5 pl-3 md:pl-8 pr-2">
       {/* <h1 className="text-3xl font-bold py-2">Juice Recipes</h1>
       <h1 className="text-2xl font-bold py-2">Blend Sip Repeat!</h1> */}
       <div className="py-4">
@@ -54,7 +54,7 @@ const Home = () => {
           favourite blend.
         </p> */}
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap pr-1">
         {cardData.map((card, index) => (
           <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
             <Card key={index} {...card} />
