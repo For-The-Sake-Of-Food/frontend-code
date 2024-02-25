@@ -134,7 +134,6 @@ const Welcome = () => {
                     meal planning tools, nutritional guidance, and much-needed
                     features aimed at empowering users to make informed dietary
                     choices. Our diverse range of recipes caters to various
-
                     dietary preferences and health goals. We&apos;re on a mission to foster a
                     healthier, happier community by providing the knowledge and
                     tools individuals need to take control of their health and
@@ -144,16 +143,11 @@ const Welcome = () => {
                   At <em className="italic">For the Sake of Food</em>, we believe that food is more than
                     just sustenance – it&apos;s a source of joy, connection, and
                     vitality. Whether you&apos;re looking to lose weight, manage a
-
-                   
-
                     health condition, or simply eat better, our platform equips
                     you with the resources to achieve your goals. Join our
                     community today and embark on a journey to a healthier,
                     happier you. Welcome to <em className="italic">For the Sake of Food</em> – where every
-
                     bite is a step towards a better you.
-
                   </p>
                 </div>
               </div>
