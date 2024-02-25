@@ -160,7 +160,7 @@ const Card = ({
 
   return (
     <div className="max-w-lg rounded-lg overflow-hidden bg-[#E7F9FD] shadow-lg m-4">
-      <div style={{ position: "relative", width: "100%", height: "200px" }}>
+      <div style={{ position: "relative" , width: "100%", height: "200px" }}>
         <Image
           layout="fill"
           objectFit="cover"

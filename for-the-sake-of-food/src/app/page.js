@@ -82,10 +82,10 @@ const Welcome = () => {
               className="w-full h-48 md:h-96 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-90 md:opacity-65 rounded-lg" />
-            <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-lg md:text-4xl mt-5 md:mt-0 ml-5 md:ml-0 text-left">
+            <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-xl md:text-4xl mt-5 md:mt-0 ml-2 md:ml-0 text-left">
               {user ? (
                 <p className="mb-1 md:mb-4 font-semibold">
-                  Hello, {user.fullName}.
+                  Hello, {user.fullName ? user.fullName : user.username}.
                 </p>
               ) : (
                 <p className="mb-1 md:mb-4 font-semibold">Hey There!</p>
@@ -96,7 +96,7 @@ const Welcome = () => {
               </p>
 
               <button
-                className="bg-orange-500 text-white text-sm md:text-lg rounded-full text-center ml-12 md:ml-0 px-4 py-2 mb-5 mt-4 md:mt-2"
+                className="bg-orange-500 text-white text-sm md:text-lg rounded-full text-center ml-12 md:ml-0 px-6 py-2 mb-5 mt-4 md:mt-2"
                 onClick={() => {
                   // Get the element to scroll to
                   const mealCategoriesSection =
@@ -125,7 +125,7 @@ const Welcome = () => {
                 <span className="text-black">?</span>
               </p>
             </h1>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-0 md:mt-8">
               <div className="max-w-6xl px-4">
                 <div className="md:grid md:grid-cols-2 md:gap-20">
                   <p className="text-center text-black text-sm md:text-base md:text-left md:pl-8 pb-4 md:pb-0">
@@ -156,10 +156,10 @@ const Welcome = () => {
         </div>
 
         <div id="meal-categories" className="flex flex-col pl-8 pr-2">
-          <h1 className="text-lg md:text-4xl pl-4 py-10 pt-10 md:pt-20 text-black text-center font-semibold">
+          <h1 className="text-lg md:text-4xl pl-4 py-10 pt-10 md:pt-20 pr-10 text-black text-center font-semibold">
             Meal Categories
           </h1>
-          <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly md:gap-8">
+          <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly mt-0 md:gap-8">
             <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
               <Generalcard className="max-h-16" />
             </div>

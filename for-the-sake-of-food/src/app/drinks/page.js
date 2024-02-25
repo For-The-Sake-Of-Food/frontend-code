@@ -37,7 +37,7 @@ const Home = () => {
   if (loading) {
     return (
       <div className="h-screen flex flex-col  items-center justify-center">
-        <p className="text-2xl font-semibold mb-4">Please Wait </p>
+        <p className="text-sm md:text-2xl md:font-semibold mb-4">Please Wait </p>
         <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
       </div>
     );
@@ -45,15 +45,14 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-14 min-h-screen">
-      <h1 className="text-3xl font-bold py-2">Juice Recipes</h1>
-      <h1 className="text-2xl font-bold py-2">Blend Sip Repeat!</h1>
+      {/* <h1 className="text-3xl font-bold py-2">Juice Recipes</h1>
+      <h1 className="text-2xl font-bold py-2">Blend Sip Repeat!</h1> */}
       <div className="py-4">
-        {" "}
         {/* Added margin for spacing */}
-        <p className="text-lg">
+        {/* <p className="text-lg">
           Explore our nutritious selection of juices and find your next
           favourite blend.
-        </p>
+        </p> */}
       </div>
       <div className="flex flex-wrap">
         {cardData.map((card, index) => (

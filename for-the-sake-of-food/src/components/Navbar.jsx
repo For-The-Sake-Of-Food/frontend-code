@@ -35,9 +35,10 @@ const NavBar = () => {
       ${
         visible ? "transform translate-y-0" : "-translate-y-16"
       }
+      style={{ paddingInline: "1rem" }}
       `}
     >
-      <div className="flex justify-end container mx-10">
+      <div className="flex justify-end container">
         {/* <div className="flex items-center pl-2">
           <Link href="/">
             <Image
