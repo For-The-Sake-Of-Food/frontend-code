@@ -14,7 +14,7 @@ const Condition = () => {
   const params = useParams();
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
-  console.log({ category: category, condition: params.conditionName });
+  console.log({ category: categoryName, condition: params.conditionName });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,13 +26,7 @@ const Condition = () => {
         // }
 
         const response = await axios.get(
-          `${
-            process.env.NEXT_PUBLIC_API_URL
-          }/api/conditions?category=${categoryName}&condition=${
-            params.conditionName == "highbloodpressure"
-              ? "High Blood Pressure"
-              : params.conditionName
-          }`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/conditions?category=${categoryName}&condition=${params.conditionName}`
         );
         console.log("Recipe Data:", response.data);
         setRecipes(response.data);
@@ -49,11 +43,12 @@ const Condition = () => {
   return (
     <div>
       <div className="flex items-center mt-10 flex-col pr-10 md:pr-0">
-        <h1 className="text-lg md:text-4xl font-semibold text-center mb-4">
+        <h1 className="text-lg md:text-4xl font-semibold text-center mb-4 capitalize">
           {params.conditionName == "highbloodpressure"
-            ? "High Blood Pressure"
-            : params.conditionName}
-          recipes.
+            ? "High Blood Pressure" 
+            : params.conditionName == "highcholesterol"
+            ? "High Cholesterol" 
+            : params.conditionName}&nbsp;Recipes.
         </h1>
         <p className="text-sm text-center pt-5 pl-8 md:pl-10 md:px-20">
           Scroll through to discover tasty recipes, and embark on a journey of

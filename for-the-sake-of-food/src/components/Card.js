@@ -110,9 +110,6 @@ import { usePathname } from "next/navigation";
 
 const Card = ({
   image,
-  timestamp,
-  description,
-  link,
   id,
   category,
   title,
@@ -121,8 +118,8 @@ const Card = ({
   const [isFavorited, setIsFavorited] = useState(false);
   const { user } = useUser();
   const pathName = usePathname();
-  console.log(pathName);
-
+  
+ 
   if (!user) {
     return null;
   }
