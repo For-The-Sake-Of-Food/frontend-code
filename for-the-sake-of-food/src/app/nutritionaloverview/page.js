@@ -608,7 +608,7 @@ const FoodInput = () => {
                   options={mealtypeOpttions}
                 />
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-5 md:mb-20">
                 <button
                   type="submit"
                   className="bg-[#E7F9FD] hover:bg-[#858684] text-black text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"

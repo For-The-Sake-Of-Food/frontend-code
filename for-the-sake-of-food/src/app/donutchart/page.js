@@ -135,7 +135,7 @@ export default function Example() {
     //   )}
 
     // </div>
-    <div className="flex justify-center items-center h-screen flex-col">
+    <div className="flex flex-col lg:flex-row justify-around pl-6 md:pl-40 pt-8">
     <div>
       <Calendar
         mode="single"
@@ -143,7 +143,7 @@ export default function Example() {
         onSelect={setDate}
         initialFocus
       />
-      {date ? format(date, "dd /MM /yyyy") : <span>Pick a date</span>}
+      <span className="ml-24 text-sm"> {date ? format(date, "dd/MM/yyyy") : <span>Pick a date</span>}</span>
     </div>
   
     <div className="mt-8">
