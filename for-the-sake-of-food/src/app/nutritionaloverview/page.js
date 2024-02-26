@@ -26,12 +26,7 @@ const FoodInput = () => {
     return response.data;
   });
 
-  // const fetchData = async () => {
-  //   const response = await axios.get("http://localhost:5000/api/all-foods");
-  //   return response.data;
-  // };
-
-  // console.log({ data });
+  
 
   if (!user) {
     return null;

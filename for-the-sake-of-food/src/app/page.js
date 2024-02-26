@@ -179,7 +179,7 @@ const Welcome = () => {
           <div className="w-full md:w-1/2 p-6 md:order-1">
             <Image
               src="/userimage.jpg"
-              alt="user image"
+              alt="user-image"
               width={700}
               height={500}
               className="rounded-md"
