@@ -531,7 +531,7 @@ const FoodInput = () => {
 
   return (
     <div className="relative overflow-x-hidden">
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -539,16 +539,16 @@ const FoodInput = () => {
           bottom: 0,
           left: 0,
           zIndex: -1,
-          backgroundImage: "url('/Back-ground.JPG')",
+          backgroundImage: "url('/Back-ground.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100vw",
           height: "100%", 
         }}
-      ></div>
-      <div className="pt-20 items-center justify-center">
+      ></div> */}
+      <div className="pt-10 items-center justify-center">
         <div className="text-center">
-          <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
+          <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black mb-8">
 
             Nutritional Overview.
           </h1>
@@ -616,7 +616,7 @@ const FoodInput = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="bg-black hover:bg-[#858684] text-white text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"
+                  className="bg-[#E7F9FD] hover:bg-[#858684] text-black text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"
                 >
                   Submit
                 </button>

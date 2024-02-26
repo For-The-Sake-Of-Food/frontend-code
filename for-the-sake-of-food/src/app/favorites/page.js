@@ -58,10 +58,15 @@ const Favorites = () => {
           height: "100%", 
         }}
       ></div> */}
-      <h1 className="text-center text-black text-lg md:text-4xl font-semibold">Favorites</h1>
+      <div className="flex items-center mt-10 flex-col pr-10 md:pr-0">
+      <h1 className="text-center text-black text-lg md:text-4xl font-semibold mb-2">Favorites.</h1>
+      <p className="text-sm text-center pt-5 mb-10 pl-8 md:pl-10 md:px-20">
+          Your favorites all on one page. Happy Cooking!
+          </p>
+          </div>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
-          <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
+          <div className="w-full sm:w-1/2 md:w-1/3 mb-8 pl-6 pr-4" key={index}>
             <Card key={index} {...card} />
           </div>
         ))}

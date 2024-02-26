@@ -73,7 +73,7 @@ const Welcome = () => {
   const conditionLabelStyle = "block mb-2";
 
   return (
-    <div className= "max-w-screen-lg w-full">
+    
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-6">
           <div className="relative">
@@ -222,7 +222,7 @@ const Welcome = () => {
       </div>
         
       </div>
-    </div>
+  
   );
 };
 

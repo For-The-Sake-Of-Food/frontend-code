@@ -135,63 +135,40 @@ export default function Example() {
     //   )}
 
     // </div>
-    <div className="flex justify-around">
-      <div>
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          initialFocus
-        />
-        {date ? format(date, "dd/MM/yyyy") : <span>Pick a date</span>}
-      </div>
-      <div>
-        {/* Render Pie Chart */}
-        {pieChartData?.length !== 0 && !isLoading ? (
-          <PieChart width={400} height={400}>
-            <Pie
-              dataKey="value"
-              isAnimationActive={true}
-              data={pieChartData}
-              cx={200}
-              cy={200}
-              outerRadius={120}
-              fill="#8884d8"
-              label
-            />
-            <Tooltip />
-          </PieChart>
-        ) : (
-          <div className="h-screen flex flex-col items-center justify-center">
-            <p className="text-sm md:text-2xl md:font-semibold mb-4">
-              {isLoading ? "Please Wait" : "No data available on this date"}
-            </p>
-            {isLoading && (
-              <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
-            )}
-          </div>
-        )}
-
-        {/* Render Bar Chart */}
-        {barChartData?.length !== 0 && !isLoading ? (
-          <BarChart width={400} height={400} data={barChartData}>
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Bar dataKey="value" fill="#8884d8" />
-            <BarChartTooltip />
-            <Legend />
-          </BarChart>
-        ) : (
-          <div className="h-screen flex flex-col items-center justify-center">
-            <p className="text-sm md:text-2xl md:font-semibold mb-4">
-              {isLoading ? "Please Wait" : "No data available on this date"}
-            </p>
-            {isLoading && (
-              <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10"></div>
-            )}
-          </div>
-        )}
-      </div>
+    <div className="flex justify-center items-center h-screen flex-col">
+    <div>
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        initialFocus
+      />
+      {date ? format(date, "dd /MM /yyyy") : <span>Pick a date</span>}
+    </div>
+  
+    <div className="mt-8">
+      {/* Render Pie Chart */}
+      {pieChartData?.length !== 0 && !isLoading ? (
+        <PieChart width={400} height={400}>
+          {/* Pie Chart components... */}
+        </PieChart>
+      ) : (
+        <div className="h-screen flex flex-col items-center justify-center">
+          {/* No data message... */}
+        </div>
+      )}
+  
+      {/* Render Bar Chart */}
+      {barChartData?.length !== 0 && !isLoading ? (
+        <BarChart width={400} height={400} data={barChartData}>
+          {/* Bar Chart components... */}
+        </BarChart>
+      ) : (
+        <div className="h-screen flex flex-col items-center justify-center">
+          {/* No data message... */}
+        </div>
+      )}
+    </div>
     </div>
   );
 }
