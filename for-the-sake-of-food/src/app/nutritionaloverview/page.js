@@ -3,6 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import Footer from "@/components/Footer";
 import Select from "react-select";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -525,7 +526,7 @@ const FoodInput = () => {
 
   return (
     <div className="relative overflow-x-hidden">
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -533,16 +534,16 @@ const FoodInput = () => {
           bottom: 0,
           left: 0,
           zIndex: -1,
-          backgroundImage: "url('/Back-ground.JPG')",
+          backgroundImage: "url('/Back-ground.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100vw",
           height: "100%", 
         }}
-      ></div>
-      <div className="pt-20 items-center justify-center">
+      ></div> */}
+      <div className="pt-10 items-center justify-center">
         <div className="text-center">
-          <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black">
+          <h1 className="text-lg md:text-4xl font-semibold text-center pl-8 pr-4 text-black mb-8">
 
             Nutritional Overview.
           </h1>
@@ -607,15 +608,22 @@ const FoodInput = () => {
                   options={mealtypeOpttions}
                 />
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-5 md:mb-20">
                 <button
                   type="submit"
-                  className="bg-black hover:bg-[#858684] text-white text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"
+                  className="bg-[#E7F9FD] hover:bg-[#858684] text-black text-xs md:text-sm mt-5 py-2 px-3 md:px-4 rounded-full mb-4 self-center"
                 >
                   Submit
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
           </div>
         </div>
       </div>

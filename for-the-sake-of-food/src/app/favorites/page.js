@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useAuth } from "@clerk/nextjs";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import Card from "@/components/Card";
 const Favorites = () => {
@@ -41,8 +42,8 @@ const Favorites = () => {
   }
   
   return (
-    <div className="relative overflow-x-hidden">
-      <div
+    <div className="relative">
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -56,14 +57,26 @@ const Favorites = () => {
           width: "100vw",
           height: "100%", 
         }}
-      ></div>
-      <h1 className="text-center text-black text-lg md:text-4xl font-semibold">Favorites</h1>
+      ></div> */}
+      <div className="flex items-center mt-10 flex-col pr-10 md:pr-0">
+      <h1 className="text-center text-black text-lg md:text-4xl font-semibold mb-2">Favorites.</h1>
+      <p className="text-sm text-center pt-5 mb-10 pl-8 md:pl-10 md:px-20">
+          Your favorites all on one page. Happy Cooking!
+          </p>
+          </div>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
-          <div className="w-full sm:w-1/2 md:w-1/3 mb-8" key={index}>
+          <div className="w-full sm:w-1/2 md:w-1/3 mb-8 pl-6 pr-4" key={index}>
             <Card key={index} {...card} />
           </div>
         ))}
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

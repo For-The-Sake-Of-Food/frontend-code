@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Card from "@/components/Card";
-import SignupForm from "@/components/SignupForm";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import { useRecipes } from "@/components/MyContext";
 
@@ -61,13 +61,13 @@ const Home = () => {
           </div>
         ))}
       </div>
-      {/* <div className="bg-[#E7F9FD] w-full">
+      <div className="bg-[#E7F9FD] w-full">
         <div className="max-w-screen-xl mx-auto p-4">
           <div className="w-full">
-            <SignupForm />
+            <Footer />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "@/components/Card";
-import SignupForm from "@/components/SignupForm";
+import SignupForm from "@/components/Footer";
 import axios from "axios";
 import { useRecipes } from "@/components/MyContext";
 

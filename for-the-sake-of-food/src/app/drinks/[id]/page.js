@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import SignupForm from "@/components/SignupForm";
+import Footer from "@/components/Footer";
 import { useParams } from "next/navigation";
 import axios from "axios";
 import { useRecipes } from "@/components/MyContext";
@@ -177,9 +177,9 @@ const handlePrevious = () => {
       </div>
 
       {/* SignupForm with full-width background */}
-      {/* <div className="bg-gray-200">
-        <SignupForm />
-      </div> */}
+      <div className="bg-gray-200">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import Image from "next/image";
-import SignupForm from "@/components/SignupForm";
+import SignupForm from "@/components/Footer";
 
 const About = () => {
   const [toggleTab, setToggleTab] = useState(1);

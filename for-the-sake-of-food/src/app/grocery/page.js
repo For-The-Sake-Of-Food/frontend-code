@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Footer from "@/components/Footer";
 import { FaPlus } from "react-icons/fa6";
 import { useUser } from "@clerk/nextjs";
 
@@ -154,9 +155,9 @@ const Groceryshopping = () => {
           </p>
         </div>
         <div className="px-4 md:px-28 pt-16">
-          <div className="relative pl-10 md:pl-5 pr-8 md:pr-0">
+          <div className="relative pl-10 md:pl-5 pr-8">
             <input
-              className="border-b w-full md:w-120 text-xs md:text-base focus:outline-none p-3"
+              className="border-b w-full md:w-120 text-xs md:text-sm focus:outline-none p-3"
               placeholder="Add New"
               onChange={(e) => setNewGrocery({ name: e.target.value })}
               value={newGrocery.name} // Controlled input value
@@ -183,7 +184,7 @@ const Groceryshopping = () => {
             )} */}
           </div>
 
-          <div className="space-y-4 pt-4">
+          <div className="space-y-4 pt-4 pl-12 md:pl-8 text-xs md:text-sm">
             {grocery.map((item) => (
               <div
                 key={item.id}
@@ -204,6 +205,13 @@ const Groceryshopping = () => {
                 </label>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
           </div>
         </div>
       </div>

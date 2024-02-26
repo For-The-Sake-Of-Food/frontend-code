@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import axios from "axios";
+import Footer from "@/components/Footer";
 import { useRecipes } from "@/components/MyContext";
 import { useRouter } from "next/navigation";
 const MyPage = () => {
@@ -179,9 +180,9 @@ const MyPage = () => {
       </div>
 
       {/* SignupForm with full-width background */}
-      {/* <div className="bg-gray-200">
-        <SignupForm />
-      </div> */}
+      <div className="bg-gray-200">
+        <Footer />
+      </div>
     </div>
   );
 };

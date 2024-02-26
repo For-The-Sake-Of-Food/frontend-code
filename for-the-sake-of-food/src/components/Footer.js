@@ -1,36 +1,36 @@
-"use client";
-import React, { useState } from "react";
+// "use client";
+// import React, { useState } from "react";
 
-const SignupForm = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false); 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+// const SignupForm = () => {
+//   const [email, setEmail] = useState("");
+//   const [submitted, setSubmitted] = useState(false);
+//   const [loading, setLoading] = useState(false); 
+//   const handleEmailChange = (e) => {
+//     setEmail(e.target.value);
+//   };
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setLoading(true);
-    const res = await fetch("/api/send-email", {
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-      body: JSON.stringify({ email: email }),
-    });
-    const data = await res.json();
-    console.log(data);
-    setSubmitted(true);
-    setLoading(false);
-  }
+//   async function handleSubmit(e) {
+//     e.preventDefault();
+//     setLoading(true);
+//     const res = await fetch("/api/send-email", {
+//       headers: { "Content-Type": "application/json" },
+//       method: "POST",
+//       body: JSON.stringify({ email: email }),
+//     });
+//     const data = await res.json();
+//     console.log(data);
+//     setSubmitted(true);
+//     setLoading(false);
+//   }
 
-  return (
-    <div className="bg-[#E7F9FD]">
-      {/* The blue background container */}
+//   return (
+//     <div className="bg-[#E7F9FD]">
+      {/* The blue background container
       <div className="p-4 max-w-md mx-auto">
-      {loading ? ( // Display loader if loading is true
+      {loading ? ( 
           <div className="text-center">
             <p className="text-2xl font-semibold mb-4">Please Wait </p>
-            {/* <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10 ml-20"></div> */}
+            <div className="loader ease-linear border-4 border-t-4 border-gray-200 rounded-full h-10 w-10 ml-20"></div>
           </div>
         ) : submitted ? (
           <div className="text-center">
@@ -47,9 +47,9 @@ const SignupForm = () => {
           </div>
         ) : (
           <div className="flex flex-col items-center">
-            {/* <h1 className="text-5xl py-10 pt-60 text-black font-bold">
+            <h1 className="text-5xl py-10 pt-60 text-black font-bold">
               Simple and tasty recipes
-            </h1> */}
+            </h1>
             <h2 className="text-2xl font-bold text-center mb-4">
               Deliciousness to your inbox
             </h2>
@@ -75,16 +75,31 @@ const SignupForm = () => {
                 >
                   Subscribe
                 </button>
-              </div>
-                <p className="text-sm text-center">
+              </div> */}
+                {/* <p className="text-sm text-center">
                 <span className="font-bold">Disclaimer:</span> We&apos;re not nutritionists. Please verify health claims independently.For The Sake Of Food is not liable for decisions based on our content.
                 </p>
-            </form>
-          </div>
-        )}
-      </div>
-    </div>
+            </form> */}
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default SignupForm;
+
+import React from "react";
+
+const Footer = () => {
+  return (
+    <footer className="p-4 text-center">
+      <p className="text-sm md:text-base text-black">
+        <strong>Disclaimer:</strong> We are not nutritionists. This information is for general informational purposes only.
+      </p>
+    </footer>
   );
 };
 
-export default SignupForm;
+export default Footer;
+
