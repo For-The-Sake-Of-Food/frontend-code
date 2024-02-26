@@ -2,6 +2,7 @@
 import FoodRecipesTabs from "@/components/tabs/food-recipes";
 import JuiceRecipesTabs from "@/components/tabs/juice-recipes";
 import SnackRecipesTabs from "@/components/tabs/snack-recipes";
+import Footer from "@/components/Footer";
 import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 const Diabetes = () => {
@@ -86,6 +87,13 @@ const Diabetes = () => {
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

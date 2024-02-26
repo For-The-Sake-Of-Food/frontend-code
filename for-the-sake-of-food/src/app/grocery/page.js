@@ -61,6 +61,7 @@
 
 "use client";
 import { useState, useEffect } from "react";
+import Footer from "Footer";
 import { FaPlus } from "react-icons/fa6";
 import { useUser } from "@clerk/nextjs";
 
@@ -291,6 +292,13 @@ const Groceryshopping = () => {
                 </label>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
           </div>
         </div>
       </div>

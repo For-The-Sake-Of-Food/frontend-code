@@ -3,6 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import Footer from "@/components/Footer";
 import Select from "react-select";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -621,6 +622,13 @@ const FoodInput = () => {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const Condition = () => {
           {params.conditionName == "highbloodpressure"
             ? "High Blood Pressure"
             : params.conditionName}
-          Recipes.
+          recipes.
         </h1>
         <p className="text-sm text-center pt-5 pl-8 md:pl-10 md:px-20">
           Scroll through to discover tasty recipes, and embark on a journey of

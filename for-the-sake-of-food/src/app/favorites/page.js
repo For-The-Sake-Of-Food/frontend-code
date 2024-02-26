@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useAuth } from "@clerk/nextjs";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import Card from "@/components/Card";
 const Favorites = () => {
@@ -41,8 +42,8 @@ const Favorites = () => {
   }
   
   return (
-    <div className="relative overflow-x-hidden">
-      <div
+    <div className="relative">
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -56,7 +57,7 @@ const Favorites = () => {
           width: "100vw",
           height: "100%", 
         }}
-      ></div>
+      ></div> */}
       <h1 className="text-center text-black text-lg md:text-4xl font-semibold">Favorites</h1>
       <div className="flex flex-wrap">
         {favData.map((card, index) => (
@@ -64,6 +65,13 @@ const Favorites = () => {
             <Card key={index} {...card} />
           </div>
         ))}
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

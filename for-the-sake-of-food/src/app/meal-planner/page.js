@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
+import Footer from "@/components/Footer";
 import React from 'react';
 import { Calendar } from "@/components/ui/calendar";
 import { formatDate } from "@/lib/utils";
@@ -288,6 +289,13 @@ const Mealplanner = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 import React, { useState, useEffect } from "react";
+import Footer from "@/components/Footer";
 import FoodRecipesTabs from "@/components/tabs/food-recipes";
 import JuiceRecipesTabs from "@/components/tabs/juice-recipes";
 import SnackRecipesTabs from "@/components/tabs/snack-recipes";
@@ -84,6 +85,13 @@ const General = () => {
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
+      </div>
+      <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

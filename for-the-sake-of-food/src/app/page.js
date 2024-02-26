@@ -3,6 +3,7 @@ import Food from "@/app/food/page";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 import Generalcard from "@/components/Generalcard";
 import Highbloodpressurecard from "@/components/Highbloodpressure";
@@ -72,7 +73,7 @@ const Welcome = () => {
   const conditionLabelStyle = "block mb-2";
 
   return (
-    <div classname= "max-w-screen-lg w-full">
+    <div className= "max-w-screen-lg w-full">
       <div className="relative rounded-lg overflow-hidden pl-4">
         <div className="px-6">
           <div className="relative">
@@ -212,6 +213,13 @@ const Welcome = () => {
         <h1 className="text-lg md:text-4xl pl-4 text-center font-semibold py-2 pt-10">Trending Recipes.</h1>
           <Food />
         </div>
+        <div className="bg-[#E7F9FD] w-full">
+        <div className="max-w-screen-xl mx-auto p-4">
+          <div className="w-full">
+            <Footer />
+          </div>
+        </div>
+      </div>
         
       </div>
     </div>
