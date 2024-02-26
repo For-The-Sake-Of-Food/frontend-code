@@ -126,7 +126,7 @@ const Groceryshopping = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div
         style={{
           position: "absolute",
@@ -138,21 +138,23 @@ const Groceryshopping = () => {
           backgroundImage: "url('/Back-ground.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          width: "100vw",
+          height: "100%",
         }}
       ></div>
       <div className="pt-20 flex flex-col min-h-[90vh]">
         <div>
           <h1 className="text-center text-black text-lg md:text-4xl font-semibold">
-            Grocery Shopping
+            Grocery Shopping.
           </h1>
-          <p className="text-sm text-center pt-5 pl-8 md:px-20 ">
+          <p className="text-sm text-center pt-5 pl-10 pr-5 md:px-20 ">
             Welcome to our Grocery Shopping Page! Here, you can easily manage
             your shopping list. Simply add items you need, and check them off as
             you go. Happy shopping!
           </p>
         </div>
         <div className="px-4 md:px-28 pt-16">
-          <div className="relative pl-5">
+          <div className="relative pl-10 md:pl-5 pr-8 md:pr-0">
             <input
               className="border-b w-full md:w-120 text-xs md:text-base focus:outline-none p-3"
               placeholder="Add New"
@@ -163,7 +165,7 @@ const Groceryshopping = () => {
               <FaPlus />
             </button>
             {/* Loading and Error Messages */}
-            {isLoading && <p className="pt-4">Loading groceries...</p>}
+            {isLoading && <p className="pt-4 text-sm">Loading groceries...</p>}
             {error && <p className="pt-4 text-red-500">{error}</p>}
             {/* {newGrocery.name && (
               <div className="flex flex-row space-x-2 items-center">

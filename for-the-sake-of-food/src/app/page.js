@@ -72,9 +72,9 @@ const Welcome = () => {
   const conditionLabelStyle = "block mb-2";
 
   return (
-    <div>
+    <div classname= "max-w-screen-lg w-full">
       <div className="relative rounded-lg overflow-hidden pl-4">
-        <div className="px-4 md:px-6">
+        <div className="px-6">
           <div className="relative">
             <img
               src="/heroimage2.jpg"
@@ -82,7 +82,7 @@ const Welcome = () => {
               className="w-full h-48 md:h-96 object-cover rounded-lg"
             />
             <div className="h-full absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-90 md:opacity-65 rounded-lg" />
-            <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-xl md:text-4xl mt-5 md:mt-0 ml-2 md:ml-0 text-left">
+            <div className="absolute top-1/2 md:top-3/4 left-0 transform -translate-y-1/2 p-4 md:pl-8 text-black text-xl md:text-4xl mt-5 md:mt-0 ml-2 md:ml-0 text-center md:text-left">
               {user ? (
                 <p className="mb-1 md:mb-4 font-semibold">
                   Hello, {user.fullName ? user.fullName : user.username}.
@@ -96,7 +96,7 @@ const Welcome = () => {
               </p>
 
               <button
-                className="bg-orange-500 text-white text-sm md:text-lg rounded-full text-center ml-12 md:ml-0 px-6 py-2 mb-5 mt-4 md:mt-2"
+                className="bg-orange-500 text-white text-sm md:text-lg rounded-full text-center mr-5 md:mr-0 ml-5 md:ml-0 px-6 py-2 mb-10 md:mb-5 mt-4 md:mt-2"
                 onClick={() => {
                   // Get the element to scroll to
                   const mealCategoriesSection =
@@ -125,7 +125,7 @@ const Welcome = () => {
                 <span className="text-black">?</span>
               </p>
             </h1>
-            <div className="flex justify-center mt-0 md:mt-8">
+            <div className="flex justify-center pr-5 md:pr-0 mt-0 md:mt-8">
               <div className="max-w-6xl px-4">
                 <div className="md:grid md:grid-cols-2 md:gap-20">
                   <p className="text-center text-black text-sm md:text-base md:text-left md:pl-8 pb-4 md:pb-0">
@@ -157,9 +157,9 @@ const Welcome = () => {
 
         <div id="meal-categories" className="flex flex-col pl-8 pr-2">
           <h1 className="text-lg md:text-4xl pl-4 py-10 pt-10 md:pt-20 pr-10 text-black text-center font-semibold">
-            Meal Categories
+            Meal Categories.
           </h1>
-          <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly mt-0 md:gap-8">
+          <div className="flex flex-col pb-5 items-center gap-8 md:flex-row md:justify-evenly mt-0 md:gap-8 pr-5 md:pr-2">
             <div className="w-full md:w-1/3 lg:w-3/4 max-w-screen-md">
               <Generalcard className="max-h-16" />
             </div>
@@ -175,7 +175,7 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center pt-10 md:pt-20 pl-5">
+        <div className="flex flex-col md:flex-row items-center pr-3 pt-10 md:pt-20 pl-3 md:pl-5">
           <div className="w-full md:w-1/2 p-6 md:order-1">
             <Image
               src="/userimage.jpg"
@@ -186,15 +186,16 @@ const Welcome = () => {
             />
           </div>
           <div className="w-full pl-10 md:w-1/2 p-4 md:order-2">
-            <h1 className="text-lg md:text-3xl pl-10 pr-5 font-semibold relative">
+            <h1 className="text-lg md:text-4xl pl-10 pr-5 font-semibold relative">
               <span className="text-black">Why </span>
               <span className="text-[#3A8700] font-semibold">Our Recipes</span>
               <span className="text-black"> Are The Best</span>
+              <span className="text-[#3A8700] font-semibold">.</span>
               <span className="absolute top-[-2.5rem] left-[-3rem] text-gray-300 text-9xl ml-4">
                 “
               </span>
             </h1>
-            <p className="text-sm md:text-base pl-10 pr-5 mt-5">
+            <p className="text-sm md:text-base pl-2 md:pl-10 pr-6 mt-5">
               At 40 its become more important than ever to make healthy food
               choices. This app has opened a world of delicious nutritious meals
               that keep me feeling vibrant and energized. Its not just an app
@@ -203,11 +204,12 @@ const Welcome = () => {
               experimenting in the kitchen. Thank you for making healthy eating
               a joy!
             </p>
-            <p className="text-sm md:text-base pl-10 pr-5 mt-2">~Carol Lynn</p>
+            <p className="text-sm md:text-base pl-20 md:pl-10 pr-5 mt-2">~Carol Lynn</p>
           </div>
         </div>
 
-        <div className="mt-3">
+        <div className="pt-10">
+        <h1 className="text-lg md:text-4xl pl-4 text-center font-semibold py-2 pt-10">Trending Recipes.</h1>
           <Food />
         </div>
         

@@ -127,7 +127,7 @@ const [loading, setLoading] = useState(false)
     return null;
   }
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div
         style={{
           position: "absolute",
@@ -148,7 +148,7 @@ const [loading, setLoading] = useState(false)
       <div className="pt-20 flex flex-col min-h-[90vh]">
         <div className="space-y-4">
           <h1 className="text-center text-black text-lg md:text-4xl font-semibold">
-            Meal Planner
+            Meal Planner.
           </h1>
           
           <p className="text-sm text-center pt-5 px-4 md:px-20 ">
@@ -169,8 +169,8 @@ const [loading, setLoading] = useState(false)
       <div className="px-4 md:px-28 pt-16 grid grid-cols-1 lg:grid-cols-2 gap-4 pl-10 md:pl-25 ">
           {/* Breakfast */}
           <div className="w-full sm:w-1/3">
-            <h3 className="text-base md:text-lg font-semibold">Breakfast</h3>
-            <div className="relative w-full md:w-80">
+            <h3 className="text-sm md:text-base font-semibold">Breakfast</h3>
+            <div className="relative w-full sm:w-64 md:w-80">
               <input
                 className="border-b w-full text-xs md:text-base focus:outline-none p-3 "
                 placeholder="Add New"
@@ -196,7 +196,7 @@ const [loading, setLoading] = useState(false)
           </div>
           {/* Lunch */}
           <div className="w-full sm:w-1/3">
-            <h3 className="text-base md:text-lg font-semibold">Lunch</h3>
+            <h3 className="text-sm md:text-base font-semibold">Lunch</h3>
             <div className="relative w-full md:w-80">
               <input
                 className="border-b w-full text-xs md:text-base focus:outline-none p-3 "
@@ -223,7 +223,7 @@ const [loading, setLoading] = useState(false)
           </div>
           {/* Dinner */}
           <div className="w-full sm:w-1/3">
-            <h3 className="text-base md:text-lg font-semibold">Dinner</h3>
+            <h3 className="text-sm md:text-base font-semibold">Dinner</h3>
             <div className="relative w-full md:w-80">
               <input
               value={newDinnerMeal}
