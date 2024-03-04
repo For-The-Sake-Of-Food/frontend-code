@@ -94,14 +94,14 @@ export default function Example() {
           onSelect={setDate}
           initialFocus
         />
-        {date ? format(date, "dd/MM/yyyy") : <span>Pick a date</span>}
+      <span className="ml-24 text-sm"> {date ? format(date, "dd/MM/yyyy") : <span>Pick a date</span>}</span>
       </div>
 
       {/* Visualizations below the calendar */}
-      <div className="flex">
+      <div className="flex ml-8 md:ml-0">
         {/* First Pie Chart on the left */}
         <div className="mr-4">
-          <h1>Food Nutritional Data</h1>
+          <h1 className="text-sm md:text-base font-semibold">Food Nutritional Data</h1>
           {pieChartData?.length !== 0 && !isLoading ? (
             <PieChart width={200} height={200}>
               <Pie
@@ -118,7 +118,7 @@ export default function Example() {
             </PieChart>
           ) : (
             <div className="h-screen flex flex-col items-center justify-center">
-              <p className="text-sm md:text-2xl md:font-semibold mb-4">
+              <p className="text-sm mb-4">
                 {isLoading ? "Please Wait" : "No data available on this date"}
               </p>
               {isLoading && (
@@ -130,7 +130,7 @@ export default function Example() {
 
         {/* Bar Chart in the middle */}
         <div className="mr-4">
-          <h1>Food Name Data</h1>
+          <h1 className="text-sm md:text-base font-semibold">Food Name Data</h1>
           {barChartData?.length !== 0 && !isLoading ? (
             <BarChart width={400} height={400} data={barChartData}>
               <XAxis dataKey="name" />
@@ -141,7 +141,7 @@ export default function Example() {
             </BarChart>
           ) : (
             <div className="h-screen flex flex-col items-center justify-center">
-              <p className="text-sm md:text-2xl md:font-semibold mb-4">
+              <p className="text-sm mb-4">
                 {isLoading ? "Please Wait" : "No data available on this date"}
               </p>
               {isLoading && (
@@ -153,7 +153,7 @@ export default function Example() {
 
         {/* Second Pie Chart on the right */}
         <div>
-          <h1>Cooking Method Data</h1>
+          <h1 className="text-sm md:text-base font-semibold">Cooking Method Data</h1>
           {cookingMethodChartData?.length !== 0 && !isLoading ? (
             <PieChart width={200} height={200}>
               <Pie
@@ -170,7 +170,7 @@ export default function Example() {
             </PieChart>
           ) : (
             <div className="h-screen flex flex-col items-center justify-center">
-              <p className="text-sm md:text-2xl md:font-semibold mb-4">
+              <p className="text-sm mb-4 mr-2 md:mr-0">
                 {isLoading ? "Please Wait" : "No data available on this date"}
               </p>
               {isLoading && (
